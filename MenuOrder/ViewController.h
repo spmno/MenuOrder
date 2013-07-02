@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "iCarousel/iCarousel.h"
-@interface ViewController : UIViewController <iCarouselDataSource, iCarouselDelegate, UIPopoverControllerDelegate>
+#import "TotalOrderController1.h"
+@interface ViewController : UIViewController <iCarouselDataSource, iCarouselDelegate, UIPopoverControllerDelegate, TotalOrderDelegate>
 {
     UIPopoverController *popover;
 }
@@ -16,5 +17,7 @@
 @property (strong, nonatomic) IBOutlet iCarousel *carousel;
 - (IBAction)doSearchDish:(id)sender;
 - (IBAction)showOrderResult:(id)sender;
+- (IBAction)enterUserManual:(id)sender;
+- (void) dismissPopoverView;
 
 @end

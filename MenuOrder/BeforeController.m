@@ -8,6 +8,7 @@
 
 #import "BeforeController.h"
 #import "BeforeSubController1.h"
+#import "DishSearchController.h"
 @interface BeforeController ()
 
 @end
@@ -76,4 +77,14 @@
 }
 
 
+- (IBAction)switchToMenu:(id)sender
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (IBAction)switchToSearch:(id)sender
+{
+    DishSearchController* searchController = [[DishSearchController alloc]initWithNibName:@"DishSearchController" bundle:nil];
+    [self presentViewController:searchController animated:YES completion:nil];
+}
 @end

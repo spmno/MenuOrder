@@ -11,5 +11,7 @@
 @interface BeforeController : UIViewController <SwipeViewDelegate, SwipeViewDataSource>
 @property (strong, nonatomic) IBOutlet SwipeView *swipeView;
 @property (strong, nonatomic) NSMutableArray* controllerContainer;
+- (IBAction)switchToMenu:(id)sender;
+- (IBAction)switchToSearch:(id)sender;
 
 @end

@@ -7,6 +7,8 @@
 //
 
 #import "SubOrderController.h"
+#import "DishSearchController.h"
+#import "TotalOrderController.h"
 
 @interface SubOrderController ()
 
@@ -71,4 +73,34 @@
 }
 
 
+- (IBAction)switchToMenu:(id)sender
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (IBAction)switchToSearch:(id)sender
+{
+    //[self dismissViewControllerAnimated:NO completion:nil];
+    DishSearchController* searchController = [[DishSearchController alloc]initWithNibName:@"DishSearchController" bundle:nil];
+    [self presentViewController:searchController animated:YES completion:nil];
+}
+
+- (IBAction)switchToManual:(id)sender
+{
+    
+}
+
+- (IBAction)showOrderCount:(id)sender
+{
+    TotalOrderController* totalController = [[TotalOrderController alloc] init];
+    totalController.contentSizeForViewInPopover = CGSizeMake(600, 800);
+    popover = [[UIPopoverController alloc] initWithContentViewController:totalController];
+    [popover setDelegate:self];
+    
+    [popover setPopoverContentSize:CGSizeMake(600, 800)];
+    
+    //设置箭头坐标--也是设置如何显示这个浮动框
+    [popover presentPopoverFromBarButtonItem:sender permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
+
+}
 @end

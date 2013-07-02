@@ -37,12 +37,12 @@
 }
 
 - (IBAction)orderPassionFruit:(id)sender {
-    DishCountController* dishController = [[DishCountController alloc]initWithNibName:@"DishCountController" bundle:nil];
+    DishCountController1* dishController = [[DishCountController1 alloc]initWithNibName:@"DishCountController1" bundle:nil];
     dishController.modalPresentationStyle = UIModalPresentationFormSheet;
     dishController.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
     [self presentViewController:dishController animated:NO completion:nil];
-    dishController.view.frame = CGRectMake(0, 0, 600, 350);
-    dishController.view.center = self.view.center;
+    dishController.view.superview.frame = CGRectMake(0, 0, 520, 350);
+    dishController.view.superview.center = self.view.center;
     NSLog(@"order passion fruit");
 }
 
@@ -51,8 +51,8 @@
     dishController.modalPresentationStyle = UIModalPresentationFormSheet;
     dishController.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
     [self presentViewController:dishController animated:NO completion:nil];
-    dishController.view.frame = CGRectMake(0, 0, 600, 350);
-    dishController.view.center = self.view.center;
+    dishController.view.superview.frame = CGRectMake(0, 0, 520, 350);
+    dishController.view.superview.center = self.view.center;
     
     NSLog(@"order matsutake");
 }

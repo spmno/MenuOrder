@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A502D121176A0D6B00548685 /* TotalOrderController1.m in Sources */ = {isa = PBXBuildFile; fileRef = A502D11F176A0D6B00548685 /* TotalOrderController1.m */; };
+		A502D122176A0D6B00548685 /* TotalOrderController1.xib in Resources */ = {isa = PBXBuildFile; fileRef = A502D120176A0D6B00548685 /* TotalOrderController1.xib */; };
 		A5059408175D582A00905069 /* DishSearchController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5059406175D582A00905069 /* DishSearchController.m */; };
 		A5059409175D582A00905069 /* DishSearchController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5059407175D582A00905069 /* DishSearchController.xib */; };
 		A50B5DD61756A9E1009FC123 /* h1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A50B5DD41756A9E1009FC123 /* h1.jpg */; };
@@ -33,6 +35,8 @@
 		A520A8D21756B579004A81EB /* r3@2x~ipad.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A520A8CC1756B579004A81EB /* r3@2x~ipad.jpg */; };
 		A520A8D71756CA1D004A81EB /* BeforeController.m in Sources */ = {isa = PBXBuildFile; fileRef = A520A8D51756CA1D004A81EB /* BeforeController.m */; };
 		A520A8D81756CA1D004A81EB /* BeforeController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A520A8D61756CA1D004A81EB /* BeforeController.xib */; };
+		A541EFB31763A5F800BA9CBF /* UserManualController.m in Sources */ = {isa = PBXBuildFile; fileRef = A541EFB11763A5F800BA9CBF /* UserManualController.m */; };
+		A541EFB41763A5F800BA9CBF /* UserManualController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A541EFB21763A5F800BA9CBF /* UserManualController.xib */; };
 		A5CBE4B617563985007C704A /* h2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A5CBE4A817563985007C704A /* h2.jpg */; };
 		A5CBE4B717563985007C704A /* h2@2x~ipad.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A5CBE4A917563985007C704A /* h2@2x~ipad.jpg */; };
 		A5CBE4B817563985007C704A /* h3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A5CBE4AA17563985007C704A /* h3.jpg */; };
@@ -73,6 +77,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A502D11E176A0D6B00548685 /* TotalOrderController1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TotalOrderController1.h; sourceTree = "<group>"; };
+		A502D11F176A0D6B00548685 /* TotalOrderController1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TotalOrderController1.m; sourceTree = "<group>"; };
+		A502D120176A0D6B00548685 /* TotalOrderController1.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TotalOrderController1.xib; sourceTree = "<group>"; };
 		A5059405175D582A00905069 /* DishSearchController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DishSearchController.h; sourceTree = "<group>"; };
 		A5059406175D582A00905069 /* DishSearchController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DishSearchController.m; sourceTree = "<group>"; };
 		A5059407175D582A00905069 /* DishSearchController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DishSearchController.xib; sourceTree = "<group>"; };
@@ -102,6 +109,9 @@
 		A520A8D41756CA1D004A81EB /* BeforeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeforeController.h; sourceTree = "<group>"; };
 		A520A8D51756CA1D004A81EB /* BeforeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeforeController.m; sourceTree = "<group>"; };
 		A520A8D61756CA1D004A81EB /* BeforeController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BeforeController.xib; sourceTree = "<group>"; };
+		A541EFB01763A5F800BA9CBF /* UserManualController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserManualController.h; sourceTree = "<group>"; };
+		A541EFB11763A5F800BA9CBF /* UserManualController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserManualController.m; sourceTree = "<group>"; };
+		A541EFB21763A5F800BA9CBF /* UserManualController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserManualController.xib; sourceTree = "<group>"; };
 		A5CBE4A817563985007C704A /* h2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = h2.jpg; sourceTree = "<group>"; };
 		A5CBE4A917563985007C704A /* h2@2x~ipad.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "h2@2x~ipad.jpg"; sourceTree = "<group>"; };
 		A5CBE4AA17563985007C704A /* h3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = h3.jpg; sourceTree = "<group>"; };
@@ -197,6 +207,7 @@
 				A520A8B91756B54D004A81EB /* b6@2x~ipad.jpg */,
 			);
 			name = Set;
+			path = ../..;
 			sourceTree = "<group>";
 		};
 		A520A8C61756B568004A81EB /* Before */ = {
@@ -225,11 +236,20 @@
 			name = Before;
 			sourceTree = "<group>";
 		};
+		A541EFAE1763A44900BA9CBF /* UserManual */ = {
+			isa = PBXGroup;
+			children = (
+				A541EFB01763A5F800BA9CBF /* UserManualController.h */,
+				A541EFB11763A5F800BA9CBF /* UserManualController.m */,
+				A541EFB21763A5F800BA9CBF /* UserManualController.xib */,
+			);
+			name = UserManual;
+			sourceTree = "<group>";
+		};
 		A5CF294D1756312400C19985 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
 				A520A8C61756B568004A81EB /* Before */,
-				A520A8AD1756B4C9004A81EB /* Set */,
 				A5CF294E1756313200C19985 /* CoverFlow */,
 			);
 			name = Resource;
@@ -259,6 +279,7 @@
 		A5D9100117518A450097BCEB /* SwipeView */ = {
 			isa = PBXGroup;
 			children = (
+				A520A8AD1756B4C9004A81EB /* Set */,
 				A5D9100217518A450097BCEB /* SwipeView.h */,
 				A5D9100317518A450097BCEB /* SwipeView.m */,
 			);
@@ -310,6 +331,7 @@
 		A5F002641750F7D4001FDFB4 /* MenuOrder */ = {
 			isa = PBXGroup;
 			children = (
+				A541EFAE1763A44900BA9CBF /* UserManual */,
 				A51210CB175959C1003A0498 /* DishCount */,
 				A520A8D31756C9E6004A81EB /* Before */,
 				A5D9DE3F17521BF4009D23D6 /* SubOrderItem */,
@@ -321,13 +343,16 @@
 				A5D90FFC175189830097BCEB /* SubOrderController.h */,
 				A5D90FFD175189830097BCEB /* SubOrderController.m */,
 				A5D90FFE175189830097BCEB /* SubOrderController.xib */,
-				A5F002651750F7D4001FDFB4 /* Supporting Files */,
 				A5059405175D582A00905069 /* DishSearchController.h */,
 				A5059406175D582A00905069 /* DishSearchController.m */,
 				A5059407175D582A00905069 /* DishSearchController.xib */,
 				A5D9AC9C17629D1000E23220 /* TotalOrderController.h */,
 				A5D9AC9D17629D1000E23220 /* TotalOrderController.m */,
 				A5D9AC9E17629D1000E23220 /* TotalOrderController.xib */,
+				A5F002651750F7D4001FDFB4 /* Supporting Files */,
+				A502D11E176A0D6B00548685 /* TotalOrderController1.h */,
+				A502D11F176A0D6B00548685 /* TotalOrderController1.m */,
+				A502D120176A0D6B00548685 /* TotalOrderController1.xib */,
 			);
 			path = MenuOrder;
 			sourceTree = "<group>";
@@ -454,6 +479,8 @@
 				A5059409175D582A00905069 /* DishSearchController.xib in Resources */,
 				A5D9ACA017629D1000E23220 /* TotalOrderController.xib in Resources */,
 				A5D9ACA51762B1CD00E23220 /* DishCountController1.xib in Resources */,
+				A541EFB41763A5F800BA9CBF /* UserManualController.xib in Resources */,
+				A502D122176A0D6B00548685 /* TotalOrderController1.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -476,6 +503,8 @@
 				A5059408175D582A00905069 /* DishSearchController.m in Sources */,
 				A5D9AC9F17629D1000E23220 /* TotalOrderController.m in Sources */,
 				A5D9ACA41762B1CD00E23220 /* DishCountController1.m in Sources */,
+				A541EFB31763A5F800BA9CBF /* UserManualController.m in Sources */,
+				A502D121176A0D6B00548685 /* TotalOrderController1.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -527,7 +556,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
-				ONLY_ACTIVE_ARCH = YES;
+				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 2;
 			};
@@ -552,6 +581,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 2;

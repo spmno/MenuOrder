@@ -30,12 +30,13 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+    _searchBar.keyboardType=UIKeyboardTypeDefault;
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    _searchBar.showsCancelButton = YES;
     _data = [[NSMutableOrderedSet alloc] init];
     [_data addObject:@"One"];
     [_data addObject:@"Two"];
@@ -162,6 +163,11 @@
     
     // Return YES to cause the search result table view to be reloaded.
     return YES;
+}
+
+- (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 

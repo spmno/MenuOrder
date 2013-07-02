@@ -11,6 +11,8 @@
 #import "BeforeController.h"
 #import "DishSearchController.h"
 #import "TotalOrderController.h"
+#import "TotalOrderController1.h"
+#import "UserManualController.h"
 
 @interface ViewController ()
 
@@ -129,26 +131,42 @@
 - (IBAction)doSearchDish:(id)sender
 {
     DishSearchController* searchController = [[DishSearchController alloc]initWithNibName:@"DishSearchController" bundle:nil];
+    searchController.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
     [self presentViewController:searchController animated:YES completion:nil];
 
 }
 
 - (IBAction)showOrderResult:(id)sender
 {
-    TotalOrderController* totalController = [[TotalOrderController alloc] init];
-    totalController.contentSizeForViewInPopover = CGSizeMake(100, 100);
+    TotalOrderController1* totalController = [[TotalOrderController1 alloc] init];
+    //[self presentViewController:totalController animated:YES completion:nil];
+    
+    totalController.contentSizeForViewInPopover = CGSizeMake(600, 800);
+
     popover = [[UIPopoverController alloc] initWithContentViewController:totalController];
     [popover setDelegate:self];
     
     [popover setPopoverContentSize:CGSizeMake(600, 800)];
-    
+    totalController.delegate = self;
     //设置箭头坐标--也是设置如何显示这个浮动框
     [popover presentPopoverFromBarButtonItem:sender permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
+
+}
+
+- (IBAction)enterUserManual:(id)sender
+{
+    UserManualController* userManualController = [[UserManualController alloc]initWithNibName:@"UserManualController" bundle:nil];
+    [self presentViewController:userManualController animated:YES completion:nil];
 
 }
 
 - (void) popoverControllerDidDismissPopover:(UIPopoverController *)popoverController
 {
     NSLog(@"%@",@"谢谢");
+}
+
+- (void) dismissPopoverView
+{
+    [popover dismissPopoverAnimated:YES];
 }
 @end
