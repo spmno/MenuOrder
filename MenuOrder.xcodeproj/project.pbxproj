@@ -11,6 +11,7 @@
 		A502D122176A0D6B00548685 /* TotalOrderController1.xib in Resources */ = {isa = PBXBuildFile; fileRef = A502D120176A0D6B00548685 /* TotalOrderController1.xib */; };
 		A5059408175D582A00905069 /* DishSearchController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5059406175D582A00905069 /* DishSearchController.m */; };
 		A5059409175D582A00905069 /* DishSearchController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5059407175D582A00905069 /* DishSearchController.xib */; };
+		A51100901783856B00608ACE /* DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A511008F1783856B00608ACE /* DataManager.m */; };
 		A51210D917597EB7003A0498 /* DishCountController.m in Sources */ = {isa = PBXBuildFile; fileRef = A51210D717597EB7003A0498 /* DishCountController.m */; };
 		A51210DA17597EB7003A0498 /* DishCountController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A51210D817597EB7003A0498 /* DishCountController.xib */; };
 		A520A8D71756CA1D004A81EB /* BeforeController.m in Sources */ = {isa = PBXBuildFile; fileRef = A520A8D51756CA1D004A81EB /* BeforeController.m */; };
@@ -51,6 +52,8 @@
 		A5059405175D582A00905069 /* DishSearchController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DishSearchController.h; sourceTree = "<group>"; };
 		A5059406175D582A00905069 /* DishSearchController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DishSearchController.m; sourceTree = "<group>"; };
 		A5059407175D582A00905069 /* DishSearchController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DishSearchController.xib; sourceTree = "<group>"; };
+		A511008E1783856B00608ACE /* DataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DataManager.h; path = MenuOrder/Data/DataManager.h; sourceTree = "<group>"; };
+		A511008F1783856B00608ACE /* DataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DataManager.m; path = MenuOrder/Data/DataManager.m; sourceTree = "<group>"; };
 		A51210D617597EB7003A0498 /* DishCountController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DishCountController.h; sourceTree = "<group>"; };
 		A51210D717597EB7003A0498 /* DishCountController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DishCountController.m; sourceTree = "<group>"; };
 		A51210D817597EB7003A0498 /* DishCountController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DishCountController.xib; sourceTree = "<group>"; };
@@ -113,6 +116,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A511008D178384C800608ACE /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				A511008E1783856B00608ACE /* DataManager.h */,
+				A511008F1783856B00608ACE /* DataManager.m */,
+			);
+			name = DataManager;
+			sourceTree = "<group>";
+		};
 		A51210CB175959C1003A0498 /* DishCount */ = {
 			isa = PBXGroup;
 			children = (
@@ -172,6 +184,7 @@
 		A5F002521750F7D4001FDFB4 = {
 			isa = PBXGroup;
 			children = (
+				A511008D178384C800608ACE /* DataManager */,
 				A5D9100117518A450097BCEB /* SwipeView */,
 				A5F0029D1750F833001FDFB4 /* iCarousel */,
 				A5F002641750F7D4001FDFB4 /* MenuOrder */,
@@ -344,6 +357,7 @@
 				A5D9ACA41762B1CD00E23220 /* DishCountController1.m in Sources */,
 				A541EFB31763A5F800BA9CBF /* UserManualController.m in Sources */,
 				A502D121176A0D6B00548685 /* TotalOrderController1.m in Sources */,
+				A51100901783856B00608ACE /* DataManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
