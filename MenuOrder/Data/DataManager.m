@@ -18,4 +18,36 @@
     });
     return shareDataManagerInstance;
 }
+
+- (NSString*) getAppVersion
+{
+    NSString *appVersionUrl = @"http://127.0.0.1:3000/page_versions/last_version.json";
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:appVersionUrl]];
+    [NSURLConnection connectionWithRequest:request delegate:self];
+    return @"hello";
+}
+
+- (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response {
+    // store data
+    [self->receivedData setLength:0];            //通常在这里先清空接受数据的缓存
+    
+}
+
+- (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {
+    
+    [self->receivedData appendData:data];        //可能多次收到数据，把新的数据添加在现有数据最后
+}
+
+- (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
+    // 错误处理
+}
+
+- (void)connectionDidFinishLoading:(NSURLConnection *)connection {
+    // disconnect
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+    NSString *returnString = [[NSString alloc] initWithData:self->receivedData encoding:NSUTF8StringEncoding];
+    NSLog(returnString);
+    //[self urlLoaded:[self urlString] data:self.receivedData];
+    //firstTimeDownloaded = YES;
+}
 @end

@@ -9,5 +9,10 @@
 #import <Foundation/Foundation.h>
 
 @interface DataManager : NSObject
+{
+@private
+    NSMutableData *receivedData;
+}
 + (DataManager*) sharedInstance;
+- (NSString*) getAppVersion;
 @end
