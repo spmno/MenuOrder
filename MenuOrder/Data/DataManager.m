@@ -21,8 +21,8 @@
 
 - (NSString*) getAppVersion
 {
-    //NSString *appVersionUrl = @"http://127.0.0.1:3000/page_versions/last_version.json";
-    NSString *appVersionUrl = @"http://192.168.59.1:3000/page_versions/last_version.json";
+    NSString *appVersionUrl = @"http://127.0.0.1:3000/page_versions/last_version.json";
+    //NSString *appVersionUrl = @"http://192.168.59.1:3000/page_versions/last_version.json";
     receivedData = [[NSMutableData alloc] init];
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:appVersionUrl]];
     [NSURLConnection connectionWithRequest:request delegate:self];
@@ -47,8 +47,16 @@
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection {
     // disconnect
     [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
-    NSString *returnString = [[NSString alloc] initWithData:receivedData encoding:NSUTF8StringEncoding];
-    NSLog(returnString);
+    NSError *error;
+    NSDictionary *versionJson = [NSJSONSerialization JSONObjectWithData:receivedData options:kNilOptions error:&error];
+    if (versionJson == nil) {
+        NSLog(@"json parser failed\r\r");
+        return;
+    }
+    NSNumber *version = [versionJson objectForKey:@"id"];
+    NSLog(@"server version is %d\r\n", [version integerValue]);
+    //NSString *returnString = [[NSString alloc] initWithData:receivedData encoding:NSUTF8StringEncoding];
+    //NSLog(returnString);
     //[self urlLoaded:[self urlString] data:self.receivedData];
     //firstTimeDownloaded = YES;
 }

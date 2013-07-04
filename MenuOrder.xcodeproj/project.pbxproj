@@ -18,6 +18,7 @@
 		A520A8D81756CA1D004A81EB /* BeforeController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A520A8D61756CA1D004A81EB /* BeforeController.xib */; };
 		A541EFB31763A5F800BA9CBF /* UserManualController.m in Sources */ = {isa = PBXBuildFile; fileRef = A541EFB11763A5F800BA9CBF /* UserManualController.m */; };
 		A541EFB41763A5F800BA9CBF /* UserManualController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A541EFB21763A5F800BA9CBF /* UserManualController.xib */; };
+		A5421F2B1786315900DBFD1D /* PersistentData.m in Sources */ = {isa = PBXBuildFile; fileRef = A5421F2A1786315900DBFD1D /* PersistentData.m */; };
 		A5D7485017580A2D00617C1E /* BeforeSubController1.m in Sources */ = {isa = PBXBuildFile; fileRef = A5D7484E17580A2D00617C1E /* BeforeSubController1.m */; };
 		A5D7485117580A2D00617C1E /* BeforeSubController1.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5D7484F17580A2D00617C1E /* BeforeSubController1.xib */; };
 		A5D90FFF175189830097BCEB /* SubOrderController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5D90FFD175189830097BCEB /* SubOrderController.m */; };
@@ -63,6 +64,8 @@
 		A541EFB01763A5F800BA9CBF /* UserManualController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserManualController.h; sourceTree = "<group>"; };
 		A541EFB11763A5F800BA9CBF /* UserManualController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserManualController.m; sourceTree = "<group>"; };
 		A541EFB21763A5F800BA9CBF /* UserManualController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserManualController.xib; sourceTree = "<group>"; };
+		A5421F291786315900DBFD1D /* PersistentData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PersistentData.h; path = MenuOrder/Data/PersistentData.h; sourceTree = "<group>"; };
+		A5421F2A1786315900DBFD1D /* PersistentData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PersistentData.m; path = MenuOrder/Data/PersistentData.m; sourceTree = "<group>"; };
 		A5D7484D17580A2D00617C1E /* BeforeSubController1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeforeSubController1.h; sourceTree = "<group>"; };
 		A5D7484E17580A2D00617C1E /* BeforeSubController1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeforeSubController1.m; sourceTree = "<group>"; };
 		A5D7484F17580A2D00617C1E /* BeforeSubController1.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BeforeSubController1.xib; sourceTree = "<group>"; };
@@ -121,6 +124,8 @@
 			children = (
 				A511008E1783856B00608ACE /* DataManager.h */,
 				A511008F1783856B00608ACE /* DataManager.m */,
+				A5421F291786315900DBFD1D /* PersistentData.h */,
+				A5421F2A1786315900DBFD1D /* PersistentData.m */,
 			);
 			name = DataManager;
 			sourceTree = "<group>";
@@ -358,6 +363,7 @@
 				A541EFB31763A5F800BA9CBF /* UserManualController.m in Sources */,
 				A502D121176A0D6B00548685 /* TotalOrderController1.m in Sources */,
 				A51100901783856B00608ACE /* DataManager.m in Sources */,
+				A5421F2B1786315900DBFD1D /* PersistentData.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
