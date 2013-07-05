@@ -7,6 +7,7 @@
 //
 
 #import "DataManager.h"
+#import "PersistentData.h"
 
 @implementation DataManager
 + (DataManager*) sharedInstance
@@ -53,8 +54,14 @@
         NSLog(@"json parser failed\r\r");
         return;
     }
-    NSNumber *version = [versionJson objectForKey:@"id"];
-    NSLog(@"server version is %d\r\n", [version integerValue]);
+    NSNumber *versionOnServer = [versionJson objectForKey:@"id"];
+    NSLog(@"server version is %d\r\n", [versionOnServer integerValue]);
+    PersistentData *persistenData = [[PersistentData alloc] init];
+    NSNumber *versionOnApp = [persistenData getVersion];
+    if ([versionOnServer isEqualToNumber:versionOnApp]) {
+        return;
+    }
+    
     //NSString *returnString = [[NSString alloc] initWithData:receivedData encoding:NSUTF8StringEncoding];
     //NSLog(returnString);
     //[self urlLoaded:[self urlString] data:self.receivedData];

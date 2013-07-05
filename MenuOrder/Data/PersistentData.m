@@ -10,19 +10,24 @@
 
 @implementation PersistentData
 
-- (int) getVersion
+- (NSNumber*) getVersion
 {
     NSString *versionFilePath = [self dataFilePath];
     if ([[NSFileManager defaultManager]fileExistsAtPath:versionFilePath]) {
         NSMutableDictionary *fileData = [[NSMutableDictionary alloc] initWithContentsOfFile:versionFilePath];
         int version = [[fileData objectForKey:@"version"] integerValue];
-        return version;
+        return [NSNumber numberWithInt:version];
     }
-    return 0;
+    return [NSNumber numberWithInt:0];
 }
 
 - (BOOL) saveVersion:(int)version
 {
+    NSString *versionFilePath = [self dataFilePath];
+    NSMutableDictionary *versionDictionary = [[NSMutableDictionary alloc] init];
+    NSNumber *versionNumber = [NSNumber numberWithInt:version];
+    [versionDictionary setObject:versionNumber forKey:@"version"];
+    [versionDictionary writeToFile:versionFilePath atomically:YES];
     return YES;
 }
 

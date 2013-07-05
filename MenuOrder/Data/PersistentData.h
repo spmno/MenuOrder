@@ -9,6 +9,6 @@
 #import <Foundation/Foundation.h>
 
 @interface PersistentData : NSObject
-- (int) getVersion;
+- (NSNumber*) getVersion;
 - (BOOL) saveVersion: (int) version;
 @end
