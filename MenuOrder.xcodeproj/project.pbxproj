@@ -65,6 +65,9 @@
 		A520A8D41756CA1D004A81EB /* BeforeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeforeController.h; sourceTree = "<group>"; };
 		A520A8D51756CA1D004A81EB /* BeforeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeforeController.m; sourceTree = "<group>"; };
 		A520A8D61756CA1D004A81EB /* BeforeController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BeforeController.xib; sourceTree = "<group>"; };
+		A53C4759178B77CA00B528DB /* DataManagerDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DataManagerDelegate.h; path = MenuOrder/Data/DataManagerDelegate.h; sourceTree = "<group>"; };
+		A53C475A178B798900B528DB /* VersionDownloadDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = VersionDownloadDelegate.h; path = MenuOrder/Data/VersionDownloadDelegate.h; sourceTree = "<group>"; };
+		A53C475B178B799F00B528DB /* PageDownloadDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PageDownloadDelegate.h; path = MenuOrder/Data/PageDownloadDelegate.h; sourceTree = "<group>"; };
 		A53D4606178A2B320062A0D0 /* DisplayPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DisplayPage.h; path = MenuOrder/Data/DisplayPage.h; sourceTree = "<group>"; };
 		A53D4607178A2B320062A0D0 /* DisplayPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DisplayPage.m; path = MenuOrder/Data/DisplayPage.m; sourceTree = "<group>"; };
 		A541EFB01763A5F800BA9CBF /* UserManualController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserManualController.h; sourceTree = "<group>"; };
@@ -146,6 +149,9 @@
 				A5555C361788D12F00F96D14 /* PageDownloadWorker.m */,
 				A53D4606178A2B320062A0D0 /* DisplayPage.h */,
 				A53D4607178A2B320062A0D0 /* DisplayPage.m */,
+				A53C4759178B77CA00B528DB /* DataManagerDelegate.h */,
+				A53C475A178B798900B528DB /* VersionDownloadDelegate.h */,
+				A53C475B178B799F00B528DB /* PageDownloadDelegate.h */,
 			);
 			name = DataManager;
 			sourceTree = "<group>";
@@ -258,10 +264,10 @@
 				A5D9AC9C17629D1000E23220 /* TotalOrderController.h */,
 				A5D9AC9D17629D1000E23220 /* TotalOrderController.m */,
 				A5D9AC9E17629D1000E23220 /* TotalOrderController.xib */,
-				A5F002651750F7D4001FDFB4 /* Supporting Files */,
 				A502D11E176A0D6B00548685 /* TotalOrderController1.h */,
 				A502D11F176A0D6B00548685 /* TotalOrderController1.m */,
 				A502D120176A0D6B00548685 /* TotalOrderController1.xib */,
+				A5F002651750F7D4001FDFB4 /* Supporting Files */,
 			);
 			path = MenuOrder;
 			sourceTree = "<group>";

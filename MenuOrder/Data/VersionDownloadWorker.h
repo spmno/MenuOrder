@@ -7,7 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import "VersionDownloadDelegate.h"
 @interface VersionDownloadWorker : NSObject
+{
+    id<VersionDownloadDelegate> delegate;
+@private
+    NSMutableData *receivedData;
+}
 
+@property (strong, nonatomic) id delegate;
+
+- (BOOL) startDownloadVersion;
 @end

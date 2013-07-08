@@ -9,5 +9,6 @@
 #import <Foundation/Foundation.h>
 
 @interface DisplayPage : NSObject
-
+@property (strong, nonatomic) NSString *imagePath;
+@property (strong, nonatomic) NSArray *subItems;
 @end
