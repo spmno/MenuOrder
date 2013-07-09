@@ -10,12 +10,11 @@
 #import "PageDownloadDelegate.h"
 @interface PageDownloadWorker : NSObject
 {
-    id<PageDownloadDelegate> delegate;
 @private
     NSMutableData *receivedData;
 }
 
-@property (strong, nonatomic) id delegate;
+@property (strong, nonatomic) id<PageDownloadDelegate> delegate;
 
 - (BOOL) startDownloadPage;
 @end

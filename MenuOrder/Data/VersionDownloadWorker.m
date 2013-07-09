@@ -17,7 +17,7 @@
     receivedData = [[NSMutableData alloc] init];
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:appVersionUrl]];
     [NSURLConnection connectionWithRequest:request delegate:self];
-
+    return YES;
 }
 
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response {
@@ -48,7 +48,7 @@
     NSLog(@"server version is %d\r\n", [versionOnServer integerValue]);
     //PersistentData *persistenData = [[PersistentData alloc] init];
     //NSNumber *versionOnApp = [persistenData getVersion];
-    [delegate didFinishVersion:versionOnServer];
+    [self.delegate didFinishVersion:versionOnServer];
     //if ([versionOnServer isEqualToNumber:versionOnApp]) {
     //    return;
     //}

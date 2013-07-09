@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 
 @protocol DataManagerDelegate <NSObject>
-- (void) didFinishVersionLoading;
+@optional
+- (void) didFinishVersionLoading : (NSNumber*) version;
 - (void) didFinishPageLoading;
+- (void) downloadPageStep : (NSString*) itemName;
 @end

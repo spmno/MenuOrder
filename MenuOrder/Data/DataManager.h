@@ -13,12 +13,12 @@
 
 @interface DataManager : NSObject<VersionDownloadDelegate, PageDownloadDelegate>
 {
-    id<DataManagerDelegate> delegate;
     VersionDownloadWorker *_versionWorker;
     PageDownloadWorker  *_pageWorker;
 }
 + (DataManager*) sharedInstance;
-- (NSString*) getAppVersion;
+- (void) getAppVersion;
 @property (strong, nonatomic) NSMutableArray *wholePageContainer;
 @property (strong, nonatomic) NSNumber *versionNumber;
+@property (strong, nonatomic) id<DataManagerDelegate> delegate;
 @end

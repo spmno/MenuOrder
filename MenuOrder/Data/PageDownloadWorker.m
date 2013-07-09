@@ -9,6 +9,18 @@
 #import "PageDownloadWorker.h"
 
 @implementation PageDownloadWorker
+
+- (BOOL) startDownloadPage
+{
+    NSString *appVersionUrl = @"http://127.0.0.1:3000/pages/update_app.json";
+    //NSString *appVersionUrl = @"http://192.168.59.1:3000/page_versions/last_version.json";
+    receivedData = [[NSMutableData alloc] init];
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:appVersionUrl]];
+    [NSURLConnection connectionWithRequest:request delegate:self];
+    return YES;
+}
+
+
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response {
     // store data
     [receivedData setLength:0];            //通常在这里先清空接受数据的缓存
@@ -35,11 +47,11 @@
     }
     NSNumber *versionOnServer = [versionJson objectForKey:@"id"];
     NSLog(@"server version is %d\r\n", [versionOnServer integerValue]);
-    PersistentData *persistenData = [[PersistentData alloc] init];
-    NSNumber *versionOnApp = [persistenData getVersion];
-    if ([versionOnServer isEqualToNumber:versionOnApp]) {
-        return;
-    }
+//    PersistentData *persistenData = [[PersistentData alloc] init];
+//   NSNumber *versionOnApp = [persistenData getVersion];
+//    if ([versionOnServer isEqualToNumber:versionOnApp]) {
+//        return;
+//    }
     
     //NSString *returnString = [[NSString alloc] initWithData:receivedData encoding:NSUTF8StringEncoding];
     //NSLog(returnString);

@@ -16,6 +16,10 @@
 		A51210DA17597EB7003A0498 /* DishCountController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A51210D817597EB7003A0498 /* DishCountController.xib */; };
 		A520A8D71756CA1D004A81EB /* BeforeController.m in Sources */ = {isa = PBXBuildFile; fileRef = A520A8D51756CA1D004A81EB /* BeforeController.m */; };
 		A520A8D81756CA1D004A81EB /* BeforeController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A520A8D61756CA1D004A81EB /* BeforeController.xib */; };
+		A53BD404178CB00C00CAB4C7 /* VersionCheckController.m in Sources */ = {isa = PBXBuildFile; fileRef = A53BD402178CB00C00CAB4C7 /* VersionCheckController.m */; };
+		A53BD405178CB00C00CAB4C7 /* VersionCheckController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A53BD403178CB00C00CAB4C7 /* VersionCheckController.xib */; };
+		A53BD409178CC33600CAB4C7 /* UpdateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A53BD407178CC33500CAB4C7 /* UpdateViewController.m */; };
+		A53BD40A178CC33600CAB4C7 /* UpdateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A53BD408178CC33500CAB4C7 /* UpdateViewController.xib */; };
 		A53D4608178A2B320062A0D0 /* DisplayPage.m in Sources */ = {isa = PBXBuildFile; fileRef = A53D4607178A2B320062A0D0 /* DisplayPage.m */; };
 		A541EFB31763A5F800BA9CBF /* UserManualController.m in Sources */ = {isa = PBXBuildFile; fileRef = A541EFB11763A5F800BA9CBF /* UserManualController.m */; };
 		A541EFB41763A5F800BA9CBF /* UserManualController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A541EFB21763A5F800BA9CBF /* UserManualController.xib */; };
@@ -65,6 +69,12 @@
 		A520A8D41756CA1D004A81EB /* BeforeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeforeController.h; sourceTree = "<group>"; };
 		A520A8D51756CA1D004A81EB /* BeforeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeforeController.m; sourceTree = "<group>"; };
 		A520A8D61756CA1D004A81EB /* BeforeController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BeforeController.xib; sourceTree = "<group>"; };
+		A53BD401178CB00C00CAB4C7 /* VersionCheckController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VersionCheckController.h; sourceTree = "<group>"; };
+		A53BD402178CB00C00CAB4C7 /* VersionCheckController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VersionCheckController.m; sourceTree = "<group>"; };
+		A53BD403178CB00C00CAB4C7 /* VersionCheckController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VersionCheckController.xib; sourceTree = "<group>"; };
+		A53BD406178CC33500CAB4C7 /* UpdateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UpdateViewController.h; sourceTree = "<group>"; };
+		A53BD407178CC33500CAB4C7 /* UpdateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UpdateViewController.m; sourceTree = "<group>"; };
+		A53BD408178CC33500CAB4C7 /* UpdateViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UpdateViewController.xib; sourceTree = "<group>"; };
 		A53C4759178B77CA00B528DB /* DataManagerDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DataManagerDelegate.h; path = MenuOrder/Data/DataManagerDelegate.h; sourceTree = "<group>"; };
 		A53C475A178B798900B528DB /* VersionDownloadDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = VersionDownloadDelegate.h; path = MenuOrder/Data/VersionDownloadDelegate.h; sourceTree = "<group>"; };
 		A53C475B178B799F00B528DB /* PageDownloadDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PageDownloadDelegate.h; path = MenuOrder/Data/PageDownloadDelegate.h; sourceTree = "<group>"; };
@@ -267,6 +277,12 @@
 				A502D11E176A0D6B00548685 /* TotalOrderController1.h */,
 				A502D11F176A0D6B00548685 /* TotalOrderController1.m */,
 				A502D120176A0D6B00548685 /* TotalOrderController1.xib */,
+				A53BD401178CB00C00CAB4C7 /* VersionCheckController.h */,
+				A53BD402178CB00C00CAB4C7 /* VersionCheckController.m */,
+				A53BD403178CB00C00CAB4C7 /* VersionCheckController.xib */,
+				A53BD406178CC33500CAB4C7 /* UpdateViewController.h */,
+				A53BD407178CC33500CAB4C7 /* UpdateViewController.m */,
+				A53BD408178CC33500CAB4C7 /* UpdateViewController.xib */,
 				A5F002651750F7D4001FDFB4 /* Supporting Files */,
 			);
 			path = MenuOrder;
@@ -364,6 +380,8 @@
 				A5D9ACA51762B1CD00E23220 /* DishCountController1.xib in Resources */,
 				A541EFB41763A5F800BA9CBF /* UserManualController.xib in Resources */,
 				A502D122176A0D6B00548685 /* TotalOrderController1.xib in Resources */,
+				A53BD405178CB00C00CAB4C7 /* VersionCheckController.xib in Resources */,
+				A53BD40A178CC33600CAB4C7 /* UpdateViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -394,6 +412,8 @@
 				A5555C341788D10000F96D14 /* VersionDownloadWorker.m in Sources */,
 				A5555C371788D12F00F96D14 /* PageDownloadWorker.m in Sources */,
 				A53D4608178A2B320062A0D0 /* DisplayPage.m in Sources */,
+				A53BD404178CB00C00CAB4C7 /* VersionCheckController.m in Sources */,
+				A53BD409178CC33600CAB4C7 /* UpdateViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

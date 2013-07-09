@@ -30,15 +30,25 @@
     return [super init];
 }
 
-- (NSString*) getAppVersion
+- (void) getAppVersion
 {
     [_versionWorker startDownloadVersion];
-    return @"";
 }
 
 - (void) didFinishVersion:(NSNumber *)version
 {
     _versionNumber = version;
+    [_delegate didFinishVersionLoading:version];
+}
+
+- (void) didFinishPageLoading
+{
+    
+}
+
+- (void) downloadPageStep:(NSString *)itemName
+{
+    
 }
 
 @end

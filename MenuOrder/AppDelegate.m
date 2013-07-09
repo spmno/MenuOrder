@@ -9,17 +9,16 @@
 #import "AppDelegate.h"
 
 #import "ViewController.h"
+#import "VersionCheckController.h"
 #import "Data/DataManager.h"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    DataManager *manager =[DataManager sharedInstance];
-    NSString *appVersion = [manager getAppVersion];
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    self.viewController = [[ViewController alloc] initWithNibName:@"ViewController" bundle:nil];
+    self.viewController = [[VersionCheckController alloc] initWithNibName:@"VersionCheckController" bundle:nil];
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
     return YES;

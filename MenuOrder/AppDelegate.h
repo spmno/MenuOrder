@@ -9,11 +9,11 @@
 #import <UIKit/UIKit.h>
 
 @class ViewController;
-
+@class VersionCheckController;
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
-@property (strong, nonatomic) ViewController *viewController;
+@property (strong, nonatomic) VersionCheckController *viewController;
 
 @end
