@@ -7,12 +7,18 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "DataManagerDelegate.h"
+#import "VersionDownloadWorker.h"
+#import "PageDownloadWorker.h"
 
-@interface DataManager : NSObject
+@interface DataManager : NSObject<VersionDownloadDelegate, PageDownloadDelegate>
 {
-@private
-    NSMutableData *receivedData;
+    id<DataManagerDelegate> delegate;
+    VersionDownloadWorker *_versionWorker;
+    PageDownloadWorker  *_pageWorker;
 }
 + (DataManager*) sharedInstance;
 - (NSString*) getAppVersion;
+@property (strong, nonatomic) NSMutableArray *wholePageContainer;
+@property (strong, nonatomic) NSNumber *versionNumber;
 @end
