@@ -24,15 +24,20 @@
 - (id) init
 {
     _versionWorker = [[VersionDownloadWorker alloc] init];
-    _pageWorker = [[UpdateJsonDownloadWorker alloc] init];
+    _updateWorker = [[UpdateJsonDownloadWorker alloc] init];
     _versionWorker.delegate = self;
-    _pageWorker.delegate = self;
+    _updateWorker.delegate = self;
     return [super init];
 }
 
 - (void) getAppVersion
 {
     [_versionWorker startDownloadVersion];
+}
+
+- (void) getPages
+{
+    [_updateWorker startDownloadUpdateJson];
 }
 
 - (void) didFinishVersion:(NSNumber *)version

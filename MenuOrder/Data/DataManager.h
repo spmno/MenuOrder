@@ -9,15 +9,18 @@
 #import <Foundation/Foundation.h>
 #import "DataManagerDelegate.h"
 #import "VersionDownloadWorker.h"
+#import "PageDownloadWorker.h"
 #import "UpdateJsonDownloadWorker.h"
 
-@interface DataManager : NSObject<VersionDownloadDelegate, PageDownloadDelegate>
+
+@interface DataManager : NSObject<VersionDownloadDelegate, UpdateJsonDownloadDelegate>
 {
     VersionDownloadWorker *_versionWorker;
-    UpdateJsonDownloadWorker  *_pageWorker;
+    UpdateJsonDownloadWorker  *_updateWorker;
 }
 + (DataManager*) sharedInstance;
 - (void) getAppVersion;
+- (void) getPages;
 @property (strong, nonatomic) NSMutableArray *wholePageContainer;
 @property (strong, nonatomic) NSNumber *versionNumber;
 @property (strong, nonatomic) id<DataManagerDelegate> delegate;

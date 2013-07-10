@@ -117,6 +117,7 @@
 		A5E4FD7F178E0AA8007B5A4A /* DishKindDownloadWorker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DishKindDownloadWorker.m; path = MenuOrder/Data/DishKindDownloadWorker.m; sourceTree = "<group>"; };
 		A5E4FD81178E0ACF007B5A4A /* PageDownloadWorker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PageDownloadWorker.h; path = MenuOrder/Data/PageDownloadWorker.h; sourceTree = "<group>"; };
 		A5E4FD82178E0ACF007B5A4A /* PageDownloadWorker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PageDownloadWorker.m; path = MenuOrder/Data/PageDownloadWorker.m; sourceTree = "<group>"; };
+		A5E4FD84178E1C18007B5A4A /* UpdateJsonDownloadDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = UpdateJsonDownloadDelegate.h; path = MenuOrder/Data/UpdateJsonDownloadDelegate.h; sourceTree = "<group>"; };
 		A5F0025B1750F7D4001FDFB4 /* MenuOrder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MenuOrder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5F0025E1750F7D4001FDFB4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		A5F002601750F7D4001FDFB4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -158,25 +159,26 @@
 			children = (
 				A511008E1783856B00608ACE /* DataManager.h */,
 				A511008F1783856B00608ACE /* DataManager.m */,
+				A53C4759178B77CA00B528DB /* DataManagerDelegate.h */,
 				A5421F291786315900DBFD1D /* PersistentData.h */,
 				A5421F2A1786315900DBFD1D /* PersistentData.m */,
 				A5555C2F1788C8C300F96D14 /* FileManager.h */,
 				A5555C301788C8C300F96D14 /* FileManager.m */,
 				A5555C321788D10000F96D14 /* VersionDownloadWorker.h */,
 				A5555C331788D10000F96D14 /* VersionDownloadWorker.m */,
+				A53C475A178B798900B528DB /* VersionDownloadDelegate.h */,
 				A5555C351788D12F00F96D14 /* UpdateJsonDownloadWorker.h */,
 				A5555C361788D12F00F96D14 /* UpdateJsonDownloadWorker.m */,
+				A5E4FD84178E1C18007B5A4A /* UpdateJsonDownloadDelegate.h */,
 				A53D4606178A2B320062A0D0 /* DisplayPage.h */,
 				A53D4607178A2B320062A0D0 /* DisplayPage.m */,
-				A53C4759178B77CA00B528DB /* DataManagerDelegate.h */,
-				A53C475A178B798900B528DB /* VersionDownloadDelegate.h */,
-				A53C475B178B799F00B528DB /* PageDownloadDelegate.h */,
 				A5E4FD7B178E08B9007B5A4A /* DishKind.h */,
 				A5E4FD7C178E08B9007B5A4A /* DishKind.m */,
 				A5E4FD7E178E0AA8007B5A4A /* DishKindDownloadWorker.h */,
 				A5E4FD7F178E0AA8007B5A4A /* DishKindDownloadWorker.m */,
 				A5E4FD81178E0ACF007B5A4A /* PageDownloadWorker.h */,
 				A5E4FD82178E0ACF007B5A4A /* PageDownloadWorker.m */,
+				A53C475B178B799F00B528DB /* PageDownloadDelegate.h */,
 			);
 			name = DataManager;
 			sourceTree = "<group>";

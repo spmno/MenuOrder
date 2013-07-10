@@ -7,6 +7,7 @@
 //
 
 #import "UpdateViewController.h"
+#import "UpdateJsonDownloadWorker.h"
 
 @interface UpdateViewController ()
 
@@ -27,6 +28,8 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    UpdateJsonDownloadWorker *updateJsonWorker = [[UpdateJsonDownloadWorker alloc] init];
+    [updateJsonWorker startDownloadUpdateJson];
 }
 
 - (void)didReceiveMemoryWarning

@@ -10,7 +10,7 @@
 
 @implementation UpdateJsonDownloadWorker
 
-- (BOOL) startDownloadPage
+- (BOOL) startDownloadUpdateJson
 {
     NSString *appVersionUrl = @"http://127.0.0.1:3000/pages/update_app.json";
     //NSString *appVersionUrl = @"http://192.168.59.1:3000/page_versions/last_version.json";
@@ -40,13 +40,14 @@
     // disconnect
     [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
     NSError *error;
-    NSDictionary *versionJson = [NSJSONSerialization JSONObjectWithData:receivedData options:kNilOptions error:&error];
-    if (versionJson == nil) {
+    NSDictionary *updateJson = [NSJSONSerialization JSONObjectWithData:receivedData options:kNilOptions error:&error];
+    if (updateJson == nil) {
         NSLog(@"json parser failed\r\r");
         return;
     }
-    NSNumber *versionOnServer = [versionJson objectForKey:@"id"];
-    NSLog(@"server version is %d\r\n", [versionOnServer integerValue]);
+    NSDictionary *dishKinds = [updateJson objectForKey:@"kinds"];
+    NSDictionary *dishPages = [updateJson objectForKey:@"pages"];
+    //NSLog(@"server version is %d\r\n", [versionOnServer integerValue]);
 //    PersistentData *persistenData = [[PersistentData alloc] init];
 //   NSNumber *versionOnApp = [persistenData getVersion];
 //    if ([versionOnServer isEqualToNumber:versionOnApp]) {

@@ -7,14 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "PageDownloadDelegate.h"
+#import "UpdateJsonDownloadDelegate.h"
 @interface UpdateJsonDownloadWorker : NSObject
 {
 @private
     NSMutableData *receivedData;
 }
-
-@property (strong, nonatomic) id<PageDownloadDelegate> delegate;
-
-- (BOOL) startDownloadPage;
+@property (strong, nonatomic) id<UpdateJsonDownloadDelegate> delegate;
+- (BOOL) startDownloadUpdateJson;
 @end

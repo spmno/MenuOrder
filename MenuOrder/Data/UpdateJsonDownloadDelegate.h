@@ -1,5 +1,5 @@
 //
-//  PageDownloadWorker.h
+//  UpdateJsonDownloadDelegate.h
 //  MenuOrder
 //
 //  Created by spmno on 13-7-11.
@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "PageDownloadDelegate.h"
-@interface PageDownloadWorker : NSObject
+
+@protocol UpdateJsonDownloadDelegate <NSObject>
 
 @end
