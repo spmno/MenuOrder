@@ -11,4 +11,5 @@
 @interface DisplayPage : NSObject
 @property (strong, nonatomic) NSString *imagePath;
 @property (strong, nonatomic) NSArray *subItems;
+@property (strong, nonatomic) NSNumber *kindId;
 @end

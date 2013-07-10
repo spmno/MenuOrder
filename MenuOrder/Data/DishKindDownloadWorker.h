@@ -1,5 +1,5 @@
 //
-//  PageDownloadWorker.h
+//  DishKindDownloadWorker.h
 //  MenuOrder
 //
 //  Created by spmno on 13-7-11.
@@ -8,6 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-@interface PageDownloadWorker : NSObject
+@interface DishKindDownloadWorker : NSObject
 
 @end

@@ -9,12 +9,12 @@
 #import <Foundation/Foundation.h>
 #import "DataManagerDelegate.h"
 #import "VersionDownloadWorker.h"
-#import "PageDownloadWorker.h"
+#import "UpdateJsonDownloadWorker.h"
 
 @interface DataManager : NSObject<VersionDownloadDelegate, PageDownloadDelegate>
 {
     VersionDownloadWorker *_versionWorker;
-    PageDownloadWorker  *_pageWorker;
+    UpdateJsonDownloadWorker  *_pageWorker;
 }
 + (DataManager*) sharedInstance;
 - (void) getAppVersion;

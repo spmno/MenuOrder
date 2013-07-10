@@ -24,7 +24,7 @@
 - (id) init
 {
     _versionWorker = [[VersionDownloadWorker alloc] init];
-    _pageWorker = [[PageDownloadWorker alloc] init];
+    _pageWorker = [[UpdateJsonDownloadWorker alloc] init];
     _versionWorker.delegate = self;
     _pageWorker.delegate = self;
     return [super init];
