@@ -40,6 +40,16 @@
     [_updateWorker startDownloadUpdateJson: _wholePageContainer: _wholeKindContainer];
 }
 
+- (void) getKindData
+{
+    
+}
+
+- (void) getPageData
+{
+    
+}
+
 - (void) didFinishVersion:(NSNumber *)version
 {
     _versionNumber = version;
@@ -54,6 +64,12 @@
 - (void) downloadPageStep:(NSString *)itemName
 {
     
+}
+
+- (void) didFinishDownloadUpdateJson
+{
+    [self getKindData];
+    [self getPageData];
 }
 
 @end

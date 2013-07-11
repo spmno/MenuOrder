@@ -67,6 +67,8 @@
         dishKind.imageUrl = [photoDictionary objectForKey:@"photo"];
         [_kindArray addObject:dishKind];
     }
+    
+    [_delegate didFinishDownloadUpdateJson];
     //NSLog(@"server version is %d\r\n", [versionOnServer integerValue]);
 //    PersistentData *persistenData = [[PersistentData alloc] init];
 //   NSNumber *versionOnApp = [persistenData getVersion];

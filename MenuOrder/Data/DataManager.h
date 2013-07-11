@@ -11,9 +11,11 @@
 #import "VersionDownloadWorker.h"
 #import "PageDownloadWorker.h"
 #import "UpdateJsonDownloadWorker.h"
+#import "DishKindDownloadWorker.h"
 
-
-@interface DataManager : NSObject<VersionDownloadDelegate, UpdateJsonDownloadDelegate>
+@interface DataManager : NSObject<VersionDownloadDelegate,
+                                UpdateJsonDownloadDelegate,
+                                DishKindDownloadDelegate>
 {
     VersionDownloadWorker *_versionWorker;
     UpdateJsonDownloadWorker  *_updateWorker;
@@ -24,6 +26,6 @@
 @property (strong, nonatomic) NSMutableArray *wholePageContainer;
 @property (strong, nonatomic) NSMutableArray *wholeKindContainer;
 @property (strong, nonatomic) NSNumber *versionNumber;
-@property (strong, nonatomic) id<DataManagerDelegate> delegate;
+@property (weak, nonatomic) id<DataManagerDelegate> delegate;
 
 @end

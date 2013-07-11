@@ -7,7 +7,16 @@
 //
 
 #import "DishKindDownloadWorker.h"
-
+#import "DishKind.h"
 @implementation DishKindDownloadWorker
+
+- (void) startDownloadDishKind : kinds
+{
+    for ((DishKind*) kind in kinds) {
+        <#statements#>
+    }
+}
+
+
 
 @end

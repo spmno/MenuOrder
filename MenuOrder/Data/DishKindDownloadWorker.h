@@ -7,7 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "DishKindDownloadDelegate.h"
 
 @interface DishKindDownloadWorker : NSObject
+{
+    NSMutableArray* downloadContainer;
+}
 
+@property (weak, nonatomic) id<DishKindDownloadDelegate> delegate;
+
+- (void) startDownloadDishKind : (NSMutableArray*)kinds;
 @end

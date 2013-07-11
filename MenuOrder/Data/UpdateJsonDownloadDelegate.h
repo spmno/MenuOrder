@@ -9,5 +9,5 @@
 #import <Foundation/Foundation.h>
 
 @protocol UpdateJsonDownloadDelegate <NSObject>
-
+- (void) didFinishDownloadUpdateJson;
 @end

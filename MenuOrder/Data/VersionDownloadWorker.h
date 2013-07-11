@@ -15,7 +15,7 @@
     NSMutableData *receivedData;
 }
 
-@property (strong, nonatomic) id delegate;
+@property (weak, nonatomic) id delegate;
 
 - (BOOL) startDownloadVersion;
 @end

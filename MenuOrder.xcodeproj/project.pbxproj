@@ -94,6 +94,7 @@
 		A5555C331788D10000F96D14 /* VersionDownloadWorker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VersionDownloadWorker.m; path = MenuOrder/Data/VersionDownloadWorker.m; sourceTree = "<group>"; };
 		A5555C351788D12F00F96D14 /* UpdateJsonDownloadWorker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UpdateJsonDownloadWorker.h; path = MenuOrder/Data/UpdateJsonDownloadWorker.h; sourceTree = "<group>"; };
 		A5555C361788D12F00F96D14 /* UpdateJsonDownloadWorker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UpdateJsonDownloadWorker.m; path = MenuOrder/Data/UpdateJsonDownloadWorker.m; sourceTree = "<group>"; };
+		A5671AD4178F5FE70052C329 /* DishKindDownloadDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DishKindDownloadDelegate.h; path = MenuOrder/Data/DishKindDownloadDelegate.h; sourceTree = "<group>"; };
 		A5D7484D17580A2D00617C1E /* BeforeSubController1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeforeSubController1.h; sourceTree = "<group>"; };
 		A5D7484E17580A2D00617C1E /* BeforeSubController1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeforeSubController1.m; sourceTree = "<group>"; };
 		A5D7484F17580A2D00617C1E /* BeforeSubController1.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BeforeSubController1.xib; sourceTree = "<group>"; };
@@ -176,6 +177,7 @@
 				A5E4FD7C178E08B9007B5A4A /* DishKind.m */,
 				A5E4FD7E178E0AA8007B5A4A /* DishKindDownloadWorker.h */,
 				A5E4FD7F178E0AA8007B5A4A /* DishKindDownloadWorker.m */,
+				A5671AD4178F5FE70052C329 /* DishKindDownloadDelegate.h */,
 				A5E4FD81178E0ACF007B5A4A /* PageDownloadWorker.h */,
 				A5E4FD82178E0ACF007B5A4A /* PageDownloadWorker.m */,
 				A53C475B178B799F00B528DB /* PageDownloadDelegate.h */,
