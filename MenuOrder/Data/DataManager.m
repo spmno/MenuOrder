@@ -37,7 +37,7 @@
 
 - (void) getPages
 {
-    [_updateWorker startDownloadUpdateJson];
+    [_updateWorker startDownloadUpdateJson: _wholePageContainer: _wholeKindContainer];
 }
 
 - (void) didFinishVersion:(NSNumber *)version

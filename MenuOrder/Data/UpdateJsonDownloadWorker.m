@@ -7,14 +7,18 @@
 //
 
 #import "UpdateJsonDownloadWorker.h"
+#import "DishKind.h"
+#import "DisplayPage.h"
 
 @implementation UpdateJsonDownloadWorker
 
-- (BOOL) startDownloadUpdateJson
+- (BOOL) startDownloadUpdateJson:(NSMutableArray *)pageContainer :(NSMutableArray *)kindContainer
 {
     NSString *appVersionUrl = @"http://127.0.0.1:3000/pages/update_app.json";
     //NSString *appVersionUrl = @"http://192.168.59.1:3000/page_versions/last_version.json";
     receivedData = [[NSMutableData alloc] init];
+    _pageArray = pageContainer;
+    _kindArray = kindContainer;
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:appVersionUrl]];
     [NSURLConnection connectionWithRequest:request delegate:self];
     return YES;
@@ -47,6 +51,22 @@
     }
     NSDictionary *dishKinds = [updateJson objectForKey:@"kinds"];
     NSDictionary *dishPages = [updateJson objectForKey:@"pages"];
+    
+    for (NSDictionary *page in dishPages) {
+        DisplayPage *displayPage = [[DisplayPage alloc] init];
+        NSDictionary *photoDictionary = [page objectForKey:@"photo"];
+        displayPage.imagePath = [photoDictionary objectForKey:@"photo"];
+        NSDictionary *itemsDictionary = [page objectForKey:@"display_items"];
+        [_pageArray addObject:displayPage];
+        
+    }
+    
+    for (NSDictionary *kind in dishKinds) {
+        DishKind *dishKind = [[DishKind alloc] init];
+        NSDictionary *photoDictionary = [kind objectForKey:@"photo"             ];
+        dishKind.imageUrl = [photoDictionary objectForKey:@"photo"];
+        [_kindArray addObject:dishKind];
+    }
     //NSLog(@"server version is %d\r\n", [versionOnServer integerValue]);
 //    PersistentData *persistenData = [[PersistentData alloc] init];
 //   NSNumber *versionOnApp = [persistenData getVersion];

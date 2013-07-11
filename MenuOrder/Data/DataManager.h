@@ -22,6 +22,8 @@
 - (void) getAppVersion;
 - (void) getPages;
 @property (strong, nonatomic) NSMutableArray *wholePageContainer;
+@property (strong, nonatomic) NSMutableArray *wholeKindContainer;
 @property (strong, nonatomic) NSNumber *versionNumber;
 @property (strong, nonatomic) id<DataManagerDelegate> delegate;
+
 @end

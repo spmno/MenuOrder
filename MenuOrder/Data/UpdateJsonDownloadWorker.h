@@ -14,5 +14,7 @@
     NSMutableData *receivedData;
 }
 @property (strong, nonatomic) id<UpdateJsonDownloadDelegate> delegate;
-- (BOOL) startDownloadUpdateJson;
+@property (weak, nonatomic) NSMutableArray *pageArray;
+@property (weak, nonatomic) NSMutableArray *kindArray;
+- (BOOL) startDownloadUpdateJson : (NSMutableArray*) pageContainer :(NSMutableArray*) kindContainer;
 @end
