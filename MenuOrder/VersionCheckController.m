@@ -8,6 +8,8 @@
 
 #import "VersionCheckController.h"
 #import "PersistentData.h"
+#import "UpdateViewController.h"
+
 @interface VersionCheckController ()
 
 @end
@@ -59,4 +61,12 @@
     
 }
 
+- (IBAction)switch2UpdateController:(id)sender
+{
+    //UpdateViewController *updateViewController = [[UpdateViewController alloc] init];
+    UpdateViewController* updateViewController = [[UpdateViewController alloc]initWithNibName:@"UpdateViewController" bundle:nil];
+    [self presentViewController:updateViewController animated:YES completion:nil];
+    //[self.navigationController pushViewController: updateViewController animated:YES];
+    
+}
 @end

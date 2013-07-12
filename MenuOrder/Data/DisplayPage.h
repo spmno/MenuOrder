@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @interface DisplayPage : NSObject
-@property (strong, nonatomic) NSString *imagePath;
+@property (strong, nonatomic) NSString *imageUrl;
 @property (strong, nonatomic) NSArray *subItems;
 @property (strong, nonatomic) NSNumber *kindId;
 @end

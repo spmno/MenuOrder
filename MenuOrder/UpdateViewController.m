@@ -8,6 +8,8 @@
 
 #import "UpdateViewController.h"
 #import "UpdateJsonDownloadWorker.h"
+#import "DataManager.h"
+#import "PersistentData.h"
 
 @interface UpdateViewController ()
 
@@ -28,14 +30,24 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    UpdateJsonDownloadWorker *updateJsonWorker = [[UpdateJsonDownloadWorker alloc] init];
-    [updateJsonWorker startDownloadUpdateJson];
+    //UpdateJsonDownloadWorker *updateJsonWorker = [[UpdateJsonDownloadWorker alloc] init];
+    //[updateJsonWorker startDownloadUpdateJson];
+    DataManager *dataManager = [DataManager sharedInstance];
+    dataManager.delegate = self;
+    [dataManager getUpdateJsons];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void) didFInishAppInfoLoading
+{
+    DataManager *dataManager = [DataManager sharedInstance];
+    [dataManager getKindsData];
+
 }
 
 @end

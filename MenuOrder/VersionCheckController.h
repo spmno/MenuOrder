@@ -11,5 +11,6 @@
 @interface VersionCheckController : UIViewController<DataManagerDelegate>
 @property (strong, nonatomic) IBOutlet UILabel *checkInfo;
 @property (strong, nonatomic) IBOutlet UIButton *actionButton;
+- (IBAction)switch2UpdateController:(id)sender;
 
 @end

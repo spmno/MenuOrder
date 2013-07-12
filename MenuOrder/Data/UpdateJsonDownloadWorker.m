@@ -9,12 +9,13 @@
 #import "UpdateJsonDownloadWorker.h"
 #import "DishKind.h"
 #import "DisplayPage.h"
+#import "PathDefine.h"
 
 @implementation UpdateJsonDownloadWorker
 
 - (BOOL) startDownloadUpdateJson:(NSMutableArray *)pageContainer :(NSMutableArray *)kindContainer
 {
-    NSString *appVersionUrl = @"http://127.0.0.1:3000/pages/update_app.json";
+    NSString *appVersionUrl = APP_VERSION_URL;
     //NSString *appVersionUrl = @"http://192.168.59.1:3000/page_versions/last_version.json";
     receivedData = [[NSMutableData alloc] init];
     _pageArray = pageContainer;
@@ -55,7 +56,8 @@
     for (NSDictionary *page in dishPages) {
         DisplayPage *displayPage = [[DisplayPage alloc] init];
         NSDictionary *photoDictionary = [page objectForKey:@"photo"];
-        displayPage.imagePath = [photoDictionary objectForKey:@"photo"];
+        displayPage.imageUrl = [photoDictionary objectForKey:@"photo"];
+        NSLog(@"page image url = %@", displayPage.imageUrl);
         NSDictionary *itemsDictionary = [page objectForKey:@"display_items"];
         [_pageArray addObject:displayPage];
         

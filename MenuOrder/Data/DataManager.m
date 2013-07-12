@@ -23,31 +23,35 @@
 
 - (id) init
 {
-    _versionWorker = [[VersionDownloadWorker alloc] init];
-    _updateWorker = [[UpdateJsonDownloadWorker alloc] init];
-    _versionWorker.delegate = self;
-    _updateWorker.delegate = self;
+    versionWorker = [[VersionDownloadWorker alloc] init];
+    updateWorker = [[UpdateJsonDownloadWorker alloc] init];
+    dishKindWorker = [[DishKindDownloadWorker alloc] init];
+    pageWorker = [[PageDownloadWorker alloc] init];
+    versionWorker.delegate = self;
+    updateWorker.delegate = self;
+    dishKindWorker.delegate = self;
+    pageWorker.delegate = self;
     return [super init];
 }
 
 - (void) getAppVersion
 {
-    [_versionWorker startDownloadVersion];
+    [versionWorker startDownloadVersion];
 }
 
-- (void) getPages
+- (void) getUpdateJsons
 {
-    [_updateWorker startDownloadUpdateJson: _wholePageContainer: _wholeKindContainer];
+    [updateWorker startDownloadUpdateJson: _wholePageContainer: _wholeKindContainer];
 }
 
-- (void) getKindData
+- (void) getKindsData
 {
-    
+    [dishKindWorker startDownloadDishKind: _wholeKindContainer];
 }
 
-- (void) getPageData
+- (void) getPagesData
 {
-    
+    [pageWorker startDownloadPages:_wholePageContainer];
 }
 
 - (void) didFinishVersion:(NSNumber *)version
@@ -68,8 +72,13 @@
 
 - (void) didFinishDownloadUpdateJson
 {
-    [self getKindData];
-    [self getPageData];
+    [self getKindsData];
+    [self getPagesData];
+}
+
+- (void) didFinishDownloadKind
+{
+    
 }
 
 @end

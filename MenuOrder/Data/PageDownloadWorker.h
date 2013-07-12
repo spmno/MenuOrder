@@ -9,5 +9,13 @@
 #import <Foundation/Foundation.h>
 #import "PageDownloadDelegate.h"
 @interface PageDownloadWorker : NSObject
+{
+@private
+    NSMutableArray *downloadContainer;
+    NSMutableArray *imagePathContainer;
+    NSMutableData *receivedData;
+}
 
+- (void) startDownloadPages : (NSMutableArray*)pages;
+@property (weak, nonatomic) id<PageDownloadDelegate> delegate;
 @end

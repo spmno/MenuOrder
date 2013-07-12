@@ -112,6 +112,7 @@
 		A5D9DE4017521C48009D23D6 /* SubOrderItem1.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SubOrderItem1.xib; sourceTree = "<group>"; };
 		A5D9DE4217521CC1009D23D6 /* SubOrderItem2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SubOrderItem2.xib; sourceTree = "<group>"; };
 		A5D9DE4417521CE7009D23D6 /* SubOrderItem3.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SubOrderItem3.xib; sourceTree = "<group>"; };
+		A5DC8882179072130097C690 /* PathDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PathDefine.h; path = MenuOrder/Data/PathDefine.h; sourceTree = "<group>"; };
 		A5E4FD7B178E08B9007B5A4A /* DishKind.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DishKind.h; path = MenuOrder/Data/DishKind.h; sourceTree = "<group>"; };
 		A5E4FD7C178E08B9007B5A4A /* DishKind.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DishKind.m; path = MenuOrder/Data/DishKind.m; sourceTree = "<group>"; };
 		A5E4FD7E178E0AA8007B5A4A /* DishKindDownloadWorker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DishKindDownloadWorker.h; path = MenuOrder/Data/DishKindDownloadWorker.h; sourceTree = "<group>"; };
@@ -181,6 +182,7 @@
 				A5E4FD81178E0ACF007B5A4A /* PageDownloadWorker.h */,
 				A5E4FD82178E0ACF007B5A4A /* PageDownloadWorker.m */,
 				A53C475B178B799F00B528DB /* PageDownloadDelegate.h */,
+				A5DC8882179072130097C690 /* PathDefine.h */,
 			);
 			name = DataManager;
 			sourceTree = "<group>";

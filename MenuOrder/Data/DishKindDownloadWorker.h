@@ -11,7 +11,10 @@
 
 @interface DishKindDownloadWorker : NSObject
 {
-    NSMutableArray* downloadContainer;
+@private
+    NSMutableArray *downloadContainer;
+    NSMutableArray *imagePathContainer;
+    NSMutableData *receivedData;
 }
 
 @property (weak, nonatomic) id<DishKindDownloadDelegate> delegate;

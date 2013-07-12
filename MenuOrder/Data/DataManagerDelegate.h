@@ -11,6 +11,7 @@
 @protocol DataManagerDelegate <NSObject>
 @optional
 - (void) didFinishVersionLoading : (NSNumber*) version;
+- (void) didFInishAppInfoLoading;
 - (void) didFinishPageLoading;
 - (void) downloadPageStep : (NSString*) itemName;
 @end

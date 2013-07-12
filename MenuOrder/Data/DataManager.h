@@ -15,14 +15,19 @@
 
 @interface DataManager : NSObject<VersionDownloadDelegate,
                                 UpdateJsonDownloadDelegate,
-                                DishKindDownloadDelegate>
+                                DishKindDownloadDelegate,
+                                PageDownloadDelegate>
 {
-    VersionDownloadWorker *_versionWorker;
-    UpdateJsonDownloadWorker  *_updateWorker;
+    VersionDownloadWorker *versionWorker;
+    UpdateJsonDownloadWorker  *updateWorker;
+    DishKindDownloadWorker *dishKindWorker;
+    PageDownloadWorker *pageWorker;
 }
 + (DataManager*) sharedInstance;
 - (void) getAppVersion;
-- (void) getPages;
+- (void) getUpdateJsons;
+- (void) getKindsData;
+- (void) getPagesData;
 @property (strong, nonatomic) NSMutableArray *wholePageContainer;
 @property (strong, nonatomic) NSMutableArray *wholeKindContainer;
 @property (strong, nonatomic) NSNumber *versionNumber;
