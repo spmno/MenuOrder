@@ -39,6 +39,7 @@
 		A5D9DE4117521C48009D23D6 /* SubOrderItem1.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5D9DE4017521C48009D23D6 /* SubOrderItem1.xib */; };
 		A5D9DE4317521CC1009D23D6 /* SubOrderItem2.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5D9DE4217521CC1009D23D6 /* SubOrderItem2.xib */; };
 		A5D9DE4517521CE7009D23D6 /* SubOrderItem3.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5D9DE4417521CE7009D23D6 /* SubOrderItem3.xib */; };
+		A5DD82B71791BF6A0047EB01 /* DisplayItem.m in Sources */ = {isa = PBXBuildFile; fileRef = A5DD82B61791BF6A0047EB01 /* DisplayItem.m */; };
 		A5E4FD7D178E08B9007B5A4A /* DishKind.m in Sources */ = {isa = PBXBuildFile; fileRef = A5E4FD7C178E08B9007B5A4A /* DishKind.m */; };
 		A5E4FD80178E0AA8007B5A4A /* DishKindDownloadWorker.m in Sources */ = {isa = PBXBuildFile; fileRef = A5E4FD7F178E0AA8007B5A4A /* DishKindDownloadWorker.m */; };
 		A5E4FD83178E0ACF007B5A4A /* PageDownloadWorker.m in Sources */ = {isa = PBXBuildFile; fileRef = A5E4FD82178E0ACF007B5A4A /* PageDownloadWorker.m */; };
@@ -113,6 +114,8 @@
 		A5D9DE4217521CC1009D23D6 /* SubOrderItem2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SubOrderItem2.xib; sourceTree = "<group>"; };
 		A5D9DE4417521CE7009D23D6 /* SubOrderItem3.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SubOrderItem3.xib; sourceTree = "<group>"; };
 		A5DC8882179072130097C690 /* PathDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PathDefine.h; path = MenuOrder/Data/PathDefine.h; sourceTree = "<group>"; };
+		A5DD82B51791BF6A0047EB01 /* DisplayItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DisplayItem.h; path = MenuOrder/Data/DisplayItem.h; sourceTree = "<group>"; };
+		A5DD82B61791BF6A0047EB01 /* DisplayItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DisplayItem.m; path = MenuOrder/Data/DisplayItem.m; sourceTree = "<group>"; };
 		A5E4FD7B178E08B9007B5A4A /* DishKind.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DishKind.h; path = MenuOrder/Data/DishKind.h; sourceTree = "<group>"; };
 		A5E4FD7C178E08B9007B5A4A /* DishKind.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DishKind.m; path = MenuOrder/Data/DishKind.m; sourceTree = "<group>"; };
 		A5E4FD7E178E0AA8007B5A4A /* DishKindDownloadWorker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DishKindDownloadWorker.h; path = MenuOrder/Data/DishKindDownloadWorker.h; sourceTree = "<group>"; };
@@ -174,6 +177,8 @@
 				A5E4FD84178E1C18007B5A4A /* UpdateJsonDownloadDelegate.h */,
 				A53D4606178A2B320062A0D0 /* DisplayPage.h */,
 				A53D4607178A2B320062A0D0 /* DisplayPage.m */,
+				A5DD82B51791BF6A0047EB01 /* DisplayItem.h */,
+				A5DD82B61791BF6A0047EB01 /* DisplayItem.m */,
 				A5E4FD7B178E08B9007B5A4A /* DishKind.h */,
 				A5E4FD7C178E08B9007B5A4A /* DishKind.m */,
 				A5E4FD7E178E0AA8007B5A4A /* DishKindDownloadWorker.h */,
@@ -438,6 +443,7 @@
 				A5E4FD7D178E08B9007B5A4A /* DishKind.m in Sources */,
 				A5E4FD80178E0AA8007B5A4A /* DishKindDownloadWorker.m in Sources */,
 				A5E4FD83178E0ACF007B5A4A /* PageDownloadWorker.m in Sources */,
+				A5DD82B71791BF6A0047EB01 /* DisplayItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

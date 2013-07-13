@@ -31,6 +31,15 @@
     return YES;
 }
 
+- (BOOL) saveImage:(NSString *)imageFileName :(NSData *)imageContent
+{
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentDirectory = [paths objectAtIndex:0];
+    NSString *imagePath = [documentDirectory stringByAppendingPathComponent:imageFileName];
+    [imageContent writeToFile:imagePath atomically:YES];
+    return YES;
+}
+
 -(NSString *)dataFilePath
 {
     /*常量NSDocumentDirectory表明我们正在查找Documents目录路径，第二个常量NSUserDomainMask表示的是把搜索范围定在应用程序沙盒中，YES表示的是希望希望该函数能查看用户主目录*/

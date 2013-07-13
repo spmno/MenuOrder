@@ -11,4 +11,5 @@
 @interface PersistentData : NSObject
 - (NSNumber*) getVersion;
 - (BOOL) saveVersion: (int) version;
+- (BOOL) saveImage: (NSString*) imageFileName withData:(NSData*)imageContent;
 @end

@@ -9,6 +9,7 @@
 #import "UpdateJsonDownloadWorker.h"
 #import "DishKind.h"
 #import "DisplayPage.h"
+#import "DisplayItem.h"
 #import "PathDefine.h"
 
 @implementation UpdateJsonDownloadWorker
@@ -59,6 +60,16 @@
         displayPage.imageUrl = [photoDictionary objectForKey:@"photo"];
         NSLog(@"page image url = %@", displayPage.imageUrl);
         NSDictionary *itemsDictionary = [page objectForKey:@"display_items"];
+        for (NSDictionary *item in itemsDictionary) {
+            DisplayItem *displayItem = [[DisplayItem alloc] init];
+            NSDictionary *itemDictionary = [item objectForKey:@"display_item"];
+            displayItem.x = [itemDictionary objectForKey:@"x"];
+            displayItem.y = [itemDictionary objectForKey:@"y"];
+            displayItem.width = [itemDictionary objectForKey:@"width"];
+            displayItem.height = [itemDictionary objectForKey:@"height"];
+            displayItem.dishId = [itemDictionary objectForKey:@"dish_id"];
+            [displayPage.subItems addObject:displayItem];
+        }
         [_pageArray addObject:displayPage];
         
     }

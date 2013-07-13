@@ -15,6 +15,7 @@
     NSMutableArray *downloadContainer;
     NSMutableArray *imagePathContainer;
     NSMutableData *receivedData;
+    NSInteger currentDownloadIndex;
 }
 
 @property (weak, nonatomic) id<DishKindDownloadDelegate> delegate;

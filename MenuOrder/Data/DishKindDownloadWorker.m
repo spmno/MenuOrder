@@ -9,6 +9,7 @@
 #import "DishKindDownloadWorker.h"
 #import "DishKind.h"
 #import "PathDefine.h"
+#import "PersistentData.h"
 
 @implementation DishKindDownloadWorker
 
@@ -24,11 +25,13 @@
     for (DishKind* dishKind in kinds) {
         [imagePathContainer addObject:dishKind.imageUrl];
         NSString *imageUrlPath = [NSString stringWithFormat:@"%@%@", UPLOAD_IMAGE_DIR, dishKind.imageUrl];
+        NSLog(@"downloadurl = %@", imageUrlPath);
         NSURL *imageUrl = [NSURL URLWithString:imageUrlPath];
         NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL: imageUrl];
         NSURLConnection *connection = [[NSURLConnection alloc] initWithRequest:request delegate:self startImmediately:NO];
         [downloadContainer addObject:connection];
     }
+    currentDownloadIndex = 0;
     NSURLConnection *connection = [downloadContainer objectAtIndex:0];
     [connection start];
 }
@@ -51,16 +54,16 @@
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection {
     // disconnect
-    [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
-    NSError *error;
-    NSDictionary *versionJson = [NSJSONSerialization JSONObjectWithData:receivedData options:kNilOptions error:&error];
-    if (versionJson == nil) {
-        NSLog(@"json parser failed\r\r");
-        return;
-    }
-    NSNumber *versionOnServer = [versionJson objectForKey:@"id"];
-    NSLog(@"server version is %d\r\n", [versionOnServer integerValue]);
-    //PersistentData *persistenData = [[PersistentData alloc] init];
+    
+    PersistentData *persistenData = [[PersistentData alloc] init];
+    NSString *imageUrl = [imagePathContainer objectAtIndex:currentDownloadIndex];
+    ++currentDownloadIndex;
+    NSArray *imageUrlItems = [imageUrl componentsSeparatedByString:@"/"];
+    NSString *imageName = [imageUrlItems lastObject];
+    [persistenData saveImage:imageName withData:receivedData];
+    
+    NSURLConnection *nextConnection = [downloadContainer objectAtIndex:currentDownloadIndex];
+    [nextConnection start];
     //NSNumber *versionOnApp = [persistenData getVersion];
     //[self.delegate didFinishVersion:versionOnServer];
     //if ([versionOnServer isEqualToNumber:versionOnApp]) {

@@ -23,6 +23,8 @@
 
 - (id) init
 {
+    _wholeKindContainer = [[NSMutableArray alloc] init];
+    _wholePageContainer = [[NSMutableArray alloc] init];
     versionWorker = [[VersionDownloadWorker alloc] init];
     updateWorker = [[UpdateJsonDownloadWorker alloc] init];
     dishKindWorker = [[DishKindDownloadWorker alloc] init];
@@ -73,7 +75,7 @@
 - (void) didFinishDownloadUpdateJson
 {
     [self getKindsData];
-    [self getPagesData];
+    //[self getPagesData];
 }
 
 - (void) didFinishDownloadKind
