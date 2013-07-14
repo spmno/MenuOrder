@@ -10,4 +10,5 @@
 
 @protocol DishKindDownloadDelegate <NSObject>
 - (void) didFinishDownloadKind;
+- (void) downloadKindStep : (NSString*) itemName;
 @end

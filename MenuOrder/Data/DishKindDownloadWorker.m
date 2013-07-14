@@ -16,6 +16,7 @@
 - (id) init
 {
     downloadContainer = [[NSMutableArray alloc] init];
+    imagePathContainer = [[NSMutableArray alloc] init];
     return [super init];
 }
 
@@ -26,10 +27,13 @@
         [imagePathContainer addObject:dishKind.imageUrl];
         NSString *imageUrlPath = [NSString stringWithFormat:@"%@%@", UPLOAD_IMAGE_DIR, dishKind.imageUrl];
         NSLog(@"downloadurl = %@", imageUrlPath);
-        NSURL *imageUrl = [NSURL URLWithString:imageUrlPath];
-        NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL: imageUrl];
-        NSURLConnection *connection = [[NSURLConnection alloc] initWithRequest:request delegate:self startImmediately:NO];
-        [downloadContainer addObject:connection];
+        NSRange range = [imageUrlPath rangeOfString:@"null"];
+        if (range.location == NSNotFound) {
+            NSURL *imageUrl = [NSURL URLWithString:imageUrlPath];
+            NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL: imageUrl];
+            NSURLConnection *connection = [[NSURLConnection alloc] initWithRequest:request delegate:self startImmediately:NO];
+            [downloadContainer addObject:connection];
+        }
     }
     currentDownloadIndex = 0;
     NSURLConnection *connection = [downloadContainer objectAtIndex:0];
@@ -61,9 +65,15 @@
     NSArray *imageUrlItems = [imageUrl componentsSeparatedByString:@"/"];
     NSString *imageName = [imageUrlItems lastObject];
     [persistenData saveImage:imageName withData:receivedData];
-    
-    NSURLConnection *nextConnection = [downloadContainer objectAtIndex:currentDownloadIndex];
-    [nextConnection start];
+    if ((currentDownloadIndex) != downloadContainer.count) {
+        [_delegate downloadKindStep:imageName];
+        NSURLConnection *nextConnection = [downloadContainer objectAtIndex:currentDownloadIndex];
+        [nextConnection start];
+    } else {
+        [_delegate downloadKindStep:imageName];
+        [_delegate didFinishDownloadKind];
+    }
+
     //NSNumber *versionOnApp = [persistenData getVersion];
     //[self.delegate didFinishVersion:versionOnServer];
     //if ([versionOnServer isEqualToNumber:versionOnApp]) {

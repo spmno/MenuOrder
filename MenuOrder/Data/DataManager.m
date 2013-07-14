@@ -46,6 +46,11 @@
     [updateWorker startDownloadUpdateJson: _wholePageContainer: _wholeKindContainer];
 }
 
+- (void) getAppData
+{
+    [self getKindsData];
+}
+
 - (void) getKindsData
 {
     [dishKindWorker startDownloadDishKind: _wholeKindContainer];
@@ -69,18 +74,25 @@
 
 - (void) downloadPageStep:(NSString *)itemName
 {
-    
+    [_delegate downloadAppInfoStep:itemName];
 }
 
 - (void) didFinishDownloadUpdateJson
 {
-    [self getKindsData];
+    int appInfoCount = updateWorker.appInfoCount;
+    [_delegate didFinishAppInfoLoading : appInfoCount];
+    //[self getKindsData];
     //[self getPagesData];
 }
 
 - (void) didFinishDownloadKind
 {
-    
+    [self getPagesData];
+}
+
+- (void) downloadKindStep:(NSString *)itemName
+{
+    [_delegate downloadAppInfoStep:itemName];
 }
 
 @end

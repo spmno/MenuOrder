@@ -9,12 +9,14 @@
 #import "PageDownloadWorker.h"
 #import "DisplayPage.h"
 #import "PathDefine.h"
+#import "PersistentData.h"
 
 @implementation PageDownloadWorker
 
 - (id) init
 {
     downloadContainer = [[NSMutableArray alloc] init];
+    imagePathContainer = [[NSMutableArray alloc] init];
     return [super init];
 }
 
@@ -24,6 +26,7 @@
     for (DisplayPage* displayPage in pages) {
         [imagePathContainer addObject:displayPage.imageUrl];
         NSString *imageUrlPath = [NSString stringWithFormat:@"%@%@", UPLOAD_IMAGE_DIR, displayPage.imageUrl];
+        NSLog(@"downloadurl = %@", imageUrlPath);
         NSURL *imageUrl = [NSURL URLWithString:imageUrlPath];
         NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL: imageUrl];
         NSURLConnection *connection = [[NSURLConnection alloc] initWithRequest:request delegate:self startImmediately:NO];
@@ -51,26 +54,20 @@
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection {
     // disconnect
-    [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
-    NSError *error;
-    NSDictionary *versionJson = [NSJSONSerialization JSONObjectWithData:receivedData options:kNilOptions error:&error];
-    if (versionJson == nil) {
-        NSLog(@"json parser failed\r\r");
-        return;
+    PersistentData *persistenData = [[PersistentData alloc] init];
+    NSString *imageUrl = [imagePathContainer objectAtIndex:currentDownloadIndex];
+    ++currentDownloadIndex;
+    NSArray *imageUrlItems = [imageUrl componentsSeparatedByString:@"/"];
+    NSString *imageName = [imageUrlItems lastObject];
+    [persistenData saveImage:imageName withData:receivedData];
+    if ((currentDownloadIndex) != downloadContainer.count) {
+        [_delegate downloadPageStep:imageName];
+        NSURLConnection *nextConnection = [downloadContainer objectAtIndex:currentDownloadIndex];
+        [nextConnection start];
+    } else {
+        [_delegate downloadPageStep:imageName];
+        [_delegate didFinishPageLoading];
     }
-    NSNumber *versionOnServer = [versionJson objectForKey:@"id"];
-    NSLog(@"server version is %d\r\n", [versionOnServer integerValue]);
-    //PersistentData *persistenData = [[PersistentData alloc] init];
-    //NSNumber *versionOnApp = [persistenData getVersion];
-    //[self.delegate didFinishVersion:versionOnServer];
-    //if ([versionOnServer isEqualToNumber:versionOnApp]) {
-    //    return;
-    //}
-    
-    //NSString *returnString = [[NSString alloc] initWithData:receivedData encoding:NSUTF8StringEncoding];
-    //NSLog(returnString);
-    //[self urlLoaded:[self urlString] data:self.receivedData];
-    //firstTimeDownloaded = YES;
-}
+ }
 
 @end

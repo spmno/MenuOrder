@@ -14,6 +14,7 @@
     NSMutableArray *downloadContainer;
     NSMutableArray *imagePathContainer;
     NSMutableData *receivedData;
+    NSInteger currentDownloadIndex;
 }
 
 - (void) startDownloadPages : (NSMutableArray*)pages;

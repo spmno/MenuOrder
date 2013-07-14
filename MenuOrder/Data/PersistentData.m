@@ -27,16 +27,22 @@
     NSMutableDictionary *versionDictionary = [[NSMutableDictionary alloc] init];
     NSNumber *versionNumber = [NSNumber numberWithInt:version];
     [versionDictionary setObject:versionNumber forKey:@"version"];
-    [versionDictionary writeToFile:versionFilePath atomically:YES];
-    return YES;
+    if ([versionDictionary writeToFile:versionFilePath atomically:YES]) {
+        return YES;
+    } else {
+        return NO;
+    }
+    
 }
 
-- (BOOL) saveImage:(NSString *)imageFileName :(NSData *)imageContent
+- (BOOL) saveImage:(NSString *)imageFileName withData:(NSData *)imageContent
 {
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *documentDirectory = [paths objectAtIndex:0];
     NSString *imagePath = [documentDirectory stringByAppendingPathComponent:imageFileName];
-    [imageContent writeToFile:imagePath atomically:YES];
+    if ([imageContent writeToFile:imagePath atomically:YES] == NO) {
+        return NO;
+    }
     return YES;
 }
 

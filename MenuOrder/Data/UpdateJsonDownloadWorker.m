@@ -21,6 +21,7 @@
     receivedData = [[NSMutableData alloc] init];
     _pageArray = pageContainer;
     _kindArray = kindContainer;
+    _appInfoCount = 0;
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:appVersionUrl]];
     [NSURLConnection connectionWithRequest:request delegate:self];
     return YES;
@@ -57,8 +58,10 @@
     for (NSDictionary *page in dishPages) {
         DisplayPage *displayPage = [[DisplayPage alloc] init];
         NSDictionary *photoDictionary = [page objectForKey:@"photo"];
-        displayPage.imageUrl = [photoDictionary objectForKey:@"photo"];
+        NSDictionary *urlDictionary = [photoDictionary objectForKey:@"photo"];
+        displayPage.imageUrl = [urlDictionary objectForKey:@"url"];
         NSLog(@"page image url = %@", displayPage.imageUrl);
+        ++_appInfoCount;
         NSDictionary *itemsDictionary = [page objectForKey:@"display_items"];
         for (NSDictionary *item in itemsDictionary) {
             DisplayItem *displayItem = [[DisplayItem alloc] init];
@@ -76,8 +79,10 @@
     
     for (NSDictionary *kind in dishKinds) {
         DishKind *dishKind = [[DishKind alloc] init];
-        NSDictionary *photoDictionary = [kind objectForKey:@"photo"             ];
-        dishKind.imageUrl = [photoDictionary objectForKey:@"photo"];
+        NSDictionary *photoDictionary = [kind objectForKey:@"photo"];
+        NSDictionary *urlDictionary = [photoDictionary objectForKey:@"photo"];
+        dishKind.imageUrl = [urlDictionary objectForKey:@"url"];
+        ++_appInfoCount;
         [_kindArray addObject:dishKind];
     }
     

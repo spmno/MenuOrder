@@ -26,8 +26,8 @@
 + (DataManager*) sharedInstance;
 - (void) getAppVersion;
 - (void) getUpdateJsons;
-- (void) getKindsData;
-- (void) getPagesData;
+- (void) getAppData;
+
 @property (strong, nonatomic) NSMutableArray *wholePageContainer;
 @property (strong, nonatomic) NSMutableArray *wholeKindContainer;
 @property (strong, nonatomic) NSNumber *versionNumber;

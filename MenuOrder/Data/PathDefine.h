@@ -10,6 +10,6 @@
 #define MenuOrder_Header_h
 
 #define APP_VERSION_URL @"http://127.0.0.1:3000/pages/update_app.json"
-#define UPLOAD_IMAGE_DIR    @"http://127.0.0.1:3000/"
+#define UPLOAD_IMAGE_DIR    @"http://127.0.0.1:3000"
 
 #endif

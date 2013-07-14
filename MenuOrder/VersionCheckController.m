@@ -56,10 +56,6 @@
     }
 }
 
-- (void) didFinishPageLoading
-{
-    
-}
 
 - (IBAction)switch2UpdateController:(id)sender
 {

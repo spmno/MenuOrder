@@ -35,6 +35,8 @@
     DataManager *dataManager = [DataManager sharedInstance];
     dataManager.delegate = self;
     [dataManager getUpdateJsons];
+    [_updateProgress setProgress:0];
+    [_updateInfo setText:@"正在下载，请稍后"];
 }
 
 - (void)didReceiveMemoryWarning
@@ -43,11 +45,29 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void) didFInishAppInfoLoading
+- (void) didFinishAppInfoLoading : (int) appInfoCount
 {
+    updateInfoAppCount = appInfoCount;
+    currentUpdateCount = 1;
     DataManager *dataManager = [DataManager sharedInstance];
-    [dataManager getKindsData];
+    [dataManager getAppData];
+}
 
+- (void) downloadAppInfoStep:(NSString *)itemName
+{
+    float progressValue = currentUpdateCount * (1.0/updateInfoAppCount);
+    [_updateProgress setProgress:progressValue];
+    [_updateFileName setText:itemName];
+    
+    if (currentUpdateCount == updateInfoAppCount) {
+        [_updateInfo setText:@"下载完毕，请进入应用"];
+        PersistentData *persistenData = [[PersistentData alloc] init];
+        DataManager *dataManager = [DataManager sharedInstance];
+        int newVersion = [dataManager.versionNumber intValue];
+        [persistenData saveVersion:newVersion];
+    }
+    ++currentUpdateCount;
+    
 }
 
 @end
