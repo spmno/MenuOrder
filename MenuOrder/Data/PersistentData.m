@@ -56,4 +56,68 @@
     //    返回一个kFileName的完整路径
     return [documentDirectory stringByAppendingPathComponent:@"version.plist"];
 }
+
+- (BOOL) saveKinds:(NSArray *)kindsContainer
+{
+    
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    //  数组索引0处Documentd目录，
+    NSString *documentDirectory = [paths objectAtIndex:0];
+    //    返回一个kFileName的完整路径
+    NSString *kindsFileName =  [documentDirectory stringByAppendingPathComponent:@"kinds.plist"];
+        
+    if ([kindsContainer writeToFile:kindsFileName atomically:YES]) {
+        return YES;
+    } else {
+        return NO;
+    }
+
+}
+
+- (BOOL) savePages:(NSArray *)pagesContainer
+{
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    //  数组索引0处Documentd目录，
+    NSString *documentDirectory = [paths objectAtIndex:0];
+    //    返回一个kFileName的完整路径
+    NSString *pagesFileName =  [documentDirectory stringByAppendingPathComponent:@"pages.plist"];
+    
+    if ([pagesContainer writeToFile:pagesFileName atomically:YES]) {
+        return YES;
+    } else {
+        return NO;
+    }
+}
+
+- (BOOL) getKinds:(NSArray *)kindsContainer
+{
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    //  数组索引0处Documentd目录，
+    NSString *documentDirectory = [paths objectAtIndex:0];
+    //    返回一个kFileName的完整路径
+    NSString *kindsFileName =  [documentDirectory stringByAppendingPathComponent:@"kinds.plist"];
+
+    if ([[NSFileManager defaultManager]fileExistsAtPath:kindsFileName]) {
+        kindsContainer = [[NSArray alloc]initWithContentsOfFile:kindsFileName];
+        return YES;
+    } else {
+        return NO;
+    }
+}
+
+- (BOOL) getPages:(NSArray *)pagesContainer
+{
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    //  数组索引0处Documentd目录，
+    NSString *documentDirectory = [paths objectAtIndex:0];
+    //    返回一个kFileName的完整路径
+    NSString *pagesFileName =  [documentDirectory stringByAppendingPathComponent:@"pages.plist"];
+    
+    if ([[NSFileManager defaultManager]fileExistsAtPath:pagesFileName]) {
+        pagesContainer = [[NSArray alloc]initWithContentsOfFile:pagesFileName];
+        return YES;
+    } else {
+        return NO;
+    }
+}
 @end

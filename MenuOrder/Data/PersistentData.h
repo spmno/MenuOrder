@@ -12,4 +12,8 @@
 - (NSNumber*) getVersion;
 - (BOOL) saveVersion: (int) version;
 - (BOOL) saveImage: (NSString*) imageFileName withData:(NSData*)imageContent;
+- (BOOL) saveKinds: (NSArray*) kindsContainer;
+- (BOOL) savePages: (NSArray*) pagesContainer;
+- (BOOL) getKinds: (NSArray*) kindsContainer;
+- (BOOL) getPages: (NSArray*) pagesContainer;
 @end
