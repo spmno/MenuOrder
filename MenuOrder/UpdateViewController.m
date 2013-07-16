@@ -60,11 +60,24 @@
     [_updateFileName setText:itemName];
     
     if (currentUpdateCount == updateInfoAppCount) {
+        DataManager *dataManager = [DataManager sharedInstance];
         [_updateInfo setText:@"下载完毕，请进入应用"];
         PersistentData *persistenData = [[PersistentData alloc] init];
-        DataManager *dataManager = [DataManager sharedInstance];
         int newVersion = [dataManager.versionNumber intValue];
         [persistenData saveVersion:newVersion];
+        if ([persistenData savePages:dataManager.wholePageContainer]) {
+            
+        } else {
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"init data failed" delegate:self cancelButtonTitle:@"No" otherButtonTitles:@"YES" , nil];
+            [alert show];
+        }
+        if ([persistenData saveKinds:dataManager.wholeKindContainer]) {
+            
+        } else {
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"init data failed" delegate:self cancelButtonTitle:@"No" otherButtonTitles:@"YES" , nil];
+            [alert show];
+        }
+        return;
     }
     ++currentUpdateCount;
     

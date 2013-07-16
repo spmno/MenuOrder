@@ -50,6 +50,7 @@
     if ([version isEqualToNumber:versionOnApp]) {
         _actionButton.titleLabel.text = @"start";
         _checkInfo.text = @"It is the last version.";
+        isLastVersion = YES;
     } else {
         _actionButton.titleLabel.text = @"update";
         _checkInfo.text = @"It is not last version, please update.";
@@ -60,8 +61,13 @@
 - (IBAction)switch2UpdateController:(id)sender
 {
     //UpdateViewController *updateViewController = [[UpdateViewController alloc] init];
-    UpdateViewController* updateViewController = [[UpdateViewController alloc]initWithNibName:@"UpdateViewController" bundle:nil];
-    [self presentViewController:updateViewController animated:YES completion:nil];
+    if (isLastVersion) {
+        
+    } else {
+        UpdateViewController* updateViewController = [[UpdateViewController alloc]initWithNibName:@"UpdateViewController" bundle:nil];
+        [self presentViewController:updateViewController animated:YES completion:nil];
+    }
+
     //[self.navigationController pushViewController: updateViewController animated:YES];
     
 }

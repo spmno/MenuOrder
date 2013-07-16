@@ -95,4 +95,10 @@
     [_delegate downloadAppInfoStep:itemName];
 }
 
+- (BOOL) initDataFromDisk
+{
+    
+    return YES;
+}
+
 @end

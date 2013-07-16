@@ -27,6 +27,7 @@
 - (void) getAppVersion;
 - (void) getUpdateJsons;
 - (void) getAppData;
+- (BOOL) initDataFromDisk;
 
 @property (strong, nonatomic) NSMutableArray *wholePageContainer;
 @property (strong, nonatomic) NSMutableArray *wholeKindContainer;

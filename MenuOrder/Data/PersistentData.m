@@ -81,7 +81,7 @@
     NSString *documentDirectory = [paths objectAtIndex:0];
     //    返回一个kFileName的完整路径
     NSString *pagesFileName =  [documentDirectory stringByAppendingPathComponent:@"pages.plist"];
-    
+    NSLog(@"pagesFileName = %@", pagesFileName);
     if ([pagesContainer writeToFile:pagesFileName atomically:YES]) {
         return YES;
     } else {
