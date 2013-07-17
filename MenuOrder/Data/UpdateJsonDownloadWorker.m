@@ -60,6 +60,7 @@
         NSDictionary *photoDictionary = [page objectForKey:@"photo"];
         NSDictionary *urlDictionary = [photoDictionary objectForKey:@"photo"];
         displayPage.imageUrl = [urlDictionary objectForKey:@"url"];
+        displayPage.kindId = [page objectForKey:@"dish_kind_id"];
         NSLog(@"page image url = %@", displayPage.imageUrl);
         ++_appInfoCount;
         NSDictionary *itemsDictionary = [page objectForKey:@"display_items"];
@@ -82,6 +83,8 @@
         NSDictionary *photoDictionary = [kind objectForKey:@"photo"];
         NSDictionary *urlDictionary = [photoDictionary objectForKey:@"photo"];
         dishKind.imageUrl = [urlDictionary objectForKey:@"url"];
+        dishKind.kindId = [kind objectForKey:@"id"];
+        dishKind.kindName = [kind objectForKey:@"name"];
         ++_appInfoCount;
         [_kindArray addObject:dishKind];
     }

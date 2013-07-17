@@ -97,8 +97,12 @@
 
 - (BOOL) initDataFromDisk
 {
-    
-    return YES;
+    PersistentData *persistentData = [[PersistentData alloc] init];
+    if ([persistentData getKinds:_wholeKindContainer] == NO) {
+        return NO;
+    }
+    return [persistentData getPages:_wholePageContainer];
+
 }
 
 @end

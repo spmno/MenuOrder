@@ -7,6 +7,7 @@
 //
 
 #import "PersistentData.h"
+#import "DataConverter.h"
 
 @implementation PersistentData
 
@@ -65,8 +66,12 @@
     NSString *documentDirectory = [paths objectAtIndex:0];
     //    返回一个kFileName的完整路径
     NSString *kindsFileName =  [documentDirectory stringByAppendingPathComponent:@"kinds.plist"];
-        
-    if ([kindsContainer writeToFile:kindsFileName atomically:YES]) {
+    
+    DataConverter *converter = [[DataConverter alloc] init];
+    NSMutableArray *dictionaryArray = [[NSMutableArray alloc] init];
+    [converter kindToDictionary:kindsContainer to:dictionaryArray];
+    
+    if ([dictionaryArray writeToFile:kindsFileName atomically:YES]) {
         return YES;
     } else {
         return NO;
@@ -81,15 +86,20 @@
     NSString *documentDirectory = [paths objectAtIndex:0];
     //    返回一个kFileName的完整路径
     NSString *pagesFileName =  [documentDirectory stringByAppendingPathComponent:@"pages.plist"];
+    
+    DataConverter *converter = [[DataConverter alloc] init];
+    NSMutableArray *pagesArray = [[NSMutableArray alloc] init];
+    [converter pageToDictionary:pagesContainer to:pagesArray];
+    
     NSLog(@"pagesFileName = %@", pagesFileName);
-    if ([pagesContainer writeToFile:pagesFileName atomically:YES]) {
+    if ([pagesArray writeToFile:pagesFileName atomically:YES]) {
         return YES;
     } else {
         return NO;
     }
 }
 
-- (BOOL) getKinds:(NSArray *)kindsContainer
+- (BOOL) getKinds:(NSMutableArray *)kindsContainer
 {
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     //  数组索引0处Documentd目录，
@@ -97,15 +107,18 @@
     //    返回一个kFileName的完整路径
     NSString *kindsFileName =  [documentDirectory stringByAppendingPathComponent:@"kinds.plist"];
 
+    
     if ([[NSFileManager defaultManager]fileExistsAtPath:kindsFileName]) {
-        kindsContainer = [[NSArray alloc]initWithContentsOfFile:kindsFileName];
+        NSArray *dictionaryArray = [[NSArray alloc]initWithContentsOfFile:kindsFileName];
+        DataConverter *converter = [[DataConverter alloc] init];
+        [converter dictionaryToKind:dictionaryArray to:kindsContainer];
         return YES;
     } else {
         return NO;
     }
 }
 
-- (BOOL) getPages:(NSArray *)pagesContainer
+- (BOOL) getPages:(NSMutableArray *)pagesContainer
 {
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     //  数组索引0处Documentd目录，
@@ -114,7 +127,9 @@
     NSString *pagesFileName =  [documentDirectory stringByAppendingPathComponent:@"pages.plist"];
     
     if ([[NSFileManager defaultManager]fileExistsAtPath:pagesFileName]) {
-        pagesContainer = [[NSArray alloc]initWithContentsOfFile:pagesFileName];
+        NSArray *dictionaryArray = [[NSArray alloc]initWithContentsOfFile:pagesFileName];
+        DataConverter *converter = [[DataConverter alloc] init];
+        [converter dictionaryToPage:dictionaryArray to:pagesContainer];
         return YES;
     } else {
         return NO;

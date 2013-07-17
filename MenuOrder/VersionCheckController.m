@@ -45,11 +45,16 @@
 - (void) didFinishVersionLoading:(NSNumber *)version
 {
     PersistentData *persistenData = [[PersistentData alloc] init];
+    DataManager *dataManager = [DataManager sharedInstance];
     NSNumber *versionOnApp = [persistenData getVersion];
     _actionButton.hidden = NO;
     if ([version isEqualToNumber:versionOnApp]) {
         _actionButton.titleLabel.text = @"start";
         _checkInfo.text = @"It is the last version.";
+        if ([dataManager initDataFromDisk] == NO) {
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"error" message:@"init data fail" delegate:self cancelButtonTitle:@"No" otherButtonTitles:@"YES", nil];
+            [alert show];
+        }
         isLastVersion = YES;
     } else {
         _actionButton.titleLabel.text = @"update";
