@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@class ViewController;
+@class KindSelectController;
 @class VersionCheckController;
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 

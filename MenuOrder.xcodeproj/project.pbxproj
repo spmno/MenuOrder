@@ -53,8 +53,8 @@
 		A5F002711750F7D4001FDFB4 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = A5F002701750F7D4001FDFB4 /* Default.png */; };
 		A5F002731750F7D4001FDFB4 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A5F002721750F7D4001FDFB4 /* Default@2x.png */; };
 		A5F002751750F7D4001FDFB4 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A5F002741750F7D4001FDFB4 /* Default-568h@2x.png */; };
-		A5F002781750F7D4001FDFB4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5F002771750F7D4001FDFB4 /* ViewController.m */; };
-		A5F0027B1750F7D4001FDFB4 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5F002791750F7D4001FDFB4 /* ViewController.xib */; };
+		A5F002781750F7D4001FDFB4 /* KindSelectController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5F002771750F7D4001FDFB4 /* KindSelectController.m */; };
+		A5F0027B1750F7D4001FDFB4 /* KindSelectController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5F002791750F7D4001FDFB4 /* KindSelectController.xib */; };
 		A5F002A01750F833001FDFB4 /* iCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = A5F0029F1750F833001FDFB4 /* iCarousel.m */; };
 		A5F002A21750F83E001FDFB4 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5F002A11750F83E001FDFB4 /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
@@ -139,9 +139,9 @@
 		A5F002701750F7D4001FDFB4 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		A5F002721750F7D4001FDFB4 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		A5F002741750F7D4001FDFB4 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		A5F002761750F7D4001FDFB4 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		A5F002771750F7D4001FDFB4 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		A5F0027A1750F7D4001FDFB4 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		A5F002761750F7D4001FDFB4 /* KindSelectController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KindSelectController.h; sourceTree = "<group>"; };
+		A5F002771750F7D4001FDFB4 /* KindSelectController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KindSelectController.m; sourceTree = "<group>"; };
+		A5F0027A1750F7D4001FDFB4 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/KindSelectController.xib; sourceTree = "<group>"; };
 		A5F0029E1750F833001FDFB4 /* iCarousel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iCarousel.h; sourceTree = "<group>"; };
 		A5F0029F1750F833001FDFB4 /* iCarousel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iCarousel.m; sourceTree = "<group>"; };
 		A5F002A11750F83E001FDFB4 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -293,9 +293,9 @@
 				A5D9DE3F17521BF4009D23D6 /* SubOrderItem */,
 				A5F0026D1750F7D4001FDFB4 /* AppDelegate.h */,
 				A5F0026E1750F7D4001FDFB4 /* AppDelegate.m */,
-				A5F002761750F7D4001FDFB4 /* ViewController.h */,
-				A5F002771750F7D4001FDFB4 /* ViewController.m */,
-				A5F002791750F7D4001FDFB4 /* ViewController.xib */,
+				A5F002761750F7D4001FDFB4 /* KindSelectController.h */,
+				A5F002771750F7D4001FDFB4 /* KindSelectController.m */,
+				A5F002791750F7D4001FDFB4 /* KindSelectController.xib */,
 				A5D90FFC175189830097BCEB /* SubOrderController.h */,
 				A5D90FFD175189830097BCEB /* SubOrderController.m */,
 				A5D90FFE175189830097BCEB /* SubOrderController.xib */,
@@ -398,7 +398,7 @@
 				A5F002711750F7D4001FDFB4 /* Default.png in Resources */,
 				A5F002731750F7D4001FDFB4 /* Default@2x.png in Resources */,
 				A5F002751750F7D4001FDFB4 /* Default-568h@2x.png in Resources */,
-				A5F0027B1750F7D4001FDFB4 /* ViewController.xib in Resources */,
+				A5F0027B1750F7D4001FDFB4 /* KindSelectController.xib in Resources */,
 				A5D91000175189830097BCEB /* SubOrderController.xib in Resources */,
 				A5D9DE4117521C48009D23D6 /* SubOrderItem1.xib in Resources */,
 				A5D9DE4317521CC1009D23D6 /* SubOrderItem2.xib in Resources */,
@@ -425,7 +425,7 @@
 			files = (
 				A5F0026B1750F7D4001FDFB4 /* main.m in Sources */,
 				A5F0026F1750F7D4001FDFB4 /* AppDelegate.m in Sources */,
-				A5F002781750F7D4001FDFB4 /* ViewController.m in Sources */,
+				A5F002781750F7D4001FDFB4 /* KindSelectController.m in Sources */,
 				A5F002A01750F833001FDFB4 /* iCarousel.m in Sources */,
 				A5D90FFF175189830097BCEB /* SubOrderController.m in Sources */,
 				A5D9100417518A450097BCEB /* SwipeView.m in Sources */,
@@ -464,12 +464,12 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		A5F002791750F7D4001FDFB4 /* ViewController.xib */ = {
+		A5F002791750F7D4001FDFB4 /* KindSelectController.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				A5F0027A1750F7D4001FDFB4 /* en */,
 			);
-			name = ViewController.xib;
+			name = KindSelectController.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

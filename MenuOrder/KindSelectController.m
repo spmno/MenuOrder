@@ -6,7 +6,7 @@
 //  Copyright (c) 2013年 spmno. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "KindSelectController.h"
 #import "SubOrderController.h"
 #import "BeforeController.h"
 #import "DishSearchController.h"
@@ -14,11 +14,11 @@
 #import "TotalOrderController1.h"
 #import "UserManualController.h"
 
-@interface ViewController ()
+@interface KindSelectController ()
 
 @end
 
-@implementation ViewController
+@implementation KindSelectController
 @synthesize carousel;
 - (void)viewDidLoad
 {
