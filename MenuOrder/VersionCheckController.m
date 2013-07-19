@@ -9,6 +9,7 @@
 #import "VersionCheckController.h"
 #import "PersistentData.h"
 #import "UpdateViewController.h"
+#import "KindSelectController.h"
 
 @interface VersionCheckController ()
 
@@ -28,6 +29,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self.navigationController setNavigationBarHidden:YES];
     _actionButton.hidden = YES;
     _checkInfo.text = @"check version now, please wait!!!";
     DataManager *manager =[DataManager sharedInstance];
@@ -67,7 +69,8 @@
 {
     //UpdateViewController *updateViewController = [[UpdateViewController alloc] init];
     if (isLastVersion) {
-        
+        KindSelectController *kindSelectController = [[KindSelectController alloc] initWithNibName:@"KindSelectController" bundle:nil];
+        [self.navigationController pushViewController: kindSelectController animated:YES];
     } else {
         UpdateViewController* updateViewController = [[UpdateViewController alloc]initWithNibName:@"UpdateViewController" bundle:nil];
         [self presentViewController:updateViewController animated:YES completion:nil];

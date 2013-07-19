@@ -13,6 +13,8 @@
 #import "TotalOrderController.h"
 #import "TotalOrderController1.h"
 #import "UserManualController.h"
+#import "Data/DataManager.h"
+#import "DishKind.h"
 
 @interface KindSelectController ()
 
@@ -23,6 +25,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+
 	// Do any additional setup after loading the view, typically from a nib.
     self.carousel.type = iCarouselTypeCoverFlow2;
 }
@@ -38,7 +41,10 @@
 
 - (NSUInteger)numberOfItemsInCarousel:(iCarousel *)carousel
 {
-    return 5;
+    DataManager *dataManager = [DataManager sharedInstance];
+    NSUInteger kindCount = [dataManager.wholeKindContainer count];
+    NSLog(@"kind count = %d", kindCount);
+    return kindCount;
 }
 
 - (UIView *)carousel:(iCarousel *)carousel viewForItemAtIndex:(NSUInteger)index reusingView:(UIView *)view
@@ -48,8 +54,29 @@
 	//create new view if no view is available for recycling
 	if (view == nil)
 	{
-        view = [[UIImageView alloc] initWithImage:[UIImage imageNamed:[NSString stringWithFormat:@"h%d.jpg",index+1]]];
 
+        //view = [[UIImageView alloc] initWithImage:[UIImage imageNamed:[NSString stringWithFormat:@"h%d.jpg",index+1]]];
+        DataManager *dataManager = [DataManager sharedInstance];
+        DishKind* kind = [dataManager.wholeKindContainer objectAtIndex:index];
+        NSArray *imageUrlItems = [kind.imageUrl componentsSeparatedByString:@"/"];
+        NSString *imageName = [imageUrlItems lastObject];
+        NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+        NSString *documentDirectory = [paths objectAtIndex:0];
+        NSString *imagePath = [documentDirectory stringByAppendingPathComponent:imageName];
+        NSLog(@"kind url = %@\n", imagePath);
+        view = [[UIImageView alloc] initWithImage:[UIImage imageNamed:imagePath]];
+        /*
+        for (DishKind* kind in dataManager.wholeKindContainer) {
+            NSArray *imageUrlItems = [kind.imageUrl componentsSeparatedByString:@"/"];
+            NSString *imageName = [imageUrlItems lastObject];
+            NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+            NSString *documentDirectory = [paths objectAtIndex:0];
+            NSString *imagePath = [documentDirectory stringByAppendingPathComponent:imageName];
+            
+            NSLog(@"kind url = %@", imagePath);
+            view = [[UIImageView alloc] initWithImage:[UIImage imageNamed:imagePath]];
+        }
+         */
         //UIImage* imageView=[UIImage imageNamed:[NSString stringWithFormat:@"%d.jpg",index+1]];
         //view.backgroundColor = [UIColor lightGrayColor];
         //label = [[UILabel alloc] initWithFrame:view.bounds];

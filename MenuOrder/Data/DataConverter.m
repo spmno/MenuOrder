@@ -63,6 +63,7 @@
         dishKind.kindId = [kindDictionary objectForKey:@"id"];
         dishKind.kindName = [kindDictionary objectForKey:@"name"];
         dishKind.imageUrl = [kindDictionary objectForKey:@"imageurl"];
+        [kinds addObject:dishKind];
     }
     return YES;
 }
