@@ -56,6 +56,7 @@
 	{
 
         //view = [[UIImageView alloc] initWithImage:[UIImage imageNamed:[NSString stringWithFormat:@"h%d.jpg",index+1]]];
+        
         DataManager *dataManager = [DataManager sharedInstance];
         DishKind* kind = [dataManager.wholeKindContainer objectAtIndex:index];
         NSArray *imageUrlItems = [kind.imageUrl componentsSeparatedByString:@"/"];
@@ -64,7 +65,9 @@
         NSString *documentDirectory = [paths objectAtIndex:0];
         NSString *imagePath = [documentDirectory stringByAppendingPathComponent:imageName];
         NSLog(@"kind url = %@\n", imagePath);
-        view = [[UIImageView alloc] initWithImage:[UIImage imageNamed:imagePath]];
+        UIImage *kindImage = [UIImage imageWithContentsOfFile:imagePath];
+        view = [[UIImageView alloc] initWithImage:kindImage];
+        
         /*
         for (DishKind* kind in dataManager.wholeKindContainer) {
             NSArray *imageUrlItems = [kind.imageUrl componentsSeparatedByString:@"/"];
