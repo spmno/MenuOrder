@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "iCarousel/iCarousel.h"
+#import "../../iCarousel/iCarousel.h"
 #import "TotalOrderController1.h"
 @interface KindSelectController : UIViewController <iCarouselDataSource, iCarouselDelegate, UIPopoverControllerDelegate, TotalOrderDelegate>
 {

@@ -7,39 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A502D121176A0D6B00548685 /* TotalOrderController1.m in Sources */ = {isa = PBXBuildFile; fileRef = A502D11F176A0D6B00548685 /* TotalOrderController1.m */; };
-		A502D122176A0D6B00548685 /* TotalOrderController1.xib in Resources */ = {isa = PBXBuildFile; fileRef = A502D120176A0D6B00548685 /* TotalOrderController1.xib */; };
-		A5059408175D582A00905069 /* DishSearchController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5059406175D582A00905069 /* DishSearchController.m */; };
-		A5059409175D582A00905069 /* DishSearchController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5059407175D582A00905069 /* DishSearchController.xib */; };
 		A51100901783856B00608ACE /* DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A511008F1783856B00608ACE /* DataManager.m */; };
-		A51210D917597EB7003A0498 /* DishCountController.m in Sources */ = {isa = PBXBuildFile; fileRef = A51210D717597EB7003A0498 /* DishCountController.m */; };
-		A51210DA17597EB7003A0498 /* DishCountController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A51210D817597EB7003A0498 /* DishCountController.xib */; };
-		A520A8D71756CA1D004A81EB /* BeforeController.m in Sources */ = {isa = PBXBuildFile; fileRef = A520A8D51756CA1D004A81EB /* BeforeController.m */; };
-		A520A8D81756CA1D004A81EB /* BeforeController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A520A8D61756CA1D004A81EB /* BeforeController.xib */; };
-		A53BD404178CB00C00CAB4C7 /* VersionCheckController.m in Sources */ = {isa = PBXBuildFile; fileRef = A53BD402178CB00C00CAB4C7 /* VersionCheckController.m */; };
-		A53BD405178CB00C00CAB4C7 /* VersionCheckController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A53BD403178CB00C00CAB4C7 /* VersionCheckController.xib */; };
-		A53BD409178CC33600CAB4C7 /* UpdateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A53BD407178CC33500CAB4C7 /* UpdateViewController.m */; };
-		A53BD40A178CC33600CAB4C7 /* UpdateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A53BD408178CC33500CAB4C7 /* UpdateViewController.xib */; };
 		A53D4608178A2B320062A0D0 /* DisplayPage.m in Sources */ = {isa = PBXBuildFile; fileRef = A53D4607178A2B320062A0D0 /* DisplayPage.m */; };
-		A541EFB31763A5F800BA9CBF /* UserManualController.m in Sources */ = {isa = PBXBuildFile; fileRef = A541EFB11763A5F800BA9CBF /* UserManualController.m */; };
-		A541EFB41763A5F800BA9CBF /* UserManualController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A541EFB21763A5F800BA9CBF /* UserManualController.xib */; };
 		A5421F2B1786315900DBFD1D /* PersistentData.m in Sources */ = {isa = PBXBuildFile; fileRef = A5421F2A1786315900DBFD1D /* PersistentData.m */; };
 		A5555C311788C8C300F96D14 /* FileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A5555C301788C8C300F96D14 /* FileManager.m */; };
 		A5555C341788D10000F96D14 /* VersionDownloadWorker.m in Sources */ = {isa = PBXBuildFile; fileRef = A5555C331788D10000F96D14 /* VersionDownloadWorker.m */; };
 		A5555C371788D12F00F96D14 /* UpdateJsonDownloadWorker.m in Sources */ = {isa = PBXBuildFile; fileRef = A5555C361788D12F00F96D14 /* UpdateJsonDownloadWorker.m */; };
-		A5D7485017580A2D00617C1E /* BeforeSubController1.m in Sources */ = {isa = PBXBuildFile; fileRef = A5D7484E17580A2D00617C1E /* BeforeSubController1.m */; };
-		A5D7485117580A2D00617C1E /* BeforeSubController1.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5D7484F17580A2D00617C1E /* BeforeSubController1.xib */; };
-		A5D90FFF175189830097BCEB /* SubOrderController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5D90FFD175189830097BCEB /* SubOrderController.m */; };
-		A5D91000175189830097BCEB /* SubOrderController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5D90FFE175189830097BCEB /* SubOrderController.xib */; };
 		A5D9100417518A450097BCEB /* SwipeView.m in Sources */ = {isa = PBXBuildFile; fileRef = A5D9100317518A450097BCEB /* SwipeView.m */; };
 		A5D9180D17969F4600CFC134 /* DataConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = A5D9180C17969F4600CFC134 /* DataConverter.m */; };
-		A5D9AC9F17629D1000E23220 /* TotalOrderController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5D9AC9D17629D1000E23220 /* TotalOrderController.m */; };
-		A5D9ACA017629D1000E23220 /* TotalOrderController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5D9AC9E17629D1000E23220 /* TotalOrderController.xib */; };
-		A5D9ACA41762B1CD00E23220 /* DishCountController1.m in Sources */ = {isa = PBXBuildFile; fileRef = A5D9ACA21762B1CD00E23220 /* DishCountController1.m */; };
-		A5D9ACA51762B1CD00E23220 /* DishCountController1.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5D9ACA31762B1CD00E23220 /* DishCountController1.xib */; };
-		A5D9DE4117521C48009D23D6 /* SubOrderItem1.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5D9DE4017521C48009D23D6 /* SubOrderItem1.xib */; };
-		A5D9DE4317521CC1009D23D6 /* SubOrderItem2.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5D9DE4217521CC1009D23D6 /* SubOrderItem2.xib */; };
-		A5D9DE4517521CE7009D23D6 /* SubOrderItem3.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5D9DE4417521CE7009D23D6 /* SubOrderItem3.xib */; };
 		A5DD82B71791BF6A0047EB01 /* DisplayItem.m in Sources */ = {isa = PBXBuildFile; fileRef = A5DD82B61791BF6A0047EB01 /* DisplayItem.m */; };
 		A5E4FD7D178E08B9007B5A4A /* DishKind.m in Sources */ = {isa = PBXBuildFile; fileRef = A5E4FD7C178E08B9007B5A4A /* DishKind.m */; };
 		A5E4FD80178E0AA8007B5A4A /* DishKindDownloadWorker.m in Sources */ = {isa = PBXBuildFile; fileRef = A5E4FD7F178E0AA8007B5A4A /* DishKindDownloadWorker.m */; };
@@ -47,47 +22,43 @@
 		A5F0025F1750F7D4001FDFB4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5F0025E1750F7D4001FDFB4 /* UIKit.framework */; };
 		A5F002611750F7D4001FDFB4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5F002601750F7D4001FDFB4 /* Foundation.framework */; };
 		A5F002631750F7D4001FDFB4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5F002621750F7D4001FDFB4 /* CoreGraphics.framework */; };
-		A5F002691750F7D4001FDFB4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A5F002671750F7D4001FDFB4 /* InfoPlist.strings */; };
-		A5F0026B1750F7D4001FDFB4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A5F0026A1750F7D4001FDFB4 /* main.m */; };
-		A5F0026F1750F7D4001FDFB4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A5F0026E1750F7D4001FDFB4 /* AppDelegate.m */; };
-		A5F002711750F7D4001FDFB4 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = A5F002701750F7D4001FDFB4 /* Default.png */; };
-		A5F002731750F7D4001FDFB4 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A5F002721750F7D4001FDFB4 /* Default@2x.png */; };
-		A5F002751750F7D4001FDFB4 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A5F002741750F7D4001FDFB4 /* Default-568h@2x.png */; };
-		A5F002781750F7D4001FDFB4 /* KindSelectController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5F002771750F7D4001FDFB4 /* KindSelectController.m */; };
-		A5F0027B1750F7D4001FDFB4 /* KindSelectController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5F002791750F7D4001FDFB4 /* KindSelectController.xib */; };
 		A5F002A01750F833001FDFB4 /* iCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = A5F0029F1750F833001FDFB4 /* iCarousel.m */; };
 		A5F002A21750F83E001FDFB4 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5F002A11750F83E001FDFB4 /* QuartzCore.framework */; };
+		A5FF1F53179DD4DE00CF308B /* UpdateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5FF1F4E179DD4DE00CF308B /* UpdateViewController.m */; };
+		A5FF1F54179DD4DE00CF308B /* UpdateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5FF1F4F179DD4DE00CF308B /* UpdateViewController.xib */; };
+		A5FF1F55179DD4DE00CF308B /* VersionCheckController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5FF1F51179DD4DE00CF308B /* VersionCheckController.m */; };
+		A5FF1F56179DD4DE00CF308B /* VersionCheckController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5FF1F52179DD4DE00CF308B /* VersionCheckController.xib */; };
+		A5FF1F5B179DD4FE00CF308B /* DishSearchController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5FF1F59179DD4FE00CF308B /* DishSearchController.m */; };
+		A5FF1F5C179DD4FE00CF308B /* DishSearchController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5FF1F5A179DD4FE00CF308B /* DishSearchController.xib */; };
+		A5FF1F75179DD50D00CF308B /* BeforeController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5FF1F5F179DD50D00CF308B /* BeforeController.m */; };
+		A5FF1F76179DD50D00CF308B /* BeforeController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5FF1F60179DD50D00CF308B /* BeforeController.xib */; };
+		A5FF1F77179DD50D00CF308B /* BeforeSubController1.m in Sources */ = {isa = PBXBuildFile; fileRef = A5FF1F62179DD50D00CF308B /* BeforeSubController1.m */; };
+		A5FF1F78179DD50D00CF308B /* BeforeSubController1.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5FF1F63179DD50D00CF308B /* BeforeSubController1.xib */; };
+		A5FF1F79179DD50D00CF308B /* DishCountController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5FF1F65179DD50D00CF308B /* DishCountController.m */; };
+		A5FF1F7A179DD50D00CF308B /* DishCountController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5FF1F66179DD50D00CF308B /* DishCountController.xib */; };
+		A5FF1F7B179DD50D00CF308B /* DishCountController1.m in Sources */ = {isa = PBXBuildFile; fileRef = A5FF1F68179DD50D00CF308B /* DishCountController1.m */; };
+		A5FF1F7C179DD50D00CF308B /* DishCountController1.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5FF1F69179DD50D00CF308B /* DishCountController1.xib */; };
+		A5FF1F7D179DD50D00CF308B /* KindSelectController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5FF1F6B179DD50D00CF308B /* KindSelectController.m */; };
+		A5FF1F7E179DD50D00CF308B /* SubOrderController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5FF1F6D179DD50D00CF308B /* SubOrderController.m */; };
+		A5FF1F7F179DD50D00CF308B /* SubOrderController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5FF1F6E179DD50D00CF308B /* SubOrderController.xib */; };
+		A5FF1F80179DD50D00CF308B /* TotalOrderController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5FF1F70179DD50D00CF308B /* TotalOrderController.m */; };
+		A5FF1F81179DD50D00CF308B /* TotalOrderController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5FF1F71179DD50D00CF308B /* TotalOrderController.xib */; };
+		A5FF1F82179DD50D00CF308B /* TotalOrderController1.m in Sources */ = {isa = PBXBuildFile; fileRef = A5FF1F73179DD50D00CF308B /* TotalOrderController1.m */; };
+		A5FF1F83179DD50D00CF308B /* TotalOrderController1.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5FF1F74179DD50D00CF308B /* TotalOrderController1.xib */; };
+		A5FF1F87179DD5B500CF308B /* UserManualController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5FF1F85179DD5B500CF308B /* UserManualController.m */; };
+		A5FF1F88179DD5B500CF308B /* UserManualController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5FF1F86179DD5B500CF308B /* UserManualController.xib */; };
+		A5FF1F8C179DD61700CF308B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A5FF1F8B179DD61700CF308B /* AppDelegate.m */; };
+		A5FF1F8E179DD65F00CF308B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A5FF1F8D179DD65F00CF308B /* main.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		A502D11E176A0D6B00548685 /* TotalOrderController1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TotalOrderController1.h; sourceTree = "<group>"; };
-		A502D11F176A0D6B00548685 /* TotalOrderController1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TotalOrderController1.m; sourceTree = "<group>"; };
-		A502D120176A0D6B00548685 /* TotalOrderController1.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TotalOrderController1.xib; sourceTree = "<group>"; };
-		A5059405175D582A00905069 /* DishSearchController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DishSearchController.h; sourceTree = "<group>"; };
-		A5059406175D582A00905069 /* DishSearchController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DishSearchController.m; sourceTree = "<group>"; };
-		A5059407175D582A00905069 /* DishSearchController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DishSearchController.xib; sourceTree = "<group>"; };
 		A511008E1783856B00608ACE /* DataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DataManager.h; path = MenuOrder/Data/DataManager.h; sourceTree = "<group>"; };
 		A511008F1783856B00608ACE /* DataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DataManager.m; path = MenuOrder/Data/DataManager.m; sourceTree = "<group>"; };
-		A51210D617597EB7003A0498 /* DishCountController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DishCountController.h; sourceTree = "<group>"; };
-		A51210D717597EB7003A0498 /* DishCountController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DishCountController.m; sourceTree = "<group>"; };
-		A51210D817597EB7003A0498 /* DishCountController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DishCountController.xib; sourceTree = "<group>"; };
-		A520A8D41756CA1D004A81EB /* BeforeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeforeController.h; sourceTree = "<group>"; };
-		A520A8D51756CA1D004A81EB /* BeforeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeforeController.m; sourceTree = "<group>"; };
-		A520A8D61756CA1D004A81EB /* BeforeController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BeforeController.xib; sourceTree = "<group>"; };
-		A53BD401178CB00C00CAB4C7 /* VersionCheckController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VersionCheckController.h; sourceTree = "<group>"; };
-		A53BD402178CB00C00CAB4C7 /* VersionCheckController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VersionCheckController.m; sourceTree = "<group>"; };
-		A53BD403178CB00C00CAB4C7 /* VersionCheckController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VersionCheckController.xib; sourceTree = "<group>"; };
-		A53BD406178CC33500CAB4C7 /* UpdateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UpdateViewController.h; sourceTree = "<group>"; };
-		A53BD407178CC33500CAB4C7 /* UpdateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UpdateViewController.m; sourceTree = "<group>"; };
-		A53BD408178CC33500CAB4C7 /* UpdateViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UpdateViewController.xib; sourceTree = "<group>"; };
 		A53C4759178B77CA00B528DB /* DataManagerDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DataManagerDelegate.h; path = MenuOrder/Data/DataManagerDelegate.h; sourceTree = "<group>"; };
 		A53C475A178B798900B528DB /* VersionDownloadDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = VersionDownloadDelegate.h; path = MenuOrder/Data/VersionDownloadDelegate.h; sourceTree = "<group>"; };
 		A53C475B178B799F00B528DB /* PageDownloadDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PageDownloadDelegate.h; path = MenuOrder/Data/PageDownloadDelegate.h; sourceTree = "<group>"; };
 		A53D4606178A2B320062A0D0 /* DisplayPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DisplayPage.h; path = MenuOrder/Data/DisplayPage.h; sourceTree = "<group>"; };
 		A53D4607178A2B320062A0D0 /* DisplayPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DisplayPage.m; path = MenuOrder/Data/DisplayPage.m; sourceTree = "<group>"; };
-		A541EFB01763A5F800BA9CBF /* UserManualController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserManualController.h; sourceTree = "<group>"; };
-		A541EFB11763A5F800BA9CBF /* UserManualController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserManualController.m; sourceTree = "<group>"; };
-		A541EFB21763A5F800BA9CBF /* UserManualController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserManualController.xib; sourceTree = "<group>"; };
 		A5421F291786315900DBFD1D /* PersistentData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PersistentData.h; path = MenuOrder/Data/PersistentData.h; sourceTree = "<group>"; };
 		A5421F2A1786315900DBFD1D /* PersistentData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PersistentData.m; path = MenuOrder/Data/PersistentData.m; sourceTree = "<group>"; };
 		A5555C2F1788C8C300F96D14 /* FileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FileManager.h; path = MenuOrder/Data/FileManager.h; sourceTree = "<group>"; };
@@ -97,25 +68,10 @@
 		A5555C351788D12F00F96D14 /* UpdateJsonDownloadWorker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UpdateJsonDownloadWorker.h; path = MenuOrder/Data/UpdateJsonDownloadWorker.h; sourceTree = "<group>"; };
 		A5555C361788D12F00F96D14 /* UpdateJsonDownloadWorker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UpdateJsonDownloadWorker.m; path = MenuOrder/Data/UpdateJsonDownloadWorker.m; sourceTree = "<group>"; };
 		A5671AD4178F5FE70052C329 /* DishKindDownloadDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DishKindDownloadDelegate.h; path = MenuOrder/Data/DishKindDownloadDelegate.h; sourceTree = "<group>"; };
-		A5D7484D17580A2D00617C1E /* BeforeSubController1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeforeSubController1.h; sourceTree = "<group>"; };
-		A5D7484E17580A2D00617C1E /* BeforeSubController1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeforeSubController1.m; sourceTree = "<group>"; };
-		A5D7484F17580A2D00617C1E /* BeforeSubController1.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BeforeSubController1.xib; sourceTree = "<group>"; };
-		A5D90FFC175189830097BCEB /* SubOrderController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubOrderController.h; sourceTree = "<group>"; };
-		A5D90FFD175189830097BCEB /* SubOrderController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubOrderController.m; sourceTree = "<group>"; };
-		A5D90FFE175189830097BCEB /* SubOrderController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SubOrderController.xib; sourceTree = "<group>"; };
 		A5D9100217518A450097BCEB /* SwipeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwipeView.h; sourceTree = "<group>"; };
 		A5D9100317518A450097BCEB /* SwipeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwipeView.m; sourceTree = "<group>"; };
 		A5D9180B17969F4600CFC134 /* DataConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DataConverter.h; path = MenuOrder/Data/DataConverter.h; sourceTree = "<group>"; };
 		A5D9180C17969F4600CFC134 /* DataConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DataConverter.m; path = MenuOrder/Data/DataConverter.m; sourceTree = "<group>"; };
-		A5D9AC9C17629D1000E23220 /* TotalOrderController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TotalOrderController.h; sourceTree = "<group>"; };
-		A5D9AC9D17629D1000E23220 /* TotalOrderController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TotalOrderController.m; sourceTree = "<group>"; };
-		A5D9AC9E17629D1000E23220 /* TotalOrderController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TotalOrderController.xib; sourceTree = "<group>"; };
-		A5D9ACA11762B1CD00E23220 /* DishCountController1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DishCountController1.h; sourceTree = "<group>"; };
-		A5D9ACA21762B1CD00E23220 /* DishCountController1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DishCountController1.m; sourceTree = "<group>"; };
-		A5D9ACA31762B1CD00E23220 /* DishCountController1.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DishCountController1.xib; sourceTree = "<group>"; };
-		A5D9DE4017521C48009D23D6 /* SubOrderItem1.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SubOrderItem1.xib; sourceTree = "<group>"; };
-		A5D9DE4217521CC1009D23D6 /* SubOrderItem2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SubOrderItem2.xib; sourceTree = "<group>"; };
-		A5D9DE4417521CE7009D23D6 /* SubOrderItem3.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SubOrderItem3.xib; sourceTree = "<group>"; };
 		A5DC8882179072130097C690 /* PathDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PathDefine.h; path = MenuOrder/Data/PathDefine.h; sourceTree = "<group>"; };
 		A5DD82B51791BF6A0047EB01 /* DisplayItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DisplayItem.h; path = MenuOrder/Data/DisplayItem.h; sourceTree = "<group>"; };
 		A5DD82B61791BF6A0047EB01 /* DisplayItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DisplayItem.m; path = MenuOrder/Data/DisplayItem.m; sourceTree = "<group>"; };
@@ -130,21 +86,47 @@
 		A5F0025E1750F7D4001FDFB4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		A5F002601750F7D4001FDFB4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A5F002621750F7D4001FDFB4 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		A5F002661750F7D4001FDFB4 /* MenuOrder-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MenuOrder-Info.plist"; sourceTree = "<group>"; };
-		A5F002681750F7D4001FDFB4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		A5F0026A1750F7D4001FDFB4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		A5F0026C1750F7D4001FDFB4 /* MenuOrder-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MenuOrder-Prefix.pch"; sourceTree = "<group>"; };
-		A5F0026D1750F7D4001FDFB4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		A5F0026E1750F7D4001FDFB4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		A5F002701750F7D4001FDFB4 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		A5F002721750F7D4001FDFB4 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		A5F002741750F7D4001FDFB4 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		A5F002761750F7D4001FDFB4 /* KindSelectController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KindSelectController.h; sourceTree = "<group>"; };
-		A5F002771750F7D4001FDFB4 /* KindSelectController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KindSelectController.m; sourceTree = "<group>"; };
-		A5F0027A1750F7D4001FDFB4 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/KindSelectController.xib; sourceTree = "<group>"; };
 		A5F0029E1750F833001FDFB4 /* iCarousel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iCarousel.h; sourceTree = "<group>"; };
 		A5F0029F1750F833001FDFB4 /* iCarousel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iCarousel.m; sourceTree = "<group>"; };
 		A5F002A11750F83E001FDFB4 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		A5FF1F4D179DD4DE00CF308B /* UpdateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UpdateViewController.h; sourceTree = "<group>"; };
+		A5FF1F4E179DD4DE00CF308B /* UpdateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UpdateViewController.m; sourceTree = "<group>"; };
+		A5FF1F4F179DD4DE00CF308B /* UpdateViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UpdateViewController.xib; sourceTree = "<group>"; };
+		A5FF1F50179DD4DE00CF308B /* VersionCheckController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VersionCheckController.h; sourceTree = "<group>"; };
+		A5FF1F51179DD4DE00CF308B /* VersionCheckController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VersionCheckController.m; sourceTree = "<group>"; };
+		A5FF1F52179DD4DE00CF308B /* VersionCheckController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VersionCheckController.xib; sourceTree = "<group>"; };
+		A5FF1F58179DD4FE00CF308B /* DishSearchController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DishSearchController.h; sourceTree = "<group>"; };
+		A5FF1F59179DD4FE00CF308B /* DishSearchController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DishSearchController.m; sourceTree = "<group>"; };
+		A5FF1F5A179DD4FE00CF308B /* DishSearchController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DishSearchController.xib; sourceTree = "<group>"; };
+		A5FF1F5E179DD50D00CF308B /* BeforeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeforeController.h; sourceTree = "<group>"; };
+		A5FF1F5F179DD50D00CF308B /* BeforeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeforeController.m; sourceTree = "<group>"; };
+		A5FF1F60179DD50D00CF308B /* BeforeController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BeforeController.xib; sourceTree = "<group>"; };
+		A5FF1F61179DD50D00CF308B /* BeforeSubController1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeforeSubController1.h; sourceTree = "<group>"; };
+		A5FF1F62179DD50D00CF308B /* BeforeSubController1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeforeSubController1.m; sourceTree = "<group>"; };
+		A5FF1F63179DD50D00CF308B /* BeforeSubController1.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BeforeSubController1.xib; sourceTree = "<group>"; };
+		A5FF1F64179DD50D00CF308B /* DishCountController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DishCountController.h; sourceTree = "<group>"; };
+		A5FF1F65179DD50D00CF308B /* DishCountController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DishCountController.m; sourceTree = "<group>"; };
+		A5FF1F66179DD50D00CF308B /* DishCountController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DishCountController.xib; sourceTree = "<group>"; };
+		A5FF1F67179DD50D00CF308B /* DishCountController1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DishCountController1.h; sourceTree = "<group>"; };
+		A5FF1F68179DD50D00CF308B /* DishCountController1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DishCountController1.m; sourceTree = "<group>"; };
+		A5FF1F69179DD50D00CF308B /* DishCountController1.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DishCountController1.xib; sourceTree = "<group>"; };
+		A5FF1F6A179DD50D00CF308B /* KindSelectController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KindSelectController.h; sourceTree = "<group>"; };
+		A5FF1F6B179DD50D00CF308B /* KindSelectController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KindSelectController.m; sourceTree = "<group>"; };
+		A5FF1F6C179DD50D00CF308B /* SubOrderController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubOrderController.h; sourceTree = "<group>"; };
+		A5FF1F6D179DD50D00CF308B /* SubOrderController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubOrderController.m; sourceTree = "<group>"; };
+		A5FF1F6E179DD50D00CF308B /* SubOrderController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SubOrderController.xib; sourceTree = "<group>"; };
+		A5FF1F6F179DD50D00CF308B /* TotalOrderController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TotalOrderController.h; sourceTree = "<group>"; };
+		A5FF1F70179DD50D00CF308B /* TotalOrderController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TotalOrderController.m; sourceTree = "<group>"; };
+		A5FF1F71179DD50D00CF308B /* TotalOrderController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TotalOrderController.xib; sourceTree = "<group>"; };
+		A5FF1F72179DD50D00CF308B /* TotalOrderController1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TotalOrderController1.h; sourceTree = "<group>"; };
+		A5FF1F73179DD50D00CF308B /* TotalOrderController1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TotalOrderController1.m; sourceTree = "<group>"; };
+		A5FF1F74179DD50D00CF308B /* TotalOrderController1.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TotalOrderController1.xib; sourceTree = "<group>"; };
+		A5FF1F84179DD5B500CF308B /* UserManualController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserManualController.h; path = MenuOrder/UI/UserManual/UserManualController.h; sourceTree = "<group>"; };
+		A5FF1F85179DD5B500CF308B /* UserManualController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserManualController.m; path = MenuOrder/UI/UserManual/UserManualController.m; sourceTree = "<group>"; };
+		A5FF1F86179DD5B500CF308B /* UserManualController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = UserManualController.xib; path = MenuOrder/UI/UserManual/UserManualController.xib; sourceTree = "<group>"; };
+		A5FF1F8A179DD61700CF308B /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = MenuOrder/AppDelegate.h; sourceTree = "<group>"; };
+		A5FF1F8B179DD61700CF308B /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = MenuOrder/AppDelegate.m; sourceTree = "<group>"; };
+		A5FF1F8D179DD65F00CF308B /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = MenuOrder/main.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -197,42 +179,6 @@
 			name = DataManager;
 			sourceTree = "<group>";
 		};
-		A51210CB175959C1003A0498 /* DishCount */ = {
-			isa = PBXGroup;
-			children = (
-				A51210D617597EB7003A0498 /* DishCountController.h */,
-				A51210D717597EB7003A0498 /* DishCountController.m */,
-				A51210D817597EB7003A0498 /* DishCountController.xib */,
-				A5D9ACA11762B1CD00E23220 /* DishCountController1.h */,
-				A5D9ACA21762B1CD00E23220 /* DishCountController1.m */,
-				A5D9ACA31762B1CD00E23220 /* DishCountController1.xib */,
-			);
-			name = DishCount;
-			sourceTree = "<group>";
-		};
-		A520A8D31756C9E6004A81EB /* Before */ = {
-			isa = PBXGroup;
-			children = (
-				A520A8D41756CA1D004A81EB /* BeforeController.h */,
-				A520A8D51756CA1D004A81EB /* BeforeController.m */,
-				A520A8D61756CA1D004A81EB /* BeforeController.xib */,
-				A5D7484D17580A2D00617C1E /* BeforeSubController1.h */,
-				A5D7484E17580A2D00617C1E /* BeforeSubController1.m */,
-				A5D7484F17580A2D00617C1E /* BeforeSubController1.xib */,
-			);
-			name = Before;
-			sourceTree = "<group>";
-		};
-		A541EFAE1763A44900BA9CBF /* UserManual */ = {
-			isa = PBXGroup;
-			children = (
-				A541EFB01763A5F800BA9CBF /* UserManualController.h */,
-				A541EFB11763A5F800BA9CBF /* UserManualController.m */,
-				A541EFB21763A5F800BA9CBF /* UserManualController.xib */,
-			);
-			name = UserManual;
-			sourceTree = "<group>";
-		};
 		A5D9100117518A450097BCEB /* SwipeView */ = {
 			isa = PBXGroup;
 			children = (
@@ -243,23 +189,14 @@
 			path = MenuOrder/SwipeView;
 			sourceTree = "<group>";
 		};
-		A5D9DE3F17521BF4009D23D6 /* SubOrderItem */ = {
-			isa = PBXGroup;
-			children = (
-				A5D9DE4017521C48009D23D6 /* SubOrderItem1.xib */,
-				A5D9DE4217521CC1009D23D6 /* SubOrderItem2.xib */,
-				A5D9DE4417521CE7009D23D6 /* SubOrderItem3.xib */,
-			);
-			name = SubOrderItem;
-			sourceTree = "<group>";
-		};
 		A5F002521750F7D4001FDFB4 = {
 			isa = PBXGroup;
 			children = (
+				A5FF1F89179DD5FF00CF308B /* MenuOrder */,
+				A5FF1F32179DD44E00CF308B /* UI */,
 				A511008D178384C800608ACE /* DataManager */,
 				A5D9100117518A450097BCEB /* SwipeView */,
 				A5F0029D1750F833001FDFB4 /* iCarousel */,
-				A5F002641750F7D4001FDFB4 /* MenuOrder */,
 				A5F0025D1750F7D4001FDFB4 /* Frameworks */,
 				A5F0025C1750F7D4001FDFB4 /* Products */,
 			);
@@ -284,55 +221,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		A5F002641750F7D4001FDFB4 /* MenuOrder */ = {
-			isa = PBXGroup;
-			children = (
-				A541EFAE1763A44900BA9CBF /* UserManual */,
-				A51210CB175959C1003A0498 /* DishCount */,
-				A520A8D31756C9E6004A81EB /* Before */,
-				A5D9DE3F17521BF4009D23D6 /* SubOrderItem */,
-				A5F0026D1750F7D4001FDFB4 /* AppDelegate.h */,
-				A5F0026E1750F7D4001FDFB4 /* AppDelegate.m */,
-				A5F002761750F7D4001FDFB4 /* KindSelectController.h */,
-				A5F002771750F7D4001FDFB4 /* KindSelectController.m */,
-				A5F002791750F7D4001FDFB4 /* KindSelectController.xib */,
-				A5D90FFC175189830097BCEB /* SubOrderController.h */,
-				A5D90FFD175189830097BCEB /* SubOrderController.m */,
-				A5D90FFE175189830097BCEB /* SubOrderController.xib */,
-				A5059405175D582A00905069 /* DishSearchController.h */,
-				A5059406175D582A00905069 /* DishSearchController.m */,
-				A5059407175D582A00905069 /* DishSearchController.xib */,
-				A5D9AC9C17629D1000E23220 /* TotalOrderController.h */,
-				A5D9AC9D17629D1000E23220 /* TotalOrderController.m */,
-				A5D9AC9E17629D1000E23220 /* TotalOrderController.xib */,
-				A502D11E176A0D6B00548685 /* TotalOrderController1.h */,
-				A502D11F176A0D6B00548685 /* TotalOrderController1.m */,
-				A502D120176A0D6B00548685 /* TotalOrderController1.xib */,
-				A53BD401178CB00C00CAB4C7 /* VersionCheckController.h */,
-				A53BD402178CB00C00CAB4C7 /* VersionCheckController.m */,
-				A53BD403178CB00C00CAB4C7 /* VersionCheckController.xib */,
-				A53BD406178CC33500CAB4C7 /* UpdateViewController.h */,
-				A53BD407178CC33500CAB4C7 /* UpdateViewController.m */,
-				A53BD408178CC33500CAB4C7 /* UpdateViewController.xib */,
-				A5F002651750F7D4001FDFB4 /* Supporting Files */,
-			);
-			path = MenuOrder;
-			sourceTree = "<group>";
-		};
-		A5F002651750F7D4001FDFB4 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				A5F002661750F7D4001FDFB4 /* MenuOrder-Info.plist */,
-				A5F002671750F7D4001FDFB4 /* InfoPlist.strings */,
-				A5F0026A1750F7D4001FDFB4 /* main.m */,
-				A5F0026C1750F7D4001FDFB4 /* MenuOrder-Prefix.pch */,
-				A5F002701750F7D4001FDFB4 /* Default.png */,
-				A5F002721750F7D4001FDFB4 /* Default@2x.png */,
-				A5F002741750F7D4001FDFB4 /* Default-568h@2x.png */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 		A5F0029D1750F833001FDFB4 /* iCarousel */ = {
 			isa = PBXGroup;
 			children = (
@@ -341,6 +229,93 @@
 			);
 			name = iCarousel;
 			path = MenuOrder/iCarousel;
+			sourceTree = "<group>";
+		};
+		A5FF1F32179DD44E00CF308B /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				A5FF1F5D179DD50D00CF308B /* Order */,
+				A5FF1F57179DD4FE00CF308B /* Search */,
+				A5FF1F4C179DD4DE00CF308B /* Update */,
+				A5FF1F36179DD48D00CF308B /* UserManual */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
+		A5FF1F36179DD48D00CF308B /* UserManual */ = {
+			isa = PBXGroup;
+			children = (
+				A5FF1F84179DD5B500CF308B /* UserManualController.h */,
+				A5FF1F85179DD5B500CF308B /* UserManualController.m */,
+				A5FF1F86179DD5B500CF308B /* UserManualController.xib */,
+			);
+			name = UserManual;
+			sourceTree = "<group>";
+		};
+		A5FF1F4C179DD4DE00CF308B /* Update */ = {
+			isa = PBXGroup;
+			children = (
+				A5FF1F4D179DD4DE00CF308B /* UpdateViewController.h */,
+				A5FF1F4E179DD4DE00CF308B /* UpdateViewController.m */,
+				A5FF1F4F179DD4DE00CF308B /* UpdateViewController.xib */,
+				A5FF1F50179DD4DE00CF308B /* VersionCheckController.h */,
+				A5FF1F51179DD4DE00CF308B /* VersionCheckController.m */,
+				A5FF1F52179DD4DE00CF308B /* VersionCheckController.xib */,
+			);
+			name = Update;
+			path = MenuOrder/UI/Update;
+			sourceTree = "<group>";
+		};
+		A5FF1F57179DD4FE00CF308B /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				A5FF1F58179DD4FE00CF308B /* DishSearchController.h */,
+				A5FF1F59179DD4FE00CF308B /* DishSearchController.m */,
+				A5FF1F5A179DD4FE00CF308B /* DishSearchController.xib */,
+			);
+			name = Search;
+			path = MenuOrder/UI/Search;
+			sourceTree = "<group>";
+		};
+		A5FF1F5D179DD50D00CF308B /* Order */ = {
+			isa = PBXGroup;
+			children = (
+				A5FF1F5E179DD50D00CF308B /* BeforeController.h */,
+				A5FF1F5F179DD50D00CF308B /* BeforeController.m */,
+				A5FF1F60179DD50D00CF308B /* BeforeController.xib */,
+				A5FF1F61179DD50D00CF308B /* BeforeSubController1.h */,
+				A5FF1F62179DD50D00CF308B /* BeforeSubController1.m */,
+				A5FF1F63179DD50D00CF308B /* BeforeSubController1.xib */,
+				A5FF1F64179DD50D00CF308B /* DishCountController.h */,
+				A5FF1F65179DD50D00CF308B /* DishCountController.m */,
+				A5FF1F66179DD50D00CF308B /* DishCountController.xib */,
+				A5FF1F67179DD50D00CF308B /* DishCountController1.h */,
+				A5FF1F68179DD50D00CF308B /* DishCountController1.m */,
+				A5FF1F69179DD50D00CF308B /* DishCountController1.xib */,
+				A5FF1F6A179DD50D00CF308B /* KindSelectController.h */,
+				A5FF1F6B179DD50D00CF308B /* KindSelectController.m */,
+				A5FF1F6C179DD50D00CF308B /* SubOrderController.h */,
+				A5FF1F6D179DD50D00CF308B /* SubOrderController.m */,
+				A5FF1F6E179DD50D00CF308B /* SubOrderController.xib */,
+				A5FF1F6F179DD50D00CF308B /* TotalOrderController.h */,
+				A5FF1F70179DD50D00CF308B /* TotalOrderController.m */,
+				A5FF1F71179DD50D00CF308B /* TotalOrderController.xib */,
+				A5FF1F72179DD50D00CF308B /* TotalOrderController1.h */,
+				A5FF1F73179DD50D00CF308B /* TotalOrderController1.m */,
+				A5FF1F74179DD50D00CF308B /* TotalOrderController1.xib */,
+			);
+			name = Order;
+			path = MenuOrder/UI/Order;
+			sourceTree = "<group>";
+		};
+		A5FF1F89179DD5FF00CF308B /* MenuOrder */ = {
+			isa = PBXGroup;
+			children = (
+				A5FF1F8D179DD65F00CF308B /* main.m */,
+				A5FF1F8A179DD61700CF308B /* AppDelegate.h */,
+				A5FF1F8B179DD61700CF308B /* AppDelegate.m */,
+			);
+			name = MenuOrder;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -394,25 +369,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A5F002691750F7D4001FDFB4 /* InfoPlist.strings in Resources */,
-				A5F002711750F7D4001FDFB4 /* Default.png in Resources */,
-				A5F002731750F7D4001FDFB4 /* Default@2x.png in Resources */,
-				A5F002751750F7D4001FDFB4 /* Default-568h@2x.png in Resources */,
-				A5F0027B1750F7D4001FDFB4 /* KindSelectController.xib in Resources */,
-				A5D91000175189830097BCEB /* SubOrderController.xib in Resources */,
-				A5D9DE4117521C48009D23D6 /* SubOrderItem1.xib in Resources */,
-				A5D9DE4317521CC1009D23D6 /* SubOrderItem2.xib in Resources */,
-				A5D9DE4517521CE7009D23D6 /* SubOrderItem3.xib in Resources */,
-				A520A8D81756CA1D004A81EB /* BeforeController.xib in Resources */,
-				A5D7485117580A2D00617C1E /* BeforeSubController1.xib in Resources */,
-				A51210DA17597EB7003A0498 /* DishCountController.xib in Resources */,
-				A5059409175D582A00905069 /* DishSearchController.xib in Resources */,
-				A5D9ACA017629D1000E23220 /* TotalOrderController.xib in Resources */,
-				A5D9ACA51762B1CD00E23220 /* DishCountController1.xib in Resources */,
-				A541EFB41763A5F800BA9CBF /* UserManualController.xib in Resources */,
-				A502D122176A0D6B00548685 /* TotalOrderController1.xib in Resources */,
-				A53BD405178CB00C00CAB4C7 /* VersionCheckController.xib in Resources */,
-				A53BD40A178CC33600CAB4C7 /* UpdateViewController.xib in Resources */,
+				A5FF1F54179DD4DE00CF308B /* UpdateViewController.xib in Resources */,
+				A5FF1F56179DD4DE00CF308B /* VersionCheckController.xib in Resources */,
+				A5FF1F5C179DD4FE00CF308B /* DishSearchController.xib in Resources */,
+				A5FF1F76179DD50D00CF308B /* BeforeController.xib in Resources */,
+				A5FF1F78179DD50D00CF308B /* BeforeSubController1.xib in Resources */,
+				A5FF1F7A179DD50D00CF308B /* DishCountController.xib in Resources */,
+				A5FF1F7C179DD50D00CF308B /* DishCountController1.xib in Resources */,
+				A5FF1F7F179DD50D00CF308B /* SubOrderController.xib in Resources */,
+				A5FF1F81179DD50D00CF308B /* TotalOrderController.xib in Resources */,
+				A5FF1F83179DD50D00CF308B /* TotalOrderController1.xib in Resources */,
+				A5FF1F88179DD5B500CF308B /* UserManualController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -423,56 +390,37 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A5F0026B1750F7D4001FDFB4 /* main.m in Sources */,
-				A5F0026F1750F7D4001FDFB4 /* AppDelegate.m in Sources */,
-				A5F002781750F7D4001FDFB4 /* KindSelectController.m in Sources */,
 				A5F002A01750F833001FDFB4 /* iCarousel.m in Sources */,
-				A5D90FFF175189830097BCEB /* SubOrderController.m in Sources */,
 				A5D9100417518A450097BCEB /* SwipeView.m in Sources */,
-				A520A8D71756CA1D004A81EB /* BeforeController.m in Sources */,
-				A5D7485017580A2D00617C1E /* BeforeSubController1.m in Sources */,
-				A51210D917597EB7003A0498 /* DishCountController.m in Sources */,
-				A5059408175D582A00905069 /* DishSearchController.m in Sources */,
-				A5D9AC9F17629D1000E23220 /* TotalOrderController.m in Sources */,
-				A5D9ACA41762B1CD00E23220 /* DishCountController1.m in Sources */,
-				A541EFB31763A5F800BA9CBF /* UserManualController.m in Sources */,
-				A502D121176A0D6B00548685 /* TotalOrderController1.m in Sources */,
 				A51100901783856B00608ACE /* DataManager.m in Sources */,
 				A5421F2B1786315900DBFD1D /* PersistentData.m in Sources */,
 				A5555C311788C8C300F96D14 /* FileManager.m in Sources */,
 				A5555C341788D10000F96D14 /* VersionDownloadWorker.m in Sources */,
 				A5555C371788D12F00F96D14 /* UpdateJsonDownloadWorker.m in Sources */,
 				A53D4608178A2B320062A0D0 /* DisplayPage.m in Sources */,
-				A53BD404178CB00C00CAB4C7 /* VersionCheckController.m in Sources */,
-				A53BD409178CC33600CAB4C7 /* UpdateViewController.m in Sources */,
 				A5E4FD7D178E08B9007B5A4A /* DishKind.m in Sources */,
 				A5E4FD80178E0AA8007B5A4A /* DishKindDownloadWorker.m in Sources */,
 				A5E4FD83178E0ACF007B5A4A /* PageDownloadWorker.m in Sources */,
 				A5DD82B71791BF6A0047EB01 /* DisplayItem.m in Sources */,
 				A5D9180D17969F4600CFC134 /* DataConverter.m in Sources */,
+				A5FF1F53179DD4DE00CF308B /* UpdateViewController.m in Sources */,
+				A5FF1F55179DD4DE00CF308B /* VersionCheckController.m in Sources */,
+				A5FF1F5B179DD4FE00CF308B /* DishSearchController.m in Sources */,
+				A5FF1F75179DD50D00CF308B /* BeforeController.m in Sources */,
+				A5FF1F77179DD50D00CF308B /* BeforeSubController1.m in Sources */,
+				A5FF1F79179DD50D00CF308B /* DishCountController.m in Sources */,
+				A5FF1F7B179DD50D00CF308B /* DishCountController1.m in Sources */,
+				A5FF1F7D179DD50D00CF308B /* KindSelectController.m in Sources */,
+				A5FF1F7E179DD50D00CF308B /* SubOrderController.m in Sources */,
+				A5FF1F80179DD50D00CF308B /* TotalOrderController.m in Sources */,
+				A5FF1F82179DD50D00CF308B /* TotalOrderController1.m in Sources */,
+				A5FF1F87179DD5B500CF308B /* UserManualController.m in Sources */,
+				A5FF1F8C179DD61700CF308B /* AppDelegate.m in Sources */,
+				A5FF1F8E179DD65F00CF308B /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		A5F002671750F7D4001FDFB4 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A5F002681750F7D4001FDFB4 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		A5F002791750F7D4001FDFB4 /* KindSelectController.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A5F0027A1750F7D4001FDFB4 /* en */,
-			);
-			name = KindSelectController.xib;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		A5F0027C1750F7D4001FDFB4 /* Debug */ = {

@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "SwipeView/SwipeView.h"
+#import "../../SwipeView/SwipeView.h"
 @interface BeforeController : UIViewController <SwipeViewDelegate, SwipeViewDataSource>
 @property (strong, nonatomic) IBOutlet SwipeView *swipeView;
 @property (strong, nonatomic) NSMutableArray* controllerContainer;

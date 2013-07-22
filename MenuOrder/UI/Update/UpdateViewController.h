@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Data/DataManager.h"
+#import "../../Data/DataManager.h"
 @interface UpdateViewController : UIViewController<DataManagerDelegate>
 {
     int updateInfoAppCount;

@@ -12,8 +12,8 @@
 #import "DishSearchController.h"
 #import "TotalOrderController.h"
 #import "TotalOrderController1.h"
-#import "UserManualController.h"
-#import "Data/DataManager.h"
+#import "../UserManual/UserManualController.h"
+#import "../../Data/DataManager.h"
 #import "DishKind.h"
 
 @interface KindSelectController ()
