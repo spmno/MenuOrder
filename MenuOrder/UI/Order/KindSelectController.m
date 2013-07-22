@@ -15,6 +15,7 @@
 #import "../UserManual/UserManualController.h"
 #import "../../Data/DataManager.h"
 #import "DishKind.h"
+#import "UIManager.h"
 
 @interface KindSelectController ()
 
@@ -140,6 +141,7 @@
 - (void)carousel:(iCarousel *)carousel didSelectItemAtIndex:(NSInteger)index
 {
     NSLog(@"select the %d item", index);
+    /*
     switch (index) {
         case 0: {
             SubOrderController* subController = [[SubOrderController alloc]initWithNibName:@"SubOrderController" bundle:nil];
@@ -156,6 +158,11 @@
         default:
             break;
     }
+     */
+    UIManager *uiManager = [UIManager sharedInstance];
+    DataManager *dataManager = [DataManager sharedInstance];
+    DishKind *currentKind = [dataManager.wholeKindContainer objectAtIndex:index];
+    uiManager.currentKindId = currentKind.kindId;
 }
 
 - (IBAction)doSearchDish:(id)sender

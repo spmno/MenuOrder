@@ -49,6 +49,7 @@
 		A5FF1F88179DD5B500CF308B /* UserManualController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5FF1F86179DD5B500CF308B /* UserManualController.xib */; };
 		A5FF1F8C179DD61700CF308B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A5FF1F8B179DD61700CF308B /* AppDelegate.m */; };
 		A5FF1F8E179DD65F00CF308B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A5FF1F8D179DD65F00CF308B /* main.m */; };
+		A5FF1F91179DE66F00CF308B /* UIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A5FF1F90179DE66F00CF308B /* UIManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -127,6 +128,8 @@
 		A5FF1F8A179DD61700CF308B /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = MenuOrder/AppDelegate.h; sourceTree = "<group>"; };
 		A5FF1F8B179DD61700CF308B /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = MenuOrder/AppDelegate.m; sourceTree = "<group>"; };
 		A5FF1F8D179DD65F00CF308B /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = MenuOrder/main.m; sourceTree = "<group>"; };
+		A5FF1F8F179DE66F00CF308B /* UIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIManager.h; sourceTree = "<group>"; };
+		A5FF1F90179DE66F00CF308B /* UIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -303,6 +306,8 @@
 				A5FF1F72179DD50D00CF308B /* TotalOrderController1.h */,
 				A5FF1F73179DD50D00CF308B /* TotalOrderController1.m */,
 				A5FF1F74179DD50D00CF308B /* TotalOrderController1.xib */,
+				A5FF1F8F179DE66F00CF308B /* UIManager.h */,
+				A5FF1F90179DE66F00CF308B /* UIManager.m */,
 			);
 			name = Order;
 			path = MenuOrder/UI/Order;
@@ -417,6 +422,7 @@
 				A5FF1F87179DD5B500CF308B /* UserManualController.m in Sources */,
 				A5FF1F8C179DD61700CF308B /* AppDelegate.m in Sources */,
 				A5FF1F8E179DD65F00CF308B /* main.m in Sources */,
+				A5FF1F91179DE66F00CF308B /* UIManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,6 +9,9 @@
 #import "SubOrderController.h"
 #import "DishSearchController.h"
 #import "TotalOrderController.h"
+#import "UIManager.h"
+#import "DataManager.h"
+#import "DisplayPage.h"
 
 @interface SubOrderController ()
 
@@ -50,12 +53,28 @@
     //normally we'd use a backing array
     //as shown in the basic iOS example
     //but for this example we haven't bothered
-    return 6;
+    DataManager *dataManager = [DataManager sharedInstance];
+    UIManager *uiManager = [UIManager sharedInstance];  
+    currentKindPages = [[NSMutableArray alloc] init];
+    for (DisplayPage *page in dataManager.wholePageContainer) {
+        if (page.kindId == uiManager.currentKindId) {
+            [currentKindPages addObject:page];
+        }
+    }
+    return [currentKindPages count];
 }
 
 - (UIView *)swipeView:(SwipeView *)swipeView viewForItemAtIndex:(NSInteger)index reusingView:(UIView *)view
 {
+    DisplayPage *currentPage = [currentKindPages objectAtIndex:index];
     UIImageView* imageView = (UIImageView*)view;
+    NSArray *imageUrlItems = [currentPage.imageUrl componentsSeparatedByString:@"/"];
+    NSString *imageName = [imageUrlItems lastObject];
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentDirectory = [paths objectAtIndex:0];
+    NSString *imagePath = [documentDirectory stringByAppendingPathComponent:imageName];
+    NSLog(@"page url = %@\n", imagePath);
+
     if (!view) {
     	//load new item view instance from nib
         //control events are bound to view controller in nib file
@@ -63,10 +82,11 @@
         //item view, if different items have different contents, ignore the reusingView value
         //NSString *nibName = [NSString stringWithFormat: @"SubOrderItem%d", index+1];
     	//view = [[[NSBundle mainBundle] loadNibNamed:nibName owner:self options:nil] lastObject];
-        imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:[NSString stringWithFormat:@"b%d.jpg",index+1]]];
+        //imageView = [[[UIImageView alloc]initWithImage:[UIImage imageWithContentsOfFile:imagePath]]];
+        imageView = [[UIImageView alloc] initWithImage:[UIImage imageWithContentsOfFile:imagePath]];
         view = imageView;
     } else {
-        [imageView setImage:[UIImage imageNamed:[NSString stringWithFormat:@"b%d.jpg",index+1]]];
+        [imageView setImage:[UIImage imageWithContentsOfFile:imagePath]];
     }
     
     return view;

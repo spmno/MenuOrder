@@ -10,7 +10,8 @@
 #import "../../SwipeView/SwipeView.h"
 @interface SubOrderController : UIViewController <SwipeViewDelegate, SwipeViewDataSource, UIPopoverControllerDelegate>
 {
-     UIPopoverController *popover;
+    UIPopoverController *popover;
+    NSMutableArray *currentKindPages;
 }
 @property (strong, nonatomic) IBOutlet SwipeView *swipeView;
 - (IBAction)switchToMenu:(id)sender;
