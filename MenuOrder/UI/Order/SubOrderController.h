@@ -14,6 +14,7 @@
     NSMutableArray *currentKindPages;
 }
 @property (strong, nonatomic) IBOutlet SwipeView *swipeView;
+@property (strong, nonatomic) NSMutableArray *pageContainer;
 - (IBAction)switchToMenu:(id)sender;
 - (IBAction)switchToSearch:(id)sender;
 - (IBAction)switchToManual:(id)sender;

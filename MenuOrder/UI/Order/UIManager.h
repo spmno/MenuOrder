@@ -11,4 +11,5 @@
 @interface UIManager : NSObject
 + (UIManager*) sharedInstance;
 @property (strong, nonatomic) NSNumber *currentKindId;
+@property (strong, nonatomic) NSNumber *currentPageId;
 @end

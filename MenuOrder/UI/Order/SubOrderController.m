@@ -12,6 +12,7 @@
 #import "UIManager.h"
 #import "DataManager.h"
 #import "DisplayPage.h"
+#import "PageController.h"
 
 @interface SubOrderController ()
 
@@ -38,7 +39,20 @@
     _swipeView.wrapEnabled = NO;
     _swipeView.itemsPerPage = 1;
     _swipeView.truncateFinalPage = YES;
-    
+    DataManager *dataManager = [DataManager sharedInstance];
+    UIManager *uiManager = [UIManager sharedInstance];
+    for (DisplayPage *page in dataManager.wholePageContainer) {
+        if (page.kindId == uiManager.currentKindId) {
+            NSArray *imageUrlItems = [page.imageUrl componentsSeparatedByString:@"/"];
+            NSString *imageName = [imageUrlItems lastObject];
+            NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+            NSString *documentDirectory = [paths objectAtIndex:0];
+            NSString *imagePath = [documentDirectory stringByAppendingPathComponent:imageName];
+            NSLog(@"page url = %@\n", imagePath);
+            PageController *pageViewController = [[PageController alloc] init];
+            [_pageContainer addObject:pageViewController];
+        }
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -53,6 +67,7 @@
     //normally we'd use a backing array
     //as shown in the basic iOS example
     //but for this example we haven't bothered
+    /*
     DataManager *dataManager = [DataManager sharedInstance];
     UIManager *uiManager = [UIManager sharedInstance];  
     currentKindPages = [[NSMutableArray alloc] init];
@@ -62,10 +77,13 @@
         }
     }
     return [currentKindPages count];
+     */
+    return [_pageContainer count];
 }
 
 - (UIView *)swipeView:(SwipeView *)swipeView viewForItemAtIndex:(NSInteger)index reusingView:(UIView *)view
 {
+    /*
     DisplayPage *currentPage = [currentKindPages objectAtIndex:index];
     UIImageView* imageView = (UIImageView*)view;
     NSArray *imageUrlItems = [currentPage.imageUrl componentsSeparatedByString:@"/"];
@@ -74,7 +92,8 @@
     NSString *documentDirectory = [paths objectAtIndex:0];
     NSString *imagePath = [documentDirectory stringByAppendingPathComponent:imageName];
     NSLog(@"page url = %@\n", imagePath);
-
+    */
+    /*
     if (!view) {
     	//load new item view instance from nib
         //control events are bound to view controller in nib file
@@ -90,6 +109,9 @@
     }
     
     return view;
+     */
+    UIViewController* controller = _pageContainer[index];
+    return controller.view;
 }
 
 

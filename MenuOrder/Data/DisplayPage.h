@@ -12,4 +12,5 @@
 @property (strong, nonatomic) NSString *imageUrl;
 @property (strong, nonatomic) NSMutableArray *subItems;
 @property (strong, nonatomic) NSNumber *kindId;
+@property (strong, nonatomic) NSNumber *pageId;
 @end

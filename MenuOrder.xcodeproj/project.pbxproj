@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A51100901783856B00608ACE /* DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A511008F1783856B00608ACE /* DataManager.m */; };
+		A51F11A4179F2B46003AEFD9 /* PageController.m in Sources */ = {isa = PBXBuildFile; fileRef = A51F11A3179F2B46003AEFD9 /* PageController.m */; };
 		A53D4608178A2B320062A0D0 /* DisplayPage.m in Sources */ = {isa = PBXBuildFile; fileRef = A53D4607178A2B320062A0D0 /* DisplayPage.m */; };
 		A5421F2B1786315900DBFD1D /* PersistentData.m in Sources */ = {isa = PBXBuildFile; fileRef = A5421F2A1786315900DBFD1D /* PersistentData.m */; };
 		A5555C311788C8C300F96D14 /* FileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A5555C301788C8C300F96D14 /* FileManager.m */; };
@@ -55,6 +56,8 @@
 /* Begin PBXFileReference section */
 		A511008E1783856B00608ACE /* DataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DataManager.h; path = MenuOrder/Data/DataManager.h; sourceTree = "<group>"; };
 		A511008F1783856B00608ACE /* DataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DataManager.m; path = MenuOrder/Data/DataManager.m; sourceTree = "<group>"; };
+		A51F11A2179F2B46003AEFD9 /* PageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageController.h; sourceTree = "<group>"; };
+		A51F11A3179F2B46003AEFD9 /* PageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageController.m; sourceTree = "<group>"; };
 		A53C4759178B77CA00B528DB /* DataManagerDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DataManagerDelegate.h; path = MenuOrder/Data/DataManagerDelegate.h; sourceTree = "<group>"; };
 		A53C475A178B798900B528DB /* VersionDownloadDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = VersionDownloadDelegate.h; path = MenuOrder/Data/VersionDownloadDelegate.h; sourceTree = "<group>"; };
 		A53C475B178B799F00B528DB /* PageDownloadDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PageDownloadDelegate.h; path = MenuOrder/Data/PageDownloadDelegate.h; sourceTree = "<group>"; };
@@ -308,6 +311,8 @@
 				A5FF1F74179DD50D00CF308B /* TotalOrderController1.xib */,
 				A5FF1F8F179DE66F00CF308B /* UIManager.h */,
 				A5FF1F90179DE66F00CF308B /* UIManager.m */,
+				A51F11A2179F2B46003AEFD9 /* PageController.h */,
+				A51F11A3179F2B46003AEFD9 /* PageController.m */,
 			);
 			name = Order;
 			path = MenuOrder/UI/Order;
@@ -423,6 +428,7 @@
 				A5FF1F8C179DD61700CF308B /* AppDelegate.m in Sources */,
 				A5FF1F8E179DD65F00CF308B /* main.m in Sources */,
 				A5FF1F91179DE66F00CF308B /* UIManager.m in Sources */,
+				A51F11A4179F2B46003AEFD9 /* PageController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

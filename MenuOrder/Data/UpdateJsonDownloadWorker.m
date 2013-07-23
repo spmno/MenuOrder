@@ -61,6 +61,7 @@
         NSDictionary *urlDictionary = [photoDictionary objectForKey:@"photo"];
         displayPage.imageUrl = [urlDictionary objectForKey:@"url"];
         displayPage.kindId = [page objectForKey:@"dish_kind_id"];
+        displayPage.pageId = [page objectForKey:@"id"];
         NSLog(@"page image url = %@", displayPage.imageUrl);
         ++_appInfoCount;
         NSDictionary *itemsDictionary = [page objectForKey:@"display_items"];
