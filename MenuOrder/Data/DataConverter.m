@@ -80,4 +80,29 @@
     return YES;
 }
 
+- (BOOL)dictionaryToDish:(NSArray *)dictionary to:(NSMutableDictionary *)dishes
+{
+    for (NSDictionary *dishDictionary in dictionary) {
+        Dish *dish = [[Dish alloc] init];
+        dish.id = [dishDictionary objectForKey:@"id"];
+        dish.name = [dishDictionary objectForKey:@"name"];
+        dish.description = [dishDictionary objectForKey:@"description"];
+        dish.price = [dishDictionary objectForKey:@"price"];
+        [dishes setObject:dish forKey:dish.id];
+    }
+    return YES;
+}
+
+- (BOOL)dishToDictionary:(NSDictionary *)dishes to:(NSMutableArray *)dictionary
+{
+    for (Dish *dish in [dishes allValues]) {
+        NSMutableDictionary *dishDictionary = [[NSMutableDictionary alloc] init];
+        [dishDictionary setObject:dish.id forKey:@"id"];
+        [dishDictionary setObject:dish.name forKey:@"name"];
+        [dishDictionary setObject:dish.description forKey:@"description"];
+        [dishDictionary setObject:dish.price forKey:@"price"];
+        [dictionary addObject:dishDictionary];
+    }
+    return YES;
+}
 @end

@@ -23,11 +23,17 @@
     return self;
 }
 
+- (id)initWithPage:(DisplayPage *)page
+{
+    displayPage = page;
+    return [super init];
+}
+            
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    DisplayPage *displayPage = 
+     
 }
 
 - (void)didReceiveMemoryWarning

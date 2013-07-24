@@ -25,6 +25,7 @@
 {
     _wholeKindContainer = [[NSMutableArray alloc] init];
     _wholePageContainer = [[NSMutableArray alloc] init];
+    _wholeDishContainer = [[NSMutableDictionary alloc] init];
     versionWorker = [[VersionDownloadWorker alloc] init];
     updateWorker = [[UpdateJsonDownloadWorker alloc] init];
     dishKindWorker = [[DishKindDownloadWorker alloc] init];
@@ -43,7 +44,7 @@
 
 - (void) getUpdateJsons
 {
-    [updateWorker startDownloadUpdateJson: _wholePageContainer: _wholeKindContainer];
+    [updateWorker startDownloadUpdateJson: _wholePageContainer: _wholeKindContainer : _wholeDishContainer];
 }
 
 - (void) getAppData

@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "../../Data/DisplayPage.h"
 @interface PageController : UIViewController
-
+{
+    DisplayPage *displayPage;
+}
+- (id)initWithPage : (DisplayPage*) page;
 @end

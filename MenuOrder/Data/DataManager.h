@@ -31,6 +31,7 @@
 
 @property (strong, nonatomic) NSMutableArray *wholePageContainer;
 @property (strong, nonatomic) NSMutableArray *wholeKindContainer;
+@property (strong, nonatomic) NSMutableDictionary *wholeDishContainer;
 @property (strong, nonatomic) NSNumber *versionNumber;
 @property (weak, nonatomic) id<DataManagerDelegate> delegate;
 

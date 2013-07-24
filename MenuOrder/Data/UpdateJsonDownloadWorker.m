@@ -11,16 +11,18 @@
 #import "DisplayPage.h"
 #import "DisplayItem.h"
 #import "PathDefine.h"
+#import "DIsh.h"
 
 @implementation UpdateJsonDownloadWorker
 
-- (BOOL) startDownloadUpdateJson:(NSMutableArray *)pageContainer :(NSMutableArray *)kindContainer
+- (BOOL) startDownloadUpdateJson:(NSMutableArray *)pageContainer :(NSMutableArray *)kindContainer : (NSMutableDictionary*) dishContainer
 {
     NSString *appVersionUrl = APP_VERSION_URL;
     //NSString *appVersionUrl = @"http://192.168.59.1:3000/page_versions/last_version.json";
     receivedData = [[NSMutableData alloc] init];
     _pageArray = pageContainer;
     _kindArray = kindContainer;
+    _dishContainer = dishContainer;
     _appInfoCount = 0;
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:appVersionUrl]];
     [NSURLConnection connectionWithRequest:request delegate:self];
@@ -54,6 +56,7 @@
     }
     NSDictionary *dishKinds = [updateJson objectForKey:@"kinds"];
     NSDictionary *dishPages = [updateJson objectForKey:@"pages"];
+    NSDictionary *dishes = [updateJson objectForKey:@"dishes"];
     
     for (NSDictionary *page in dishPages) {
         DisplayPage *displayPage = [[DisplayPage alloc] init];
@@ -88,6 +91,15 @@
         dishKind.kindName = [kind objectForKey:@"name"];
         ++_appInfoCount;
         [_kindArray addObject:dishKind];
+    }
+    
+    for (NSDictionary *dish in dishes) {
+        Dish *tempDish = [[Dish alloc] init];
+        tempDish.id = [dish objectForKey:@"id"];
+        tempDish.name = [dish objectForKey:@"name"];
+        tempDish.description = [dish objectForKey:@"description"];
+        tempDish.price = [dish objectForKey:@"price"];
+        [_dishContainer setObject:tempDish forKey:tempDish.id];
     }
     
     [_delegate didFinishDownloadUpdateJson];

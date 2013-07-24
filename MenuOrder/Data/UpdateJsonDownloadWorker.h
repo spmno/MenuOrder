@@ -16,6 +16,7 @@
 @property (strong, nonatomic) id<UpdateJsonDownloadDelegate> delegate;
 @property (weak, nonatomic) NSMutableArray *pageArray;
 @property (weak, nonatomic) NSMutableArray *kindArray;
+@property (weak, nonatomic) NSMutableDictionary *dishContainer;
 @property (assign, nonatomic) int appInfoCount;
-- (BOOL) startDownloadUpdateJson : (NSMutableArray*) pageContainer :(NSMutableArray*) kindContainer;
+- (BOOL) startDownloadUpdateJson : (NSMutableArray*) pageContainer :(NSMutableArray*) kindContainer :(NSMutableDictionary*) dishContainer;
 @end
