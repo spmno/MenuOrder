@@ -99,6 +99,28 @@
     }
 }
 
+- (BOOL) saveDishes:(NSDictionary *)dishesContainer
+{
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    //  数组索引0处Documentd目录，
+    NSString *documentDirectory = [paths objectAtIndex:0];
+    //    返回一个kFileName的完整路径
+    NSString *dishesFileName =  [documentDirectory stringByAppendingPathComponent:@"pages.plist"];
+    
+    DataConverter *converter = [[DataConverter alloc] init];
+    NSMutableArray *pagesArray = [[NSMutableArray alloc] init];
+    [converter dishToDictionary:dishesContainer to:pagesArray];
+    
+    NSLog(@"dishesFileName = %@", dishesFileName);
+    if ([pagesArray writeToFile:dishesFileName atomically:YES]) {
+        return YES;
+    } else {
+        return NO;
+    }
+
+    return YES;
+}
+
 - (BOOL) getKinds:(NSMutableArray *)kindsContainer
 {
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
@@ -118,6 +140,8 @@
     }
 }
 
+
+
 - (BOOL) getPages:(NSMutableArray *)pagesContainer
 {
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
@@ -134,5 +158,23 @@
     } else {
         return NO;
     }
+}
+
+- (BOOL) getDishes:(NSMutableDictionary *)dishesContainer
+{
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    //  数组索引0处Documentd目录，
+    NSString *documentDirectory = [paths objectAtIndex:0];
+    //    返回一个kFileName的完整路径
+    NSString *dishesFileName =  [documentDirectory stringByAppendingPathComponent:@"dishes.plist"];
+    if ([[NSFileManager defaultManager]fileExistsAtPath:dishesFileName]) {
+        NSArray *dictionaryArray = [[NSArray alloc]initWithContentsOfFile:dishesFileName];
+        DataConverter *converter = [[DataConverter alloc] init];
+        [converter dictionaryToDish:dictionaryArray to:dishesContainer];
+        return YES;
+    } else {
+        return NO;
+    }
+
 }
 @end

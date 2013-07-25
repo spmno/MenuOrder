@@ -14,6 +14,8 @@
 - (BOOL) saveImage: (NSString*) imageFileName withData:(NSData*)imageContent;
 - (BOOL) saveKinds: (NSArray*) kindsContainer;
 - (BOOL) savePages: (NSArray*) pagesContainer;
-- (BOOL) getKinds: (NSArray*) kindsContainer;
-- (BOOL) getPages: (NSArray*) pagesContainer;
+- (BOOL) saveDishes: (NSDictionary*) dishesContainer;
+- (BOOL) getKinds: (NSMutableArray*) kindsContainer;
+- (BOOL) getPages: (NSMutableArray*) pagesContainer;
+- (BOOL) getDishes: (NSDictionary*) dishesContainer;
 @end

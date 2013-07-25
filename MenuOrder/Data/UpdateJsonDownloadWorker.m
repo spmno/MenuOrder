@@ -99,6 +99,7 @@
         tempDish.name = [dish objectForKey:@"name"];
         tempDish.description = [dish objectForKey:@"description"];
         tempDish.price = [dish objectForKey:@"price"];
+        //++_appInfoCount;
         [_dishContainer setObject:tempDish forKey:tempDish.id];
     }
     

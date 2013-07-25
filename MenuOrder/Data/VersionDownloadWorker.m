@@ -7,13 +7,13 @@
 //
 
 #import "VersionDownloadWorker.h"
+#import "PathDefine.h"
 
 @implementation VersionDownloadWorker
 
 - (BOOL) startDownloadVersion
 {
-    NSString *appVersionUrl = @"http://127.0.0.1:3000/page_versions/last_version.json";
-    //NSString *appVersionUrl = @"http://192.168.59.1:3000/page_versions/last_version.json";
+    NSString *appVersionUrl = LAST_VERSION_URL;
     receivedData = [[NSMutableData alloc] init];
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:appVersionUrl]];
     [NSURLConnection connectionWithRequest:request delegate:self];

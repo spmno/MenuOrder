@@ -15,6 +15,7 @@
 		A5555C341788D10000F96D14 /* VersionDownloadWorker.m in Sources */ = {isa = PBXBuildFile; fileRef = A5555C331788D10000F96D14 /* VersionDownloadWorker.m */; };
 		A5555C371788D12F00F96D14 /* UpdateJsonDownloadWorker.m in Sources */ = {isa = PBXBuildFile; fileRef = A5555C361788D12F00F96D14 /* UpdateJsonDownloadWorker.m */; };
 		A5A1AF8E179FCEFB00D67B74 /* Dish.m in Sources */ = {isa = PBXBuildFile; fileRef = A5A1AF8D179FCEFB00D67B74 /* Dish.m */; };
+		A5A1AF9017A0C15B00D67B74 /* KindSelectController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5A1AF8F17A0C15A00D67B74 /* KindSelectController.xib */; };
 		A5D9100417518A450097BCEB /* SwipeView.m in Sources */ = {isa = PBXBuildFile; fileRef = A5D9100317518A450097BCEB /* SwipeView.m */; };
 		A5D9180D17969F4600CFC134 /* DataConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = A5D9180C17969F4600CFC134 /* DataConverter.m */; };
 		A5DD82B71791BF6A0047EB01 /* DisplayItem.m in Sources */ = {isa = PBXBuildFile; fileRef = A5DD82B61791BF6A0047EB01 /* DisplayItem.m */; };
@@ -75,6 +76,7 @@
 		A5671AD4178F5FE70052C329 /* DishKindDownloadDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DishKindDownloadDelegate.h; path = MenuOrder/Data/DishKindDownloadDelegate.h; sourceTree = "<group>"; };
 		A5A1AF8C179FCEFB00D67B74 /* Dish.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Dish.h; path = MenuOrder/Data/Dish.h; sourceTree = "<group>"; };
 		A5A1AF8D179FCEFB00D67B74 /* Dish.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Dish.m; path = MenuOrder/Data/Dish.m; sourceTree = "<group>"; };
+		A5A1AF8F17A0C15A00D67B74 /* KindSelectController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KindSelectController.xib; sourceTree = "<group>"; };
 		A5D9100217518A450097BCEB /* SwipeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwipeView.h; sourceTree = "<group>"; };
 		A5D9100317518A450097BCEB /* SwipeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwipeView.m; sourceTree = "<group>"; };
 		A5D9180B17969F4600CFC134 /* DataConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DataConverter.h; path = MenuOrder/Data/DataConverter.h; sourceTree = "<group>"; };
@@ -305,6 +307,7 @@
 				A5FF1F69179DD50D00CF308B /* DishCountController1.xib */,
 				A5FF1F6A179DD50D00CF308B /* KindSelectController.h */,
 				A5FF1F6B179DD50D00CF308B /* KindSelectController.m */,
+				A5A1AF8F17A0C15A00D67B74 /* KindSelectController.xib */,
 				A5FF1F6C179DD50D00CF308B /* SubOrderController.h */,
 				A5FF1F6D179DD50D00CF308B /* SubOrderController.m */,
 				A5FF1F6E179DD50D00CF308B /* SubOrderController.xib */,
@@ -395,6 +398,7 @@
 				A5FF1F81179DD50D00CF308B /* TotalOrderController.xib in Resources */,
 				A5FF1F83179DD50D00CF308B /* TotalOrderController1.xib in Resources */,
 				A5FF1F88179DD5B500CF308B /* UserManualController.xib in Resources */,
+				A5A1AF9017A0C15B00D67B74 /* KindSelectController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
