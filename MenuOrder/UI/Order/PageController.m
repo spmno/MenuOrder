@@ -8,6 +8,7 @@
 
 #import "PageController.h"
 #import "../../Data/DisplayPage.h"
+#import "../../Data/DisplayItem.h"
 @interface PageController ()
 
 @end
@@ -26,6 +27,7 @@
 - (id)initWithPage:(DisplayPage *)page
 {
     displayPage = page;
+
     return [super init];
 }
             
@@ -33,7 +35,19 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-     
+    NSArray *imageUrlItems = [displayPage.imageUrl componentsSeparatedByString:@"/"];
+    NSString *imageName = [imageUrlItems lastObject];
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentDirectory = [paths objectAtIndex:0];
+    NSString *imagePath = [documentDirectory stringByAppendingPathComponent:imageName];
+    UIImage *backgroundImage = [UIImage imageWithContentsOfFile:imagePath];
+    UIColor *backgroundColor = [UIColor colorWithPatternImage:backgroundImage];
+    self.view.backgroundColor = backgroundColor;
+    
+    for (DisplayItem* item in displayPage.subItems) {
+        
+    }
+    
 }
 
 - (void)didReceiveMemoryWarning
