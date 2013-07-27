@@ -45,7 +45,11 @@
     self.view.backgroundColor = backgroundColor;
     
     for (DisplayItem* item in displayPage.subItems) {
-        
+        UIButton *uiButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+        uiButton.frame = CGRectMake([item.x integerValue], [item.y integerValue], [item.width integerValue], [item.height integerValue]);
+        uiButton.tag = [item.dishId integerValue];
+        [uiButton addTarget:self action:@selector(pageButtonPressed) forControlEvents:UIControlEventTouchUpInside];
+        [self.view addSubview:uiButton];
     }
     
 }
@@ -56,4 +60,9 @@
     // Dispose of any resources that can be recreated.
 }
 
+
+- (IBAction) pageButtonPressed: (id) send
+{
+    
+}
 @end

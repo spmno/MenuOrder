@@ -9,6 +9,11 @@
 #import "BeforeController.h"
 #import "BeforeSubController1.h"
 #import "DishSearchController.h"
+#import "PageController.h"
+#import "../../Data/DataManager.h"
+#import "../../Data/DisplayPage.h"
+#import "DishKind.h"
+#import "UIManager.h"
 @interface BeforeController ()
 
 @end
@@ -36,6 +41,14 @@
     _swipeView.wrapEnabled = NO;
     _swipeView.itemsPerPage = 1;
     _swipeView.truncateFinalPage = YES;
+    DataManager *dataManager = [DataManager sharedInstance];
+    UIManager *uiManager = [UIManager sharedInstance];
+    for (DisplayPage *page in dataManager.wholePageContainer) {
+        if (page.kindId == uiManager.currentKindId) {
+            PageController *pageController = [[PageController alloc] initWithPage:page];
+            [_controllerContainer addObject:pageController];
+        }
+    }
     _controllerContainer = [NSMutableArray arrayWithCapacity:1];
     BeforeSubController1* controller1 = [[BeforeSubController1 alloc] initWithNibName:@"BeforeSubController1" bundle:nil];
     [_controllerContainer addObject:controller1];
@@ -71,6 +84,7 @@
    // } else {
         //[imageView setImage:[UIImage imageNamed:[NSString stringWithFormat:@"r%d.jpg",index+1]]];
     //}
+
     UIViewController* controller = _controllerContainer[index];
     return controller.view;
     

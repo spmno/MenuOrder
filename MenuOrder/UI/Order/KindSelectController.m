@@ -12,8 +12,10 @@
 #import "DishSearchController.h"
 #import "TotalOrderController.h"
 #import "TotalOrderController1.h"
+#import "PageController.h"
 #import "../UserManual/UserManualController.h"
 #import "../../Data/DataManager.h"
+#import "../../Data/DisplayPage.h"
 #import "DishKind.h"
 #import "UIManager.h"
 
@@ -163,6 +165,9 @@
     DataManager *dataManager = [DataManager sharedInstance];
     DishKind *currentKind = [dataManager.wholeKindContainer objectAtIndex:index];
     uiManager.currentKindId = currentKind.kindId;
+    BeforeController* beforeController = [[BeforeController alloc]initWithNibName:@"BeforeController" bundle:nil];
+    [self presentViewController:beforeController animated:NO completion:nil];
+
 }
 
 - (IBAction)doSearchDish:(id)sender
