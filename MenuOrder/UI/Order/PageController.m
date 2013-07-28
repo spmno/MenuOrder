@@ -48,7 +48,7 @@
         UIButton *uiButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
         uiButton.frame = CGRectMake([item.x integerValue], [item.y integerValue], [item.width integerValue], [item.height integerValue]);
         uiButton.tag = [item.dishId integerValue];
-        [uiButton addTarget:self action:@selector(pageButtonPressed) forControlEvents:UIControlEventTouchUpInside];
+        [uiButton addTarget:self action:@selector(pageButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
         [self.view addSubview:uiButton];
     }
     
@@ -61,7 +61,7 @@
 }
 
 
-- (IBAction) pageButtonPressed: (id) send
+- (IBAction) pageButtonPressed: (id) sender
 {
     
 }

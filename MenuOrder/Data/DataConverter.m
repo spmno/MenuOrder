@@ -18,16 +18,19 @@
         displayPage.imageUrl = [pageDictionary objectForKey:@"imageurl"];
         displayPage.kindId = [pageDictionary objectForKey:@"kindid"];
         NSArray *itemsContainer = [pageDictionary objectForKey:@"subitem"];
-        
-        for (NSDictionary *itemDictionary in itemsContainer) {
-            DisplayItem *displayItem = [[DisplayItem alloc] init];
-            displayItem.x = [itemDictionary objectForKey:@"x"];
-            displayItem.y = [itemDictionary objectForKey:@"y"];
-            displayItem.width = [itemDictionary objectForKey:@"width"];
-            displayItem.height = [itemDictionary objectForKey:@"height"];
-            displayItem.dishId = [itemDictionary objectForKey:@"dishid"];
-            [displayPage.subItems addObject:displayItem];
+        if (itemsContainer != nil) {
+            displayPage.subItems = [[NSMutableArray alloc] init];
+            for (NSDictionary *itemDictionary in itemsContainer) {
+                DisplayItem *displayItem = [[DisplayItem alloc] init];
+                displayItem.x = [itemDictionary objectForKey:@"x"];
+                displayItem.y = [itemDictionary objectForKey:@"y"];
+                displayItem.width = [itemDictionary objectForKey:@"width"];
+                displayItem.height = [itemDictionary objectForKey:@"height"];
+                displayItem.dishId = [itemDictionary objectForKey:@"dishid"];
+                [displayPage.subItems addObject:displayItem];
+            }
         }
+
         [pages addObject:displayPage];
     }
     return YES;
@@ -60,8 +63,8 @@
 {
     for (NSDictionary *kindDictionary in dictionary) {
         DishKind *dishKind = [[DishKind alloc] init];
-        dishKind.kindId = [kindDictionary objectForKey:@"id"];
-        dishKind.kindName = [kindDictionary objectForKey:@"name"];
+        dishKind.kindId = [kindDictionary objectForKey:@"kindid"];
+        dishKind.kindName = [kindDictionary objectForKey:@"kindname"];
         dishKind.imageUrl = [kindDictionary objectForKey:@"imageurl"];
         [kinds addObject:dishKind];
     }

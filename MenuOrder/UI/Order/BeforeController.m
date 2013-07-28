@@ -43,15 +43,18 @@
     _swipeView.truncateFinalPage = YES;
     DataManager *dataManager = [DataManager sharedInstance];
     UIManager *uiManager = [UIManager sharedInstance];
+    _controllerContainer = [[NSMutableArray alloc] init];
     for (DisplayPage *page in dataManager.wholePageContainer) {
         if (page.kindId == uiManager.currentKindId) {
             PageController *pageController = [[PageController alloc] initWithPage:page];
             [_controllerContainer addObject:pageController];
         }
     }
-    _controllerContainer = [NSMutableArray arrayWithCapacity:1];
+    /*
+    _controllerContainer = [[NSMutableArray alloc] init];
     BeforeSubController1* controller1 = [[BeforeSubController1 alloc] initWithNibName:@"BeforeSubController1" bundle:nil];
     [_controllerContainer addObject:controller1];
+     */
 }
 
 - (void)didReceiveMemoryWarning

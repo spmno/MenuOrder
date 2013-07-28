@@ -68,15 +68,19 @@
         NSLog(@"page image url = %@", displayPage.imageUrl);
         ++_appInfoCount;
         NSDictionary *itemsDictionary = [page objectForKey:@"display_items"];
-        for (NSDictionary *item in itemsDictionary) {
-            DisplayItem *displayItem = [[DisplayItem alloc] init];
-            NSDictionary *itemDictionary = [item objectForKey:@"display_item"];
-            displayItem.x = [itemDictionary objectForKey:@"x"];
-            displayItem.y = [itemDictionary objectForKey:@"y"];
-            displayItem.width = [itemDictionary objectForKey:@"width"];
-            displayItem.height = [itemDictionary objectForKey:@"height"];
-            displayItem.dishId = [itemDictionary objectForKey:@"dish_id"];
-            [displayPage.subItems addObject:displayItem];
+        if (itemsDictionary != nil) {
+            displayPage.subItems = [[NSMutableArray alloc] init];
+            for (NSDictionary *item in itemsDictionary) {
+                DisplayItem *displayItem = [[DisplayItem alloc] init];
+                NSDictionary *itemDictionary = [item objectForKey:@"display_item"];
+                displayItem.x = [itemDictionary objectForKey:@"x"];
+                displayItem.y = [itemDictionary objectForKey:@"y"];
+                displayItem.width = [itemDictionary objectForKey:@"width"];
+                displayItem.height = [itemDictionary objectForKey:@"height"];
+                displayItem.dishId = [itemDictionary objectForKey:@"dish_id"];
+                [displayPage.subItems addObject:displayItem];
+            }
+
         }
         [_pageArray addObject:displayPage];
         
