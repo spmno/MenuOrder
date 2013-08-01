@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "Dish.h"
-@interface OrderItem : NSObject
+@interface OrderItem : NSObject<NSCopying>
 @property (strong, nonatomic) Dish* dish;
-@property (assign, nonatomic) NSInteger count;
+@property (strong, nonatomic) NSNumber *count;
 @end

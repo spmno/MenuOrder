@@ -9,6 +9,7 @@
 #import "PageController.h"
 #import "../../Data/DisplayPage.h"
 #import "../../Data/DisplayItem.h"
+#import "../../Data/OrderManager.h"
 @interface PageController ()
 
 @end
@@ -63,6 +64,7 @@
 
 - (IBAction) pageButtonPressed: (id) sender
 {
+    OrderManager *orderManager = [OrderManager sharedInstance];
     
 }
 @end

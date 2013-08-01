@@ -9,5 +9,11 @@
 #import "OrderItem.h"
 
 @implementation OrderItem
-
+- (id) copyWithZone:(NSZone *)zone
+{
+    OrderItem *orderItem = [[OrderItem alloc] init];
+    orderItem.dish = self.dish;
+    orderItem.count = self.count;
+    return orderItem;
+}
 @end

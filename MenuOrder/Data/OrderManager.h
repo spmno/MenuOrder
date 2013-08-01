@@ -11,9 +11,9 @@
 #import "OrderItem.h"
 @interface OrderManager : NSObject
 {
-    
+    NSMutableDictionary *orderContainer;
 }
 + (OrderManager*) sharedInstance;
-- (void) addDishToOrder : (Dish*) dish : withCount: (NSInteger) count;
+- (void) addDishToOrder : (Dish*) dish withCount: (NSInteger) count;
 - (void) deleteDishFromOrder : (Dish*) dish;
 @end

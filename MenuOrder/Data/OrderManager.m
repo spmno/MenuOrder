@@ -20,5 +20,22 @@
     return sharedOrderManagerInstance;
 }
 
+- (id) init
+{
+    orderContainer = [[NSMutableDictionary alloc] init];
+    return [super init];
+}
 
+- (void) addDishToOrder:(Dish *)dish withCount:(NSInteger)count
+{
+    OrderItem *orderItem = [[OrderItem alloc] init];
+    orderItem.dish = dish;
+    orderItem.count = [NSNumber numberWithInt:count];
+    [orderContainer setObject:dish.id forKey:orderItem];
+}
+
+- (void) deleteDishFromOrder:(Dish *)dish
+{
+    [orderContainer removeObjectForKey:dish.id];
+}
 @end
