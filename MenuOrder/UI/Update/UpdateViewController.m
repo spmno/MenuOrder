@@ -77,6 +77,13 @@
             UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"init data failed" delegate:self cancelButtonTitle:@"No" otherButtonTitles:@"YES" , nil];
             [alert show];
         }
+        if ([persistenData saveDishes:dataManager.wholeDishContainer]) {
+            
+        } else {
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"init data failed" delegate:self cancelButtonTitle:@"No" otherButtonTitles:@"YES" , nil];
+            [alert show];
+        }
+        
         int newVersion = [dataManager.versionNumber intValue];
         [persistenData saveVersion:newVersion];
         return;

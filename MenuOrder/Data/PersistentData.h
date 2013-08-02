@@ -17,5 +17,5 @@
 - (BOOL) saveDishes: (NSDictionary*) dishesContainer;
 - (BOOL) getKinds: (NSMutableArray*) kindsContainer;
 - (BOOL) getPages: (NSMutableArray*) pagesContainer;
-- (BOOL) getDishes: (NSDictionary*) dishesContainer;
+- (BOOL) getDishes: (NSMutableDictionary*) dishesContainer;
 @end

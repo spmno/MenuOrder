@@ -102,8 +102,11 @@
     if ([persistentData getKinds:_wholeKindContainer] == NO) {
         return NO;
     }
-    return [persistentData getPages:_wholePageContainer];
+    if ([persistentData getPages:_wholePageContainer] == NO) {
+        return NO;
+    }
 
+    return [persistentData getDishes:_wholeDishContainer];
 }
 
 @end

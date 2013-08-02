@@ -7,9 +7,11 @@
 //
 
 #import "PageController.h"
+#import "DishCountController1.h"
 #import "../../Data/DisplayPage.h"
 #import "../../Data/DisplayItem.h"
 #import "../../Data/OrderManager.h"
+#import "../../Data/DataManager.h"
 @interface PageController ()
 
 @end
@@ -65,6 +67,15 @@
 - (IBAction) pageButtonPressed: (id) sender
 {
     OrderManager *orderManager = [OrderManager sharedInstance];
-    
+    DataManager *dataManager = [DataManager sharedInstance];
+    UIButton *pressButton = (UIButton*) sender;
+    NSNumber *dishKey = [NSNumber numberWithInt:pressButton.tag];
+    Dish *pushDish = [dataManager.wholeDishContainer objectForKey: dishKey];
+    DishCountController1* dishController = [[DishCountController1 alloc]initWithNibName:@"DishCountController1" bundle:nil];
+    dishController.modalPresentationStyle = UIModalPresentationFormSheet;
+    dishController.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+    [self presentViewController:dishController animated:NO completion:nil];
+    dishController.view.superview.frame = CGRectMake(0, 0, 520, 350);
+    dishController.view.superview.center = self.view.center;
 }
 @end

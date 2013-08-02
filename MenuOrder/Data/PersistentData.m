@@ -105,14 +105,14 @@
     //  数组索引0处Documentd目录，
     NSString *documentDirectory = [paths objectAtIndex:0];
     //    返回一个kFileName的完整路径
-    NSString *dishesFileName =  [documentDirectory stringByAppendingPathComponent:@"pages.plist"];
+    NSString *dishesFileName =  [documentDirectory stringByAppendingPathComponent:@"dishes.plist"];
     
     DataConverter *converter = [[DataConverter alloc] init];
-    NSMutableArray *pagesArray = [[NSMutableArray alloc] init];
-    [converter dishToDictionary:dishesContainer to:pagesArray];
+    NSMutableArray *dishesArray = [[NSMutableArray alloc] init];
+    [converter dishToDictionary:dishesContainer to:dishesArray];
     
     NSLog(@"dishesFileName = %@", dishesFileName);
-    if ([pagesArray writeToFile:dishesFileName atomically:YES]) {
+    if ([dishesArray writeToFile:dishesFileName atomically:YES]) {
         return YES;
     } else {
         return NO;
