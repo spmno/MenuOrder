@@ -22,7 +22,7 @@
 
 - (id) init
 {
-    orderContainer = [[NSMutableDictionary alloc] init];
+    _orderContainer = [[NSMutableArray alloc] init];
     return [super init];
 }
 
@@ -31,12 +31,14 @@
     OrderItem *orderItem = [[OrderItem alloc] init];
     orderItem.dish = dish;
     orderItem.count = [NSNumber numberWithInt:count];
-    [orderContainer setObject:dish.id forKey:orderItem];
+    //[_orderContainer setObject:dish.id forKey:orderItem];
+    [_orderContainer addObject:orderItem];
 }
 
-- (void) deleteDishFromOrder:(Dish *)dish
+- (void) deleteDishFromOrder:(int)dishId
 {
-    [orderContainer removeObjectForKey:dish.id];
+    //[_orderContainer removeObjectForKey:dish.id];
+    [_orderContainer removeObjectAtIndex:dishId];
 }
 
 - (void) setCurrentDish:(Dish *)dish
@@ -49,7 +51,8 @@
     OrderItem *orderItem = [[OrderItem alloc] init];
     orderItem.dish = currentDish;
     orderItem.count = [NSNumber numberWithInt:count];
-    [orderContainer setObject:currentDish.id forKey:orderItem];
+    //[_orderContainer setObject:currentDish.id forKey:orderItem];
+    [_orderContainer addObject:orderItem];
 }
 
 @end

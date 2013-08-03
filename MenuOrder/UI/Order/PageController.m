@@ -48,9 +48,10 @@
     self.view.backgroundColor = backgroundColor;
     
     for (DisplayItem* item in displayPage.subItems) {
-        UIButton *uiButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+        UIButton *uiButton = [UIButton buttonWithType:UIButtonTypeCustom];
         uiButton.frame = CGRectMake([item.x integerValue], [item.y integerValue], [item.width integerValue], [item.height integerValue]);
         uiButton.tag = [item.dishId integerValue];
+        uiButton.backgroundColor = [UIColor clearColor];
         [uiButton addTarget:self action:@selector(pageButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
         [self.view addSubview:uiButton];
     }

@@ -9,6 +9,8 @@
 #import "BeforeController.h"
 #import "BeforeSubController1.h"
 #import "DishSearchController.h"
+#import "TotalOrderController1.h"
+#import "UserManualController.h"
 #import "PageController.h"
 #import "../../Data/DataManager.h"
 #import "../../Data/DisplayPage.h"
@@ -69,7 +71,7 @@
     //normally we'd use a backing array
     //as shown in the basic iOS example
     //but for this example we haven't bothered
-    return 1;
+    return [_controllerContainer count];
 }
 
 - (UIView *)swipeView:(SwipeView *)swipeView viewForItemAtIndex:(NSInteger)index reusingView:(UIView *)view
@@ -105,4 +107,39 @@
     DishSearchController* searchController = [[DishSearchController alloc]initWithNibName:@"DishSearchController" bundle:nil];
     [self presentViewController:searchController animated:YES completion:nil];
 }
+
+- (IBAction)showOrderResult:(id)sender
+{
+    TotalOrderController1* totalController = [[TotalOrderController1 alloc] init];
+    //[self presentViewController:totalController animated:YES completion:nil];
+    
+    totalController.contentSizeForViewInPopover = CGSizeMake(600, 800);
+    
+    popover = [[UIPopoverController alloc] initWithContentViewController:totalController];
+    [popover setDelegate:self];
+    
+    [popover setPopoverContentSize:CGSizeMake(600, 800)];
+    totalController.delegate = self;
+    //设置箭头坐标--也是设置如何显示这个浮动框
+    [popover presentPopoverFromBarButtonItem:sender permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
+    
+}
+
+- (IBAction)enterUserManual:(id)sender
+{
+    UserManualController* userManualController = [[UserManualController alloc]initWithNibName:@"UserManualController" bundle:nil];
+    [self presentViewController:userManualController animated:YES completion:nil];
+    
+}
+
+- (void) popoverControllerDidDismissPopover:(UIPopoverController *)popoverController
+{
+    NSLog(@"%@",@"谢谢");
+}
+
+- (void) dismissPopoverView
+{
+    [popover dismissPopoverAnimated:YES];
+}
+
 @end

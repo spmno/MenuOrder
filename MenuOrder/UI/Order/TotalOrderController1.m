@@ -7,6 +7,9 @@
 //
 
 #import "TotalOrderController1.h"
+#import "../../Data/OrderManager.h"
+#import "../../Data/Dish.h"
+#import "../../Data/OrderItem.h"
 
 @interface TotalOrderController1 ()
 
@@ -28,7 +31,9 @@
     [super viewDidLoad];
 
         // Custom initialization
-    displaySet = [NSArray arrayWithObjects: @"One Dish", @"Two Dish", @"Three Dish", @"Total = $1000.00", nil];
+    //displaySet = [NSArray arrayWithObjects: @"One Dish", @"Two Dish", @"Three Dish", @"Total = $1000.00", nil];
+    OrderManager *orderManager = [OrderManager sharedInstance];
+    displaySet = orderManager.orderContainer;
 
     _orderTable.delegate = self;
     _orderTable.dataSource = self;
@@ -76,7 +81,9 @@
     }
     
     // Configure the cell...
-    [cell.textLabel setText:displaySet[indexPath.row]];
+    NSLog(@"cell row = %d", indexPath.row);
+    OrderItem *orderItem = (OrderItem*)displaySet[indexPath.row];
+    [cell.textLabel setText:orderItem.dish.name];
     return cell;
 }
 
