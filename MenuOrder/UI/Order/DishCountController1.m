@@ -7,6 +7,7 @@
 //
 
 #import "DishCountController1.h"
+#import "../../Data/OrderManager.h"
 
 @interface DishCountController1 ()
 
@@ -87,6 +88,9 @@
 
 - (IBAction)confirmDishCount:(id)sender
 {
+    NSInteger count = [_countText.text integerValue];
+    OrderManager *orderManager = [OrderManager sharedInstance];
+    [orderManager addCountToCurrentDish:count]; 
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 

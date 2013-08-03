@@ -38,4 +38,18 @@
 {
     [orderContainer removeObjectForKey:dish.id];
 }
+
+- (void) setCurrentDish:(Dish *)dish
+{
+    currentDish = dish;
+}
+
+- (void) addCountToCurrentDish:(NSInteger)count
+{
+    OrderItem *orderItem = [[OrderItem alloc] init];
+    orderItem.dish = currentDish;
+    orderItem.count = [NSNumber numberWithInt:count];
+    [orderContainer setObject:currentDish.id forKey:orderItem];
+}
+
 @end

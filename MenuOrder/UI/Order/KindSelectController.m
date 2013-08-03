@@ -166,7 +166,8 @@
     DishKind *currentKind = [dataManager.wholeKindContainer objectAtIndex:index];
     uiManager.currentKindId = currentKind.kindId;
     BeforeController* beforeController = [[BeforeController alloc]initWithNibName:@"BeforeController" bundle:nil];
-    [self presentViewController:beforeController animated:NO completion:nil];
+    //[self presentViewController:beforeController animated:NO completion:nil];
+    [self.navigationController pushViewController:beforeController animated:YES];
 
 }
 

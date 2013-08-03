@@ -96,7 +96,8 @@
 
 - (IBAction)switchToMenu:(id)sender
 {
-    [self dismissViewControllerAnimated:YES completion:nil];
+    //[self dismissViewControllerAnimated:YES completion:nil];
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (IBAction)switchToSearch:(id)sender

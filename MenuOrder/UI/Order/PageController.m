@@ -71,6 +71,7 @@
     UIButton *pressButton = (UIButton*) sender;
     NSNumber *dishKey = [NSNumber numberWithInt:pressButton.tag];
     Dish *pushDish = [dataManager.wholeDishContainer objectForKey: dishKey];
+    [orderManager setCurrentDish:pushDish];
     DishCountController1* dishController = [[DishCountController1 alloc]initWithNibName:@"DishCountController1" bundle:nil];
     dishController.modalPresentationStyle = UIModalPresentationFormSheet;
     dishController.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;

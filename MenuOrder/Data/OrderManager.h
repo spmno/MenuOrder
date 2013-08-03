@@ -12,8 +12,11 @@
 @interface OrderManager : NSObject
 {
     NSMutableDictionary *orderContainer;
+    Dish *currentDish;
 }
 + (OrderManager*) sharedInstance;
+- (void) setCurrentDish : (Dish*) dish;
+- (void) addCountToCurrentDish : (NSInteger) count;
 - (void) addDishToOrder : (Dish*) dish withCount: (NSInteger) count;
 - (void) deleteDishFromOrder : (Dish*) dish;
 @end
