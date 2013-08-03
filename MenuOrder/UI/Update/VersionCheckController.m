@@ -73,7 +73,8 @@
         [self.navigationController pushViewController: kindSelectController animated:YES];
     } else {
         UpdateViewController* updateViewController = [[UpdateViewController alloc]initWithNibName:@"UpdateViewController" bundle:nil];
-        [self presentViewController:updateViewController animated:YES completion:nil];
+        //[self presentViewController:updateViewController animated:YES completion:nil];
+        [self.navigationController pushViewController: updateViewController animated:YES];
     }
 
     //[self.navigationController pushViewController: updateViewController animated:YES];

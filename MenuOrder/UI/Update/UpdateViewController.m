@@ -7,6 +7,7 @@
 //
 
 #import "UpdateViewController.h"
+#import "KindSelectController.h"
 #import "UpdateJsonDownloadWorker.h"
 #import "DataManager.h"
 #import "PersistentData.h"
@@ -92,4 +93,9 @@
     
 }
 
+- (IBAction)gotoApp:(id)sender
+{
+    KindSelectController *kindSelectController = [[KindSelectController alloc] initWithNibName:@"KindSelectController" bundle:nil];
+    [self.navigationController pushViewController: kindSelectController animated:YES];
+}
 @end

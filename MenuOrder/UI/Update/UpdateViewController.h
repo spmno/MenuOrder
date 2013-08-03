@@ -17,5 +17,6 @@
 @property (strong, nonatomic) IBOutlet UILabel *updateFileName;
 @property (strong, nonatomic) IBOutlet UILabel *updateInfo;
 @property (strong, nonatomic) IBOutlet UIButton *switch2App;
+- (IBAction)gotoApp:(id)sender;
 
 @end
