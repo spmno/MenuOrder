@@ -7,6 +7,7 @@
 //
 
 #import "OrderManager.h"
+#import "PathDefine.h"
 
 @implementation OrderManager
 + (OrderManager*) sharedInstance
@@ -23,6 +24,7 @@
 - (id) init
 {
     _orderContainer = [[NSMutableArray alloc] init];
+    receivedData = [[NSMutableData alloc] init];
     return [super init];
 }
 
@@ -54,5 +56,62 @@
     //[_orderContainer setObject:currentDish.id forKey:orderItem];
     [_orderContainer addObject:orderItem];
 }
+
+- (BOOL) sendOrderToServer
+{
+    NSMutableDictionary *orderContainer = [[NSMutableDictionary alloc] init];
+    NSMutableArray *sendDataArray = [[NSMutableArray alloc] init];
+    for (OrderItem *item in _orderContainer) {
+        NSMutableDictionary *itemDictionary = [[NSMutableDictionary alloc] init];
+        [itemDictionary setObject:item.dish.id forKey:@"dishid"];
+        [itemDictionary setObject:item.count forKey:@"dishcount"];
+        [sendDataArray addObject:itemDictionary];
+    }
+    [orderContainer setObject:sendDataArray forKey:@"order"];
+    if ([NSJSONSerialization isValidJSONObject:orderContainer]) {
+        NSError *error;
+        NSData *jsonData = [NSJSONSerialization dataWithJSONObject:orderContainer options:NSJSONWritingPrettyPrinted error:&error];
+        NSURL *url = [NSURL URLWithString:UPLOAD_ORDER_URL];
+        NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url];
+        [request setHTTPMethod:@"POST"];
+        [request setValue:@"application/json" forHTTPHeaderField:@"Accept"];
+        [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+        [request setValue:[NSString stringWithFormat:@"%d", [jsonData length]] forHTTPHeaderField:@"Content-Length"];
+        [request setHTTPBody:jsonData];
+        NSURLConnection *connection = [NSURLConnection connectionWithRequest:request delegate:self];
+
+    }
+    return YES;
+}
+
+- (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response {
+    // store data
+    [receivedData setLength:0];            //通常在这里先清空接受数据的缓存
+    
+}
+
+- (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {
+    
+    [receivedData appendData:data];        //可能多次收到数据，把新的数据添加在现有数据最后
+}
+
+- (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
+    // 错误处理
+}
+
+- (void)connectionDidFinishLoading:(NSURLConnection *)connection {
+    // disconnect
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+    NSError *error;
+    NSDictionary *versionJson = [NSJSONSerialization JSONObjectWithData:receivedData options:kNilOptions error:&error];
+    if (versionJson == nil) {
+        NSLog(@"json parser failed\r\r");
+        return;
+    }
+
+}
+
+
+
 
 @end

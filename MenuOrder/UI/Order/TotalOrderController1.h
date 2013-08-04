@@ -17,9 +17,8 @@
 @interface TotalOrderController1 : UIViewController <UITableViewDelegate, UITableViewDataSource>
 {
     NSArray *displaySet;
-    id<TotalOrderDelegate> delegate;
 }
-@property (weak, nonatomic) id delegate;
+@property (weak, nonatomic) id<TotalOrderDelegate> delegate;
 @property (strong, nonatomic) IBOutlet UITableView *orderTable;
 - (IBAction)checkOut:(id)sender;
 - (IBAction)cancelCheckOut:(id)sender;

@@ -17,4 +17,7 @@
 
 #define LAST_VERSION_URL @"http://127.0.0.1:3000/page_versions/last_version.json";
 //#define LAST_VERSION_URL @"http://192.168.59.1:3000/page_versions/last_version.json";
+
+#define UPLOAD_ORDER_URL @"http://127.0.0.1:3000/orders/submit.json"
+
 #endif

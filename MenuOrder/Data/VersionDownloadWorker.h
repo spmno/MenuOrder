@@ -10,12 +10,11 @@
 #import "VersionDownloadDelegate.h"
 @interface VersionDownloadWorker : NSObject
 {
-    id<VersionDownloadDelegate> delegate;
 @private
     NSMutableData *receivedData;
 }
 
-@property (weak, nonatomic) id delegate;
+@property (weak, nonatomic) id<VersionDownloadDelegate> delegate;
 
 - (BOOL) startDownloadVersion;
 @end

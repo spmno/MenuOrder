@@ -11,6 +11,7 @@
 #import "../../Data/Dish.h"
 #import "../../Data/OrderItem.h"
 
+
 @interface TotalOrderController1 ()
 
 @end
@@ -49,6 +50,8 @@
 - (IBAction)checkOut:(id)sender
 {
     [_delegate dismissPopoverView];
+    OrderManager *orderManager = [OrderManager sharedInstance];
+    [orderManager sendOrderToServer];
     //[[self valueForKey:@"ViewController"] dismissViewControllerAnimated:YES completion:nil];
 }
 

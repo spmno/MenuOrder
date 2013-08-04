@@ -12,11 +12,14 @@
 @interface OrderManager : NSObject
 {
     Dish *currentDish;
+@private
+    NSMutableData *receivedData;
 }
 + (OrderManager*) sharedInstance;
 - (void) setCurrentDish : (Dish*) dish;
 - (void) addCountToCurrentDish : (NSInteger) count;
 - (void) addDishToOrder : (Dish*) dish withCount: (NSInteger) count;
 - (void) deleteDishFromOrder : (int) dishId;
+- (BOOL) sendOrderToServer;
 @property (strong, nonatomic) NSMutableArray *orderContainer;
 @end
