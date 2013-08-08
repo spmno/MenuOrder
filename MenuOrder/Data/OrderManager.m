@@ -68,6 +68,8 @@
         [sendDataArray addObject:itemDictionary];
     }
     [orderContainer setObject:sendDataArray forKey:@"order"];
+    [orderContainer setObject:_tableNo forKey:@"tableno"];
+    [orderContainer setObject:_memberNo forKey:@"memberno"];
     if ([NSJSONSerialization isValidJSONObject:orderContainer]) {
         NSError *error;
         NSData *jsonData = [NSJSONSerialization dataWithJSONObject:orderContainer options:NSJSONWritingPrettyPrinted error:&error];

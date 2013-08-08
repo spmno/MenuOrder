@@ -10,6 +10,7 @@
 #import "PersistentData.h"
 #import "UpdateViewController.h"
 #import "KindSelectController.h"
+#import "../../Data/OrderManager.h"
 
 @interface VersionCheckController ()
 
@@ -69,6 +70,9 @@
 {
     //UpdateViewController *updateViewController = [[UpdateViewController alloc] init];
     if (isLastVersion) {
+        OrderManager *orderManager = [OrderManager sharedInstance];
+        orderManager.memberNo = [NSNumber numberWithInteger:[_memberNumberField.text integerValue]];
+        orderManager.tableNo = [NSNumber numberWithInteger:[_tableNumberField.text integerValue]];
         KindSelectController *kindSelectController = [[KindSelectController alloc] initWithNibName:@"KindSelectController" bundle:nil];
         [self.navigationController pushViewController: kindSelectController animated:YES];
     } else {

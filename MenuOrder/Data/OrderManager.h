@@ -22,4 +22,6 @@
 - (void) deleteDishFromOrder : (int) dishId;
 - (BOOL) sendOrderToServer;
 @property (strong, nonatomic) NSMutableArray *orderContainer;
+@property (strong, nonatomic) NSNumber *tableNo;
+@property (strong, nonatomic) NSNumber *memberNo;
 @end
