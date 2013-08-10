@@ -10,7 +10,7 @@
 #import "../../Data/OrderManager.h"
 #import "../../Data/Dish.h"
 #import "../../Data/OrderItem.h"
-
+#import "OrderCell.h"
 
 @interface TotalOrderController1 ()
 
@@ -77,16 +77,23 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    static NSString *CellIdentifier = @"OrderCell";
+    OrderCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+        //cell = [[OrderCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"OrderCell" owner:nil options:nil];
+        //第一个对象就是CustomCell了
+        cell = [nib objectAtIndex:0];
     }
     
     // Configure the cell...
     NSLog(@"cell row = %d", indexPath.row);
     OrderItem *orderItem = (OrderItem*)displaySet[indexPath.row];
-    [cell.textLabel setText:orderItem.dish.name];
+    //[cell.textLabel setText:orderItem.dish.name];
+    [cell.dishName setText: orderItem.dish.name];
+    NSNumberFormatter *countFormat = [[NSNumberFormatter alloc] init];
+    [cell.dishCount setText:[countFormat stringFromNumber:orderItem.count]];
+    [cell.dishPrice setText:[countFormat stringFromNumber:orderItem.dish.price]];
     return cell;
 }
 
