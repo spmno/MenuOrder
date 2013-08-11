@@ -23,9 +23,11 @@
 
 - (id) init
 {
+    self = [super init];
     _orderContainer = [[NSMutableArray alloc] init];
     receivedData = [[NSMutableData alloc] init];
-    return [super init];
+
+    return self;
 }
 
 - (void) addDishToOrder:(Dish *)dish withCount:(NSInteger)count

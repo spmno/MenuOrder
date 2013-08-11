@@ -184,8 +184,8 @@
     TotalOrderController1* totalController = [[TotalOrderController1 alloc] init];
     //[self presentViewController:totalController animated:YES completion:nil];
     
+    [totalController.view setFrame:CGRectMake(0, 0, 600, 800)];
     totalController.contentSizeForViewInPopover = CGSizeMake(600, 800);
-
     popover = [[UIPopoverController alloc] initWithContentViewController:totalController];
     [popover setDelegate:self];
     

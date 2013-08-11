@@ -92,8 +92,10 @@
     //[cell.textLabel setText:orderItem.dish.name];
     [cell.dishName setText: orderItem.dish.name];
     NSNumberFormatter *countFormat = [[NSNumberFormatter alloc] init];
+    NSNumberFormatter *priceFormat = [[NSNumberFormatter alloc] init];
     [cell.dishCount setText:[countFormat stringFromNumber:orderItem.count]];
-    [cell.dishPrice setText:[countFormat stringFromNumber:orderItem.dish.price]];
+    NSString *priceText = [NSString stringWithFormat:@"%.2f", [orderItem.dish.price floatValue]];
+    [cell.dishPrice setText:priceText];
     return cell;
 }
 

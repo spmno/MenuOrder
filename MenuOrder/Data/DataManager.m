@@ -23,6 +23,7 @@
 
 - (id) init
 {
+    self = [super init];
     _wholeKindContainer = [[NSMutableArray alloc] init];
     _wholePageContainer = [[NSMutableArray alloc] init];
     _wholeDishContainer = [[NSMutableDictionary alloc] init];
@@ -34,7 +35,8 @@
     updateWorker.delegate = self;
     dishKindWorker.delegate = self;
     pageWorker.delegate = self;
-    return [super init];
+
+    return self;
 }
 
 - (void) getAppVersion

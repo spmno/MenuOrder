@@ -15,9 +15,11 @@
 
 - (id) init
 {
+    self = [super init];
     downloadContainer = [[NSMutableArray alloc] init];
     imagePathContainer = [[NSMutableArray alloc] init];
-    return [super init];
+
+    return self;
 }
 
 - (void) startDownloadDishKind : kinds
