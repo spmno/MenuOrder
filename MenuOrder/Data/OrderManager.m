@@ -112,6 +112,9 @@
         NSLog(@"json parser failed\r\r");
         return;
     }
+    if (_delegate != nil) {
+        [_delegate didFinishOrder];
+    }
 
 }
 

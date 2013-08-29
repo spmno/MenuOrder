@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "Dish.h"
 #import "OrderItem.h"
+#import "OrderManagerDelegate.h"
 @interface OrderManager : NSObject
 {
     Dish *currentDish;
@@ -24,4 +25,5 @@
 @property (strong, nonatomic) NSMutableArray *orderContainer;
 @property (strong, nonatomic) NSNumber *tableNo;
 @property (strong, nonatomic) NSNumber *memberNo;
+@property (weak, nonatomic) id<OrderManagerDelegate> delegate;
 @end

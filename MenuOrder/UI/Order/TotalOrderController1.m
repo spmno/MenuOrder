@@ -35,7 +35,7 @@
     //displaySet = [NSArray arrayWithObjects: @"One Dish", @"Two Dish", @"Three Dish", @"Total = $1000.00", nil];
     OrderManager *orderManager = [OrderManager sharedInstance];
     displaySet = orderManager.orderContainer;
-
+    orderManager.delegate = self;
     _orderTable.delegate = self;
     _orderTable.dataSource = self;
     // Do any additional setup after loading the view from its nib.
@@ -99,6 +99,17 @@
     return cell;
 }
 
+- (void) didFinishOrder
+{
+    alertView = [[UIAlertView alloc] initWithTitle:@"Order" message:@"创建定单成功" delegate:nil cancelButtonTitle:nil otherButtonTitles:nil];
+    [NSTimer scheduledTimerWithTimeInterval:1.0f target:self selector:@selector(performDismiss:) userInfo:nil repeats:NO];
+    [alertView show];
+}
+
+- (void) performDismiss
+{
+    [alertView dismissWithClickedButtonIndex:0 animated:YES];
+}
 /*
  // Override to support conditional editing of the table view.
  - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath

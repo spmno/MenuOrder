@@ -85,6 +85,7 @@
 		A5A1AF8C179FCEFB00D67B74 /* Dish.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Dish.h; path = MenuOrder/Data/Dish.h; sourceTree = "<group>"; };
 		A5A1AF8D179FCEFB00D67B74 /* Dish.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Dish.m; path = MenuOrder/Data/Dish.m; sourceTree = "<group>"; };
 		A5A1AF8F17A0C15A00D67B74 /* KindSelectController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KindSelectController.xib; sourceTree = "<group>"; };
+		A5D6E6A717D0011600367690 /* OrderManagerDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = OrderManagerDelegate.h; path = MenuOrder/Data/OrderManagerDelegate.h; sourceTree = "<group>"; };
 		A5D9100217518A450097BCEB /* SwipeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwipeView.h; sourceTree = "<group>"; };
 		A5D9100317518A450097BCEB /* SwipeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwipeView.m; sourceTree = "<group>"; };
 		A5D9180B17969F4600CFC134 /* DataConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DataConverter.h; path = MenuOrder/Data/DataConverter.h; sourceTree = "<group>"; };
@@ -201,6 +202,7 @@
 				A5A1AF8D179FCEFB00D67B74 /* Dish.m */,
 				A58B33CA17A92FF600B2C670 /* OrderManager.h */,
 				A58B33CB17A92FF600B2C670 /* OrderManager.m */,
+				A5D6E6A717D0011600367690 /* OrderManagerDelegate.h */,
 				A58B33CD17A932FD00B2C670 /* OrderItem.h */,
 				A58B33CE17A932FD00B2C670 /* OrderItem.m */,
 			);

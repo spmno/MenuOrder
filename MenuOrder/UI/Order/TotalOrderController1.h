@@ -7,16 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "../../Data/OrderManager.h"
 @protocol TotalOrderDelegate <NSObject>
 
 - (void) dismissPopoverView;
 
 @end
 
-@interface TotalOrderController1 : UIViewController <UITableViewDelegate, UITableViewDataSource>
+@interface TotalOrderController1 : UIViewController <UITableViewDelegate, UITableViewDataSource, OrderManagerDelegate>
 {
     NSArray *displaySet;
+    UIAlertView *alertView;
 }
 @property (weak, nonatomic) id<TotalOrderDelegate> delegate;
 @property (strong, nonatomic) IBOutlet UITableView *orderTable;
