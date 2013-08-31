@@ -107,9 +107,9 @@
     // disconnect
     [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
     NSError *error;
-    NSDictionary *versionJson = [NSJSONSerialization JSONObjectWithData:receivedData options:kNilOptions error:&error];
-    if (versionJson == nil) {
-        NSLog(@"json parser failed\r\r");
+    //NSDictionary *versionJson = [NSJSONSerialization JSONObjectWithData:receivedData options:kNilOptions error:&error];
+    NSString *result = [[NSString alloc] initWithData:receivedData encoding:NSUTF8StringEncoding];
+    if (([result compare:@"success"] == NSOrderedSame) == NO) {
         return;
     }
     if (_delegate != nil) {

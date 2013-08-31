@@ -102,7 +102,7 @@
 - (void) didFinishOrder
 {
     alertView = [[UIAlertView alloc] initWithTitle:@"Order" message:@"创建定单成功" delegate:nil cancelButtonTitle:nil otherButtonTitles:nil];
-    [NSTimer scheduledTimerWithTimeInterval:1.0f target:self selector:@selector(performDismiss:) userInfo:nil repeats:NO];
+    [NSTimer scheduledTimerWithTimeInterval:1.0f target:self selector:@selector(performDismiss) userInfo:nil repeats:NO];
     [alertView show];
 }
 
