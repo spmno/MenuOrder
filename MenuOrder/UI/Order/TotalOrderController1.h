@@ -16,7 +16,7 @@
 
 @interface TotalOrderController1 : UIViewController <UITableViewDelegate, UITableViewDataSource, OrderManagerDelegate>
 {
-    NSArray *displaySet;
+    NSMutableArray *displaySet;
     UIAlertView *alertView;
 }
 @property (weak, nonatomic) id<TotalOrderDelegate> delegate;

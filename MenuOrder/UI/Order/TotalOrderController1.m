@@ -38,6 +38,7 @@
     orderManager.delegate = self;
     _orderTable.delegate = self;
     _orderTable.dataSource = self;
+    [_orderTable setEditing:YES];
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -110,6 +111,12 @@
 {
     [alertView dismissWithClickedButtonIndex:0 animated:YES];
 }
+
+- (UITableViewCellEditingStyle)tableView:(UITableView *)tableView
+           editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return UITableViewCellEditingStyleDelete;
+}
+
 /*
  // Override to support conditional editing of the table view.
  - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
@@ -119,20 +126,24 @@
  }
  */
 
-/*
+
  // Override to support editing the table view.
  - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
  {
- if (editingStyle == UITableViewCellEditingStyleDelete) {
- // Delete the row from the data source
- [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+     if (editingStyle == UITableViewCellEditingStyleDelete) {
+        // Delete the row from the data source
+         [displaySet removeObjectAtIndex:indexPath.row];
+         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic
+          ];
+     }
+     else if (editingStyle == UITableViewCellEditingStyleInsert) {
+         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+     }
  }
- else if (editingStyle == UITableViewCellEditingStyleInsert) {
- // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
- }
- }
- */
-
+ 
+- (NSString *)tableView:(UITableView *)tableView titleForDeleteConfirmationButtonForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return @"删除";
+}
 /*
  // Override to support rearranging the table view.
  - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
@@ -140,14 +151,14 @@
  }
  */
 
-/*
+
  // Override to support conditional rearranging of the table view.
  - (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
  {
  // Return NO if you do not want the item to be re-orderable.
  return YES;
  }
- */
+
 
 #pragma mark - Table view delegate
 
