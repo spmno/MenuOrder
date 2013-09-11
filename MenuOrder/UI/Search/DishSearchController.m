@@ -7,16 +7,15 @@
 //
 
 #import "DishSearchController.h"
+#import "DataManager.h"
+#import "Dish.h"
+#import "pinyin.h"
 
 @interface DishSearchController ()
 @property (nonatomic) NSMutableArray *searchResults;
 @end
 
 @implementation DishSearchController
-
-@synthesize data = _data;
-
-
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -31,16 +30,21 @@
 {
     [super viewDidLoad];
     _searchBar.keyboardType=UIKeyboardTypeDefault;
+    _searchBar.delegate = self;
+    self.tableView.tableHeaderView = _searchBar;
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     _searchBar.showsCancelButton = YES;
+    DataManager *dataManager = [DataManager sharedInstance];
     _data = [[NSMutableOrderedSet alloc] init];
-    [_data addObject:@"One"];
-    [_data addObject:@"Two"];
-    [_data addObject:@"Three"];
+    NSDictionary *dishContainer = [dataManager wholeDishContainer];
+    for (Dish* dish in [dishContainer objectEnumerator]) {
+        //[_data addObject:dish.name];
+        [_data addObject:dish.name];
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -142,13 +146,39 @@
      [self.navigationController pushViewController:detailViewController animated:YES];
      */
 }
-
+#define IS_CH_SYMBOL(chr) ((int)(chr)>127)
 #pragma mark - UISearchDisplayController Delegate Methods
 
 - (BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString
 {
     NSString *scope;
+    if (searchString.length == 0) {
+        return NO;
+    }
     
+    [_data removeAllObjects];
+    DataManager *dataManager = [DataManager sharedInstance];
+    NSDictionary *dishContainer = [dataManager wholeDishContainer];
+    unichar ch = [searchString characterAtIndex:0];
+    for (Dish* dish in [dishContainer objectEnumerator]) {
+        //[_data addObject:dish.name];
+        if (IS_CH_SYMBOL(ch)) {
+            if ([dish.name hasPrefix:searchString]) {
+                [_data addObject:dish.name];
+            }
+        } else {
+            for (int i = 0; i < searchString.length; ++i) {
+                if (pinyinFirstLetter([dish.name characterAtIndex:i]) == [searchString characterAtIndex:i]) {
+                    if (i == searchString.length-1) {
+                        [_data addObject:dish.name];
+                    }
+                } else {
+                    break;
+                }
+            }
+        }
+        
+    }
     
     // Return YES to cause the search result table view to be reloaded.
     return YES;
@@ -170,5 +200,37 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
+
+- (void) searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText
+{
+    if (searchText.length == 0) {
+        return;
+    }
+    
+    [_data removeAllObjects];
+    DataManager *dataManager = [DataManager sharedInstance];
+    NSDictionary *dishContainer = [dataManager wholeDishContainer];
+    unichar ch = [searchText characterAtIndex:0];
+    for (Dish* dish in [dishContainer objectEnumerator]) {
+        //[_data addObject:dish.name];
+        if (IS_CH_SYMBOL(ch)) {
+            if ([dish.name hasPrefix:searchText]) {
+                [_data addObject:dish.name];
+            }
+        } else {
+            for (int i = 0; i < searchText.length; ++i) {
+                if (pinyinFirstLetter([dish.name characterAtIndex:i]) == [searchText characterAtIndex:i]) {
+                    if (i == searchText.length-1) {
+                        [_data addObject:dish.name];
+                    }
+                } else {
+                    break;
+                }
+            }
+        }
+    
+    }
+    
+}
 
 @end

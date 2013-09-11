@@ -14,6 +14,7 @@
 		A5555C311788C8C300F96D14 /* FileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A5555C301788C8C300F96D14 /* FileManager.m */; };
 		A5555C341788D10000F96D14 /* VersionDownloadWorker.m in Sources */ = {isa = PBXBuildFile; fileRef = A5555C331788D10000F96D14 /* VersionDownloadWorker.m */; };
 		A5555C371788D12F00F96D14 /* UpdateJsonDownloadWorker.m in Sources */ = {isa = PBXBuildFile; fileRef = A5555C361788D12F00F96D14 /* UpdateJsonDownloadWorker.m */; };
+		A577FBF117DFDC4400869969 /* pinyin.c in Sources */ = {isa = PBXBuildFile; fileRef = A577FBEF17DFDC4400869969 /* pinyin.c */; };
 		A58B33CC17A92FF600B2C670 /* OrderManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A58B33CB17A92FF600B2C670 /* OrderManager.m */; };
 		A58B33CF17A932FD00B2C670 /* OrderItem.m in Sources */ = {isa = PBXBuildFile; fileRef = A58B33CE17A932FD00B2C670 /* OrderItem.m */; };
 		A5A1AF8E179FCEFB00D67B74 /* Dish.m in Sources */ = {isa = PBXBuildFile; fileRef = A5A1AF8D179FCEFB00D67B74 /* Dish.m */; };
@@ -78,6 +79,8 @@
 		A5555C351788D12F00F96D14 /* UpdateJsonDownloadWorker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UpdateJsonDownloadWorker.h; path = MenuOrder/Data/UpdateJsonDownloadWorker.h; sourceTree = "<group>"; };
 		A5555C361788D12F00F96D14 /* UpdateJsonDownloadWorker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UpdateJsonDownloadWorker.m; path = MenuOrder/Data/UpdateJsonDownloadWorker.m; sourceTree = "<group>"; };
 		A5671AD4178F5FE70052C329 /* DishKindDownloadDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DishKindDownloadDelegate.h; path = MenuOrder/Data/DishKindDownloadDelegate.h; sourceTree = "<group>"; };
+		A577FBEF17DFDC4400869969 /* pinyin.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pinyin.c; sourceTree = "<group>"; };
+		A577FBF017DFDC4400869969 /* pinyin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pinyin.h; sourceTree = "<group>"; };
 		A58B33CA17A92FF600B2C670 /* OrderManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OrderManager.h; path = MenuOrder/Data/OrderManager.h; sourceTree = "<group>"; };
 		A58B33CB17A92FF600B2C670 /* OrderManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OrderManager.m; path = MenuOrder/Data/OrderManager.m; sourceTree = "<group>"; };
 		A58B33CD17A932FD00B2C670 /* OrderItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OrderItem.h; path = MenuOrder/Data/OrderItem.h; sourceTree = "<group>"; };
@@ -209,6 +212,16 @@
 			name = DataManager;
 			sourceTree = "<group>";
 		};
+		A577FBEE17DFDC4400869969 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				A577FBEF17DFDC4400869969 /* pinyin.c */,
+				A577FBF017DFDC4400869969 /* pinyin.h */,
+			);
+			name = Utils;
+			path = MenuOrder/Utils;
+			sourceTree = "<group>";
+		};
 		A5D9100117518A450097BCEB /* SwipeView */ = {
 			isa = PBXGroup;
 			children = (
@@ -222,6 +235,7 @@
 		A5F002521750F7D4001FDFB4 = {
 			isa = PBXGroup;
 			children = (
+				A577FBEE17DFDC4400869969 /* Utils */,
 				A5FF1F89179DD5FF00CF308B /* MenuOrder */,
 				A5FF1F32179DD44E00CF308B /* UI */,
 				A511008D178384C800608ACE /* DataManager */,
@@ -463,6 +477,7 @@
 				A58B33CC17A92FF600B2C670 /* OrderManager.m in Sources */,
 				A58B33CF17A932FD00B2C670 /* OrderItem.m in Sources */,
 				A5E43AB517B6E85C000867ED /* OrderCell.m in Sources */,
+				A577FBF117DFDC4400869969 /* pinyin.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -534,7 +549,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MenuOrder/MenuOrder-Prefix.pch";
 				INFOPLIST_FILE = "MenuOrder/MenuOrder-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -546,7 +561,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MenuOrder/MenuOrder-Prefix.pch";
 				INFOPLIST_FILE = "MenuOrder/MenuOrder-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
