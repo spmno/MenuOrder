@@ -30,7 +30,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self.navigationController setNavigationBarHidden:YES];
+    //[self.navigationController setNavigationBarHidden:YES];
     _actionButton.hidden = YES;
     _checkInfo.text = @"check version now, please wait!!!";
     DataManager *manager =[DataManager sharedInstance];

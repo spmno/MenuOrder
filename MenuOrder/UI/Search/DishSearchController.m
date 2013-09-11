@@ -10,6 +10,8 @@
 #import "DataManager.h"
 #import "Dish.h"
 #import "pinyin.h"
+#import "OrderManager.h"
+#import "DishCountController1.h"
 
 @interface DishSearchController ()
 @property (nonatomic) NSMutableArray *searchResults;
@@ -31,20 +33,23 @@
     [super viewDidLoad];
     _searchBar.keyboardType=UIKeyboardTypeDefault;
     _searchBar.delegate = self;
-    self.tableView.tableHeaderView = _searchBar;
+    //self.tableView.tableHeaderView = _searchBar;
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     _searchBar.showsCancelButton = YES;
-    DataManager *dataManager = [DataManager sharedInstance];
+    [_searchBar sizeToFit];
+    /*
+    _searchDisplayController = [[UISearchDisplayController alloc] initWithSearchBar:_searchBar contentsController:self];
+    _searchDisplayController.delegate = self;
+    _searchDisplayController.searchResultsDataSource = self;
+    _searchDisplayController.searchResultsDelegate = self;
+     */
     _data = [[NSMutableOrderedSet alloc] init];
-    NSDictionary *dishContainer = [dataManager wholeDishContainer];
-    for (Dish* dish in [dishContainer objectEnumerator]) {
-        //[_data addObject:dish.name];
-        [_data addObject:dish.name];
-    }
+    _keys = [[NSMutableOrderedSet alloc] init];
+    [self addWholeData];
 }
 
 - (void)didReceiveMemoryWarning
@@ -145,55 +150,21 @@
      // Pass the selected object to the new view controller.
      [self.navigationController pushViewController:detailViewController animated:YES];
      */
+    OrderManager *orderManager = [OrderManager sharedInstance];
+    DataManager *dataManager = [DataManager sharedInstance];
+
+    NSNumber *dishKey = [_keys objectAtIndex:indexPath.row];
+    Dish *pushDish = [dataManager.wholeDishContainer objectForKey: dishKey];
+    [orderManager setCurrentDish:pushDish];
+    DishCountController1* dishController = [[DishCountController1 alloc]initWithNibName:@"DishCountController1" bundle:nil];
+    dishController.modalPresentationStyle = UIModalPresentationFormSheet;
+    dishController.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+    [self presentViewController:dishController animated:NO completion:nil];
+    dishController.view.superview.frame = CGRectMake(0, 0, 520, 350);
+    dishController.view.superview.center = self.view.center;
+
 }
 #define IS_CH_SYMBOL(chr) ((int)(chr)>127)
-#pragma mark - UISearchDisplayController Delegate Methods
-
-- (BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString
-{
-    NSString *scope;
-    if (searchString.length == 0) {
-        return NO;
-    }
-    
-    [_data removeAllObjects];
-    DataManager *dataManager = [DataManager sharedInstance];
-    NSDictionary *dishContainer = [dataManager wholeDishContainer];
-    unichar ch = [searchString characterAtIndex:0];
-    for (Dish* dish in [dishContainer objectEnumerator]) {
-        //[_data addObject:dish.name];
-        if (IS_CH_SYMBOL(ch)) {
-            if ([dish.name hasPrefix:searchString]) {
-                [_data addObject:dish.name];
-            }
-        } else {
-            for (int i = 0; i < searchString.length; ++i) {
-                if (pinyinFirstLetter([dish.name characterAtIndex:i]) == [searchString characterAtIndex:i]) {
-                    if (i == searchString.length-1) {
-                        [_data addObject:dish.name];
-                    }
-                } else {
-                    break;
-                }
-            }
-        }
-        
-    }
-    
-    // Return YES to cause the search result table view to be reloaded.
-    return YES;
-}
-
-
-- (BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchScope:(NSInteger)searchOption
-{
-    NSString *searchString = [self.searchDisplayController.searchBar text];
-    NSString *scope;
-
-    
-    // Return YES to cause the search result table view to be reloaded.
-    return YES;
-}
 
 - (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar
 {
@@ -203,34 +174,52 @@
 
 - (void) searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText
 {
-    if (searchText.length == 0) {
-        return;
-    }
-    
     [_data removeAllObjects];
-    DataManager *dataManager = [DataManager sharedInstance];
-    NSDictionary *dishContainer = [dataManager wholeDishContainer];
-    unichar ch = [searchText characterAtIndex:0];
-    for (Dish* dish in [dishContainer objectEnumerator]) {
-        //[_data addObject:dish.name];
-        if (IS_CH_SYMBOL(ch)) {
-            if ([dish.name hasPrefix:searchText]) {
-                [_data addObject:dish.name];
-            }
-        } else {
-            for (int i = 0; i < searchText.length; ++i) {
-                if (pinyinFirstLetter([dish.name characterAtIndex:i]) == [searchText characterAtIndex:i]) {
-                    if (i == searchText.length-1) {
-                        [_data addObject:dish.name];
+    if (searchText.length == 0) {
+        [self addWholeData];
+    } else {
+        DataManager *dataManager = [DataManager sharedInstance];
+        NSDictionary *dishContainer = [dataManager wholeDishContainer];
+        unichar ch = [searchText characterAtIndex:0];
+        for (Dish* dish in [dishContainer objectEnumerator]) {
+            //[_data addObject:dish.name];
+            if (IS_CH_SYMBOL(ch)) {
+                if ([dish.name hasPrefix:searchText]) {
+                    [_data addObject:dish.name];
+                    [_keys addObject:dish.id];
+                }
+            } else {
+                for (int i = 0; i < searchText.length; ++i) {
+                    if (pinyinFirstLetter([dish.name characterAtIndex:i]) == [searchText characterAtIndex:i]) {
+                        if (i == searchText.length-1) {
+                            [_data addObject:dish.name];
+                            [_keys addObject:dish.id];
+                        }
+                    } else {
+                        break;
                     }
-                } else {
-                    break;
                 }
             }
+            
         }
-    
+
     }
-    
+
+    [self.tableView reloadData];
 }
 
+- (void)viewDidUnload {
+    [super viewDidUnload];
+}
+
+- (void) addWholeData {
+    DataManager *dataManager = [DataManager sharedInstance];
+    
+    NSDictionary *dishContainer = [dataManager wholeDishContainer];
+    for (Dish* dish in [dishContainer objectEnumerator]) {
+        //[_data addObject:dish.name];
+        [_data addObject:dish.name];
+        [_keys addObject:dish.id];
+    }
+}
 @end

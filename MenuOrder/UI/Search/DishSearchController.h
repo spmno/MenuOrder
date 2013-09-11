@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DishSearchController : UITableViewController<UISearchDisplayDelegate, UISearchBarDelegate, UITableViewDelegate,UITableViewDataSource>
+@interface DishSearchController : UITableViewController<UISearchBarDelegate, UITableViewDelegate,UITableViewDataSource>
 @property (strong, nonatomic) NSMutableOrderedSet *data;
+@property (strong, nonatomic) NSMutableOrderedSet *keys;
 @property (strong, nonatomic) IBOutlet UISearchBar *searchBar;
 @end
