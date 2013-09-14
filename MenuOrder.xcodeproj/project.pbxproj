@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		A51100901783856B00608ACE /* DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A511008F1783856B00608ACE /* DataManager.m */; };
 		A51F11A4179F2B46003AEFD9 /* PageController.m in Sources */ = {isa = PBXBuildFile; fileRef = A51F11A3179F2B46003AEFD9 /* PageController.m */; };
+		A5277F8317E5182D003A67D0 /* EndViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5277F8117E5182D003A67D0 /* EndViewController.m */; };
+		A5277F8417E5182D003A67D0 /* EndViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5277F8217E5182D003A67D0 /* EndViewController.xib */; };
 		A53D4608178A2B320062A0D0 /* DisplayPage.m in Sources */ = {isa = PBXBuildFile; fileRef = A53D4607178A2B320062A0D0 /* DisplayPage.m */; };
 		A5421F2B1786315900DBFD1D /* PersistentData.m in Sources */ = {isa = PBXBuildFile; fileRef = A5421F2A1786315900DBFD1D /* PersistentData.m */; };
 		A5555C311788C8C300F96D14 /* FileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A5555C301788C8C300F96D14 /* FileManager.m */; };
@@ -65,6 +67,9 @@
 		A511008F1783856B00608ACE /* DataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DataManager.m; path = MenuOrder/Data/DataManager.m; sourceTree = "<group>"; };
 		A51F11A2179F2B46003AEFD9 /* PageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageController.h; sourceTree = "<group>"; };
 		A51F11A3179F2B46003AEFD9 /* PageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageController.m; sourceTree = "<group>"; };
+		A5277F8017E5182D003A67D0 /* EndViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EndViewController.h; sourceTree = "<group>"; };
+		A5277F8117E5182D003A67D0 /* EndViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EndViewController.m; sourceTree = "<group>"; };
+		A5277F8217E5182D003A67D0 /* EndViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EndViewController.xib; sourceTree = "<group>"; };
 		A53C4759178B77CA00B528DB /* DataManagerDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DataManagerDelegate.h; path = MenuOrder/Data/DataManagerDelegate.h; sourceTree = "<group>"; };
 		A53C475A178B798900B528DB /* VersionDownloadDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = VersionDownloadDelegate.h; path = MenuOrder/Data/VersionDownloadDelegate.h; sourceTree = "<group>"; };
 		A53C475B178B799F00B528DB /* PageDownloadDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PageDownloadDelegate.h; path = MenuOrder/Data/PageDownloadDelegate.h; sourceTree = "<group>"; };
@@ -355,6 +360,9 @@
 				A5E43AB317B6E85C000867ED /* OrderCell.h */,
 				A5E43AB417B6E85C000867ED /* OrderCell.m */,
 				A5E43AB817B6EB83000867ED /* OrderCell.xib */,
+				A5277F8017E5182D003A67D0 /* EndViewController.h */,
+				A5277F8117E5182D003A67D0 /* EndViewController.m */,
+				A5277F8217E5182D003A67D0 /* EndViewController.xib */,
 			);
 			name = Order;
 			path = MenuOrder/UI/Order;
@@ -434,6 +442,7 @@
 				A5FF1F88179DD5B500CF308B /* UserManualController.xib in Resources */,
 				A5A1AF9017A0C15B00D67B74 /* KindSelectController.xib in Resources */,
 				A5E43AB917B6EB83000867ED /* OrderCell.xib in Resources */,
+				A5277F8417E5182D003A67D0 /* EndViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -478,6 +487,7 @@
 				A58B33CF17A932FD00B2C670 /* OrderItem.m in Sources */,
 				A5E43AB517B6E85C000867ED /* OrderCell.m in Sources */,
 				A577FBF117DFDC4400869969 /* pinyin.c in Sources */,
+				A5277F8317E5182D003A67D0 /* EndViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

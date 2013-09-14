@@ -11,6 +11,7 @@
 #import "../../Data/Dish.h"
 #import "../../Data/OrderItem.h"
 #import "OrderCell.h"
+#import "EndViewController.h"
 
 @interface TotalOrderController1 ()
 
@@ -110,6 +111,16 @@
 - (void) performDismiss
 {
     [alertView dismissWithClickedButtonIndex:0 animated:YES];
+    [NSTimer scheduledTimerWithTimeInterval:1.0f target:self selector:@selector(showEndDialog) userInfo:nil repeats:NO];
+  
+}
+
+- (void) showEndDialog
+{
+    EndViewController* endViewController = [[EndViewController alloc]initWithNibName:@"EndViewController" bundle:nil];
+    //[self presentViewController:endViewController animated:NO completion:nil];
+    [self.navigationController pushViewController:endViewController animated:YES];
+
 }
 
 - (UITableViewCellEditingStyle)tableView:(UITableView *)tableView
