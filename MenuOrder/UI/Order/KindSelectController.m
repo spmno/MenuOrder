@@ -18,6 +18,7 @@
 #import "../../Data/DisplayPage.h"
 #import "DishKind.h"
 #import "UIManager.h"
+#import "EndViewController.h"
 
 @interface KindSelectController ()
 
@@ -206,10 +207,20 @@
 - (void) popoverControllerDidDismissPopover:(UIPopoverController *)popoverController
 {
     NSLog(@"%@",@"谢谢");
+    EndViewController* endViewController = [[EndViewController alloc]initWithNibName:@"EndViewController" bundle:nil];
+    //[self presentViewController:endViewController animated:NO completion:nil];
+    if (self.navigationController != nil) {
+        [self.navigationController presentViewController:endViewController animated:YES completion:nil];
+    }
 }
 
 - (void) dismissPopoverView
 {
     [popover dismissPopoverAnimated:YES];
+    EndViewController* endViewController = [[EndViewController alloc]initWithNibName:@"EndViewController" bundle:nil];
+    //[self presentViewController:endViewController animated:NO completion:nil];
+    if (self.navigationController != nil) {
+        [self.navigationController pushViewController:endViewController animated:YES];
+    }
 }
 @end

@@ -8,6 +8,7 @@
 
 #import "EndViewController.h"
 #import "KindSelectController.h"
+#import "VersionCheckController.h"
 
 @interface EndViewController ()
 
@@ -37,8 +38,13 @@
 }
 
 - (IBAction)reselectOrder:(id)sender {
-    KindSelectController* kindSelectController = [[KindSelectController alloc]initWithNibName:@"KindSelectController" bundle:nil];
+    //VersionCheckController* versionCheckController = [[VersionCheckController alloc]initWithNibName:@"VersionCheckController" bundle:nil];
     //[self presentViewController:beforeController animated:NO completion:nil];
-    [self.navigationController pushViewController:kindSelectController animated:YES];
+    if (self.navigationController != nil) {
+        //[self.navigationController pushViewController:versionCheckController animated:YES];
+        [self.navigationController popToRootViewControllerAnimated:YES];
+        
+    }
+    //[self presentViewController:versionCheckController animated:YES completion:nil];
 }
 @end

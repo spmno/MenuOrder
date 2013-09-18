@@ -16,6 +16,7 @@
 #import "../../Data/DisplayPage.h"
 #import "DishKind.h"
 #import "UIManager.h"
+#import "EndViewController.h"
 @interface BeforeController ()
 
 @end
@@ -140,6 +141,13 @@
 - (void) dismissPopoverView
 {
     [popover dismissPopoverAnimated:YES];
+    EndViewController* endViewController = [[EndViewController alloc]initWithNibName:@"EndViewController" bundle:nil];
+    //[self presentViewController:endViewController animated:NO completion:nil];
+    if (self.navigationController != nil) {
+        [self.navigationController pushViewController:endViewController animated:YES];
+        //[self.navigationController presentModalViewController:endViewController animated:YES];
+        //[self presentViewController:endViewController animated:YES completion:nil];
+    }
 }
 
 @end

@@ -119,7 +119,9 @@
 {
     EndViewController* endViewController = [[EndViewController alloc]initWithNibName:@"EndViewController" bundle:nil];
     //[self presentViewController:endViewController animated:NO completion:nil];
-    [self.navigationController pushViewController:endViewController animated:YES];
+    if (self.navigationController != nil) {
+        [self.navigationController pushViewController:endViewController animated:YES];
+    }
 
 }
 
