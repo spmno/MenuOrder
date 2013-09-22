@@ -12,12 +12,13 @@
 #import "DisplayItem.h"
 #import "PathDefine.h"
 #import "DIsh.h"
+#import "PathManager.h"
 
 @implementation UpdateJsonDownloadWorker
 
 - (BOOL) startDownloadUpdateJson:(NSMutableArray *)pageContainer :(NSMutableArray *)kindContainer : (NSMutableDictionary*) dishContainer
 {
-    NSString *appVersionUrl = APP_VERSION_URL;
+    NSString *appVersionUrl = [PathManager sharedInstance].appVersionUrl;
     //NSString *appVersionUrl = @"http://192.168.59.1:3000/page_versions/last_version.json";
     receivedData = [[NSMutableData alloc] init];
     _pageArray = pageContainer;

@@ -7,13 +7,13 @@
 //
 
 #import "VersionDownloadWorker.h"
-#import "PathDefine.h"
+#import "PathManager.h"
 
 @implementation VersionDownloadWorker
 
 - (BOOL) startDownloadVersion
 {
-    NSString *appVersionUrl = LAST_VERSION_URL;
+    NSString *appVersionUrl = [PathManager sharedInstance].lastVersionUrl;
     receivedData = [[NSMutableData alloc] init];
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:appVersionUrl]];
     [NSURLConnection connectionWithRequest:request delegate:self];

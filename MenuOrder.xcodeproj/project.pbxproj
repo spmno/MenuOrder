@@ -34,6 +34,8 @@
 		A5F002631750F7D4001FDFB4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5F002621750F7D4001FDFB4 /* CoreGraphics.framework */; };
 		A5F002A01750F833001FDFB4 /* iCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = A5F0029F1750F833001FDFB4 /* iCarousel.m */; };
 		A5F002A21750F83E001FDFB4 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5F002A11750F83E001FDFB4 /* QuartzCore.framework */; };
+		A5FBB7E517EF897B000666AA /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A5FBB7E417EF897B000666AA /* Settings.bundle */; };
+		A5FBB7E817EF8EB6000666AA /* PathManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A5FBB7E717EF8EB6000666AA /* PathManager.m */; };
 		A5FF1F53179DD4DE00CF308B /* UpdateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5FF1F4E179DD4DE00CF308B /* UpdateViewController.m */; };
 		A5FF1F54179DD4DE00CF308B /* UpdateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5FF1F4F179DD4DE00CF308B /* UpdateViewController.xib */; };
 		A5FF1F55179DD4DE00CF308B /* VersionCheckController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5FF1F51179DD4DE00CF308B /* VersionCheckController.m */; };
@@ -118,6 +120,9 @@
 		A5F0029E1750F833001FDFB4 /* iCarousel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iCarousel.h; sourceTree = "<group>"; };
 		A5F0029F1750F833001FDFB4 /* iCarousel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iCarousel.m; sourceTree = "<group>"; };
 		A5F002A11750F83E001FDFB4 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		A5FBB7E417EF897B000666AA /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		A5FBB7E617EF8EB6000666AA /* PathManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PathManager.h; path = MenuOrder/Data/PathManager.h; sourceTree = "<group>"; };
+		A5FBB7E717EF8EB6000666AA /* PathManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PathManager.m; path = MenuOrder/Data/PathManager.m; sourceTree = "<group>"; };
 		A5FF1F4D179DD4DE00CF308B /* UpdateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UpdateViewController.h; sourceTree = "<group>"; };
 		A5FF1F4E179DD4DE00CF308B /* UpdateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UpdateViewController.m; sourceTree = "<group>"; };
 		A5FF1F4F179DD4DE00CF308B /* UpdateViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UpdateViewController.xib; sourceTree = "<group>"; };
@@ -213,6 +218,8 @@
 				A5D6E6A717D0011600367690 /* OrderManagerDelegate.h */,
 				A58B33CD17A932FD00B2C670 /* OrderItem.h */,
 				A58B33CE17A932FD00B2C670 /* OrderItem.m */,
+				A5FBB7E617EF8EB6000666AA /* PathManager.h */,
+				A5FBB7E717EF8EB6000666AA /* PathManager.m */,
 			);
 			name = DataManager;
 			sourceTree = "<group>";
@@ -240,6 +247,7 @@
 		A5F002521750F7D4001FDFB4 = {
 			isa = PBXGroup;
 			children = (
+				A5FBB7E417EF897B000666AA /* Settings.bundle */,
 				A577FBEE17DFDC4400869969 /* Utils */,
 				A5FF1F89179DD5FF00CF308B /* MenuOrder */,
 				A5FF1F32179DD44E00CF308B /* UI */,
@@ -443,6 +451,7 @@
 				A5A1AF9017A0C15B00D67B74 /* KindSelectController.xib in Resources */,
 				A5E43AB917B6EB83000867ED /* OrderCell.xib in Resources */,
 				A5277F8417E5182D003A67D0 /* EndViewController.xib in Resources */,
+				A5FBB7E517EF897B000666AA /* Settings.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -488,6 +497,7 @@
 				A5E43AB517B6E85C000867ED /* OrderCell.m in Sources */,
 				A577FBF117DFDC4400869969 /* pinyin.c in Sources */,
 				A5277F8317E5182D003A67D0 /* EndViewController.m in Sources */,
+				A5FBB7E817EF8EB6000666AA /* PathManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

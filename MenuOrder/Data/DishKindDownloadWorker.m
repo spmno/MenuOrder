@@ -8,8 +8,8 @@
 
 #import "DishKindDownloadWorker.h"
 #import "DishKind.h"
-#import "PathDefine.h"
 #import "PersistentData.h"
+#import "PathManager.h"
 
 @implementation DishKindDownloadWorker
 
@@ -27,7 +27,8 @@
     receivedData = [[NSMutableData alloc] init];
     for (DishKind* dishKind in kinds) {
         [imagePathContainer addObject:dishKind.imageUrl];
-        NSString *imageUrlPath = [NSString stringWithFormat:@"%@%@", UPLOAD_IMAGE_DIR, dishKind.imageUrl];
+        NSString *imageDir = [PathManager sharedInstance].uploadImageDir;
+        NSString *imageUrlPath = [NSString stringWithFormat:@"%@%@", imageDir, dishKind.imageUrl];
         NSLog(@"downloadurl = %@", imageUrlPath);
         NSRange range = [imageUrlPath rangeOfString:@"null"];
         if (range.location == NSNotFound) {

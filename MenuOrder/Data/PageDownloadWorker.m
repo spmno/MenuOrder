@@ -10,6 +10,7 @@
 #import "DisplayPage.h"
 #import "PathDefine.h"
 #import "PersistentData.h"
+#import "PathManager.h"
 
 @implementation PageDownloadWorker
 
@@ -27,7 +28,8 @@
     receivedData = [[NSMutableData alloc] init];
     for (DisplayPage* displayPage in pages) {
         [imagePathContainer addObject:displayPage.imageUrl];
-        NSString *imageUrlPath = [NSString stringWithFormat:@"%@%@", UPLOAD_IMAGE_DIR, displayPage.imageUrl];
+        NSString *imageDir = [PathManager sharedInstance].uploadImageDir;
+        NSString *imageUrlPath = [NSString stringWithFormat:@"%@%@", imageDir, displayPage.imageUrl];
         NSLog(@"downloadurl = %@", imageUrlPath);
         NSURL *imageUrl = [NSURL URLWithString:imageUrlPath];
         NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL: imageUrl];

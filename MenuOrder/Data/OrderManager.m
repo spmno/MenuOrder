@@ -7,7 +7,7 @@
 //
 
 #import "OrderManager.h"
-#import "PathDefine.h"
+#import "PathManager.h"
 
 @implementation OrderManager
 + (OrderManager*) sharedInstance
@@ -75,7 +75,8 @@
     if ([NSJSONSerialization isValidJSONObject:orderContainer]) {
         NSError *error;
         NSData *jsonData = [NSJSONSerialization dataWithJSONObject:orderContainer options:NSJSONWritingPrettyPrinted error:&error];
-        NSURL *url = [NSURL URLWithString:UPLOAD_ORDER_URL];
+        NSString *uploadOrderUrl = [PathManager sharedInstance].uploadOrderUrl;
+        NSURL *url = [NSURL URLWithString:uploadOrderUrl];
         NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url];
         [request setHTTPMethod:@"POST"];
         [request setValue:@"application/json" forHTTPHeaderField:@"Accept"];
