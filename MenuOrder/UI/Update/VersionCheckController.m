@@ -29,8 +29,13 @@
 
 - (void)viewDidLoad
 {
+    //UIImage *background = [UIImage imageNamed: @"login_background.png"];
+    //UIImageView *imageView = [[UIImageView alloc] initWithImage: background];
+    
+    //[self.view addSubview: imageView];
+
     [super viewDidLoad];
-    //[self.navigationController setNavigationBarHidden:YES];
+    [self.navigationController setNavigationBarHidden:YES];
     _actionButton.hidden = YES;
     _checkInfo.text = @"check version now, please wait!!!";
     DataManager *manager =[DataManager sharedInstance];
@@ -52,15 +57,15 @@
     NSNumber *versionOnApp = [persistenData getVersion];
     _actionButton.hidden = NO;
     if ([version isEqualToNumber:versionOnApp]) {
-        _actionButton.titleLabel.text = @"start";
-        _checkInfo.text = @"It is the last version.";
+        _actionButton.titleLabel.text = @"开始";
+        _checkInfo.text = @"已经是最新版本.";
         if ([dataManager initDataFromDisk] == NO) {
             UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"error" message:@"init data fail" delegate:self cancelButtonTitle:@"No" otherButtonTitles:@"YES", nil];
             [alert show];
         }
         isLastVersion = YES;
     } else {
-        _actionButton.titleLabel.text = @"update";
+        _actionButton.titleLabel.text = @"升级";
         _checkInfo.text = @"It is not last version, please update.";
     }
 }

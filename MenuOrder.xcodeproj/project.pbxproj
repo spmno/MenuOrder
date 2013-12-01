@@ -19,6 +19,10 @@
 		A577FBF117DFDC4400869969 /* pinyin.c in Sources */ = {isa = PBXBuildFile; fileRef = A577FBEF17DFDC4400869969 /* pinyin.c */; };
 		A58B33CC17A92FF600B2C670 /* OrderManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A58B33CB17A92FF600B2C670 /* OrderManager.m */; };
 		A58B33CF17A932FD00B2C670 /* OrderItem.m in Sources */ = {isa = PBXBuildFile; fileRef = A58B33CE17A932FD00B2C670 /* OrderItem.m */; };
+		A58C41A2184B543A00C4AFEB /* login_background.png in Resources */ = {isa = PBXBuildFile; fileRef = A58C41A1184B543A00C4AFEB /* login_background.png */; };
+		A58C41A4184B582700C4AFEB /* login_button_background.png in Resources */ = {isa = PBXBuildFile; fileRef = A58C41A3184B582700C4AFEB /* login_button_background.png */; };
+		A58C41A6184B5AEB00C4AFEB /* login_section_background.png in Resources */ = {isa = PBXBuildFile; fileRef = A58C41A5184B5AEB00C4AFEB /* login_section_background.png */; };
+		A58C41A8184B5D8600C4AFEB /* login_edit_background.png in Resources */ = {isa = PBXBuildFile; fileRef = A58C41A7184B5D8600C4AFEB /* login_edit_background.png */; };
 		A5A1AF8E179FCEFB00D67B74 /* Dish.m in Sources */ = {isa = PBXBuildFile; fileRef = A5A1AF8D179FCEFB00D67B74 /* Dish.m */; };
 		A5A1AF9017A0C15B00D67B74 /* KindSelectController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5A1AF8F17A0C15A00D67B74 /* KindSelectController.xib */; };
 		A5D9100417518A450097BCEB /* SwipeView.m in Sources */ = {isa = PBXBuildFile; fileRef = A5D9100317518A450097BCEB /* SwipeView.m */; };
@@ -92,6 +96,10 @@
 		A58B33CB17A92FF600B2C670 /* OrderManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OrderManager.m; path = MenuOrder/Data/OrderManager.m; sourceTree = "<group>"; };
 		A58B33CD17A932FD00B2C670 /* OrderItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OrderItem.h; path = MenuOrder/Data/OrderItem.h; sourceTree = "<group>"; };
 		A58B33CE17A932FD00B2C670 /* OrderItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OrderItem.m; path = MenuOrder/Data/OrderItem.m; sourceTree = "<group>"; };
+		A58C41A1184B543A00C4AFEB /* login_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login_background.png; sourceTree = "<group>"; };
+		A58C41A3184B582700C4AFEB /* login_button_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login_button_background.png; sourceTree = "<group>"; };
+		A58C41A5184B5AEB00C4AFEB /* login_section_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login_section_background.png; sourceTree = "<group>"; };
+		A58C41A7184B5D8600C4AFEB /* login_edit_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login_edit_background.png; sourceTree = "<group>"; };
 		A5A1AF8C179FCEFB00D67B74 /* Dish.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Dish.h; path = MenuOrder/Data/Dish.h; sourceTree = "<group>"; };
 		A5A1AF8D179FCEFB00D67B74 /* Dish.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Dish.m; path = MenuOrder/Data/Dish.m; sourceTree = "<group>"; };
 		A5A1AF8F17A0C15A00D67B74 /* KindSelectController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KindSelectController.xib; sourceTree = "<group>"; };
@@ -234,6 +242,18 @@
 			path = MenuOrder/Utils;
 			sourceTree = "<group>";
 		};
+		A58C41A0184B543A00C4AFEB /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				A58C41A7184B5D8600C4AFEB /* login_edit_background.png */,
+				A58C41A5184B5AEB00C4AFEB /* login_section_background.png */,
+				A58C41A3184B582700C4AFEB /* login_button_background.png */,
+				A58C41A1184B543A00C4AFEB /* login_background.png */,
+			);
+			name = Resource;
+			path = MenuOrder/Resource;
+			sourceTree = "<group>";
+		};
 		A5D9100117518A450097BCEB /* SwipeView */ = {
 			isa = PBXGroup;
 			children = (
@@ -247,6 +267,7 @@
 		A5F002521750F7D4001FDFB4 = {
 			isa = PBXGroup;
 			children = (
+				A58C41A0184B543A00C4AFEB /* Resource */,
 				A5FBB7E417EF897B000666AA /* Settings.bundle */,
 				A577FBEE17DFDC4400869969 /* Utils */,
 				A5FF1F89179DD5FF00CF308B /* MenuOrder */,
@@ -452,6 +473,10 @@
 				A5E43AB917B6EB83000867ED /* OrderCell.xib in Resources */,
 				A5277F8417E5182D003A67D0 /* EndViewController.xib in Resources */,
 				A5FBB7E517EF897B000666AA /* Settings.bundle in Resources */,
+				A58C41A2184B543A00C4AFEB /* login_background.png in Resources */,
+				A58C41A4184B582700C4AFEB /* login_button_background.png in Resources */,
+				A58C41A6184B5AEB00C4AFEB /* login_section_background.png in Resources */,
+				A58C41A8184B5D8600C4AFEB /* login_edit_background.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
