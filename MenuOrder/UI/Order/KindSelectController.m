@@ -19,6 +19,7 @@
 #import "DishKind.h"
 #import "UIManager.h"
 #import "EndViewController.h"
+#import "AKTabBarController.h"
 
 @interface KindSelectController ()
 
@@ -29,14 +30,17 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    UIImage *background = [UIImage imageNamed: @"login_background.png"];
-    UIImageView *imageView = [[UIImageView alloc] initWithImage: background];
-    
+ 
     //[self.view addSubview: imageView];
 	// Do any additional setup after loading the view, typically from a nib.
     UIColor *bgColor = [UIColor colorWithPatternImage: [UIImage imageNamed:@"login_background.png"]];
     self.carousel.backgroundColor = bgColor;
     self.carousel.type = iCarouselTypeCoverFlow2;
+}
+
+- (NSString *)tabImageName
+{
+	return @"menubutton_background";
 }
 
 - (void)didReceiveMemoryWarning

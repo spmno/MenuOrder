@@ -43,6 +43,11 @@
     // Do any additional setup after loading the view from its nib.
 }
 
+- (NSString *)tabImageName
+{
+	return @"orderedbutton_background";
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

@@ -52,6 +52,11 @@
     [self addWholeData];
 }
 
+- (NSString *)tabImageName
+{
+	return @"searchbutton_background";
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

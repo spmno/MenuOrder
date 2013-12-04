@@ -9,8 +9,13 @@
 #import "VersionCheckController.h"
 #import "PersistentData.h"
 #import "UpdateViewController.h"
-#import "KindSelectController.h"
 #import "../../Data/OrderManager.h"
+#import "DishSearchController.h"
+#import "TotalOrderController.h"
+#import "TotalOrderController1.h"
+#import "KindSelectController.h"
+#import "../UserManual/UserManualController.h"
+#import "AKTabBarController.h"
 
 @interface VersionCheckController ()
 
@@ -78,8 +83,26 @@
         OrderManager *orderManager = [OrderManager sharedInstance];
         orderManager.memberNo = [NSNumber numberWithInteger:[_memberNumberField.text integerValue]];
         orderManager.tableNo = [NSNumber numberWithInteger:[_tableNumberField.text integerValue]];
+        /*KindSelectTabbarController *kindSelectController = [[KindSelectTabbarController alloc] initWithNibName:@"KindSelectTabbarController" bundle:nil];
+        [self.navigationController pushViewController: kindSelectController animated:YES];*/
+        AKTabBarController *tabBarController = [[AKTabBarController alloc] initWithTabBarHeight:50];
         KindSelectController *kindSelectController = [[KindSelectController alloc] initWithNibName:@"KindSelectController" bundle:nil];
-        [self.navigationController pushViewController: kindSelectController animated:YES];
+        DishSearchController* searchController = [[DishSearchController alloc]initWithNibName:@"DishSearchController" bundle:nil];
+        UserManualController* userManualController = [[UserManualController alloc]initWithNibName:@"UserManualController" bundle:nil];
+        TotalOrderController1* totalController = [[TotalOrderController1 alloc]initWithNibName:@"TotalOrderController1" bundle:nil];
+        // Do any additional setup after loading the view from its nib.
+        [tabBarController setViewControllers:[NSMutableArray arrayWithObjects:
+                                               kindSelectController,
+                                               searchController,
+                                               userManualController,
+                                               totalController,nil]];
+        
+        // Below you will find an example of the possible customizations, just uncomment the lines below
+        
+        // Tab background Image
+        [tabBarController setBackgroundImageName:@"tabbar_background.png"];
+        [self.navigationController pushViewController: tabBarController animated:YES];
+
     } else {
         UpdateViewController* updateViewController = [[UpdateViewController alloc]initWithNibName:@"UpdateViewController" bundle:nil];
         //[self presentViewController:updateViewController animated:YES completion:nil];
