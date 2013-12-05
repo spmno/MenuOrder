@@ -39,7 +39,7 @@
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    _searchBar.showsCancelButton = YES;
+    //_searchBar.showsCancelButton = YES;
     [_searchBar sizeToFit];
     /*
     _searchDisplayController = [[UISearchDisplayController alloc] initWithSearchBar:_searchBar contentsController:self];

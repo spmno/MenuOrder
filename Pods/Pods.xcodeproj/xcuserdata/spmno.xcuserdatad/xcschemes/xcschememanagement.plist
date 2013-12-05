@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-SwipeView.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-iCarousel.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -22,17 +27,22 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>469FA209EA14456FB49007E8</key>
+		<key>288399E96327453CA5537BFC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A63491621BCA4F7CBA9074F2</key>
+		<key>57F54C3649F7489BA250F490</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E7DAE72093A34D318E078800</key>
+		<key>BE2AB16B833B4C77A32ED274</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F684E2D6E2BB49D7A45A4217</key>
 		<dict>
 			<key>primary</key>
 			<true/>

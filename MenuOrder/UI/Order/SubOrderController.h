@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "../../SwipeView/SwipeView.h"
+#import "SwipeView/SwipeView.h"
 @interface SubOrderController : UIViewController <SwipeViewDelegate, SwipeViewDataSource, UIPopoverControllerDelegate>
 {
     UIPopoverController *popover;

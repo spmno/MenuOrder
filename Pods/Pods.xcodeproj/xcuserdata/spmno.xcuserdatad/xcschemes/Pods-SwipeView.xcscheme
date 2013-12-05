@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "BE2AB16B833B4C77A32ED274"
-               BuildableName = "libPods-iCarousel.a"
-               BlueprintName = "Pods-iCarousel"
+               BlueprintIdentifier = "F684E2D6E2BB49D7A45A4217"
+               BuildableName = "libPods-SwipeView.a"
+               BlueprintName = "Pods-SwipeView"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>

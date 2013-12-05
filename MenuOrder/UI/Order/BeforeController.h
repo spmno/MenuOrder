@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "../../SwipeView/SwipeView.h"
+#import "SwipeView/SwipeView.h"
 #import "TotalOrderController1.h"
 @interface BeforeController : UIViewController <SwipeViewDelegate, SwipeViewDataSource, UIPopoverControllerDelegate, TotalOrderDelegate>
 {

@@ -1,13 +1,16 @@
 PODS:
   - AKTabBarController (1.1.0)
   - iCarousel (1.7.6)
+  - SwipeView (1.2.10)
 
 DEPENDENCIES:
   - AKTabBarController
   - iCarousel
+  - SwipeView
 
 SPEC CHECKSUMS:
   AKTabBarController: 34443d5d028700dea1d00a6f275e8ef17fc947c2
   iCarousel: e23a26d7ba722215a42144e80adb0dcb59bebc41
+  SwipeView: 0218f1fe1a271a610279815101b808a054fe631a
 
 COCOAPODS: 0.28.0
