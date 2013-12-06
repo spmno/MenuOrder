@@ -36,6 +36,8 @@
     UIColor *bgColor = [UIColor colorWithPatternImage: [UIImage imageNamed:@"login_background.png"]];
     self.carousel.backgroundColor = bgColor;
     self.carousel.type = iCarouselTypeCoverFlow2;
+    UIImage *backgroundImage = [UIImage imageNamed:@"tabbar_background.png"];
+    [_menuToolbar setBackgroundImage:backgroundImage forToolbarPosition:0 barMetrics:0];
 }
 
 - (NSString *)tabImageName
@@ -231,5 +233,9 @@
     if (self.navigationController != nil) {
         [self.navigationController pushViewController:endViewController animated:YES];
     }
+}
+- (void)viewDidUnload {
+    [self setMenuToolbar:nil];
+    [super viewDidUnload];
 }
 @end

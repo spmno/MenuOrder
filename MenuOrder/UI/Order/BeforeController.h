@@ -14,6 +14,7 @@
     UIPopoverController *popover;
 }
 @property (strong, nonatomic) IBOutlet SwipeView *swipeView;
+@property (strong, nonatomic) IBOutlet UIToolbar *menuToolbar;
 @property (strong, nonatomic) NSMutableArray* controllerContainer;
 - (IBAction)switchToMenu:(id)sender;
 - (IBAction)switchToSearch:(id)sender;

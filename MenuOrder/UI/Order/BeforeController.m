@@ -53,6 +53,12 @@
             [_controllerContainer addObject:pageController];
         }
     }
+    //UIColor *bgColor = [UIColor colorWithPatternImage: [UIImage imageNamed:@"tabbar_background.pnd"]];
+
+    UIImage *backgroundImage = [UIImage imageNamed:@"tabbar_background.png"];
+    [_menuToolbar setBackgroundImage:backgroundImage forToolbarPosition:0 barMetrics:0];
+    //[[UIToolbar appearance] setBackgroundImage:backgroundImage forBarMetrics:UIBarMetricsDefault];
+    //[_menuToolbar setBackgroundColor:bgColor];
     /*
     _controllerContainer = [[NSMutableArray alloc] init];
     BeforeSubController1* controller1 = [[BeforeSubController1 alloc] initWithNibName:@"BeforeSubController1" bundle:nil];
@@ -150,4 +156,8 @@
     }
 }
 
+- (void)viewDidUnload {
+    [self setMenuToolbar:nil];
+    [super viewDidUnload];
+}
 @end

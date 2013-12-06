@@ -14,6 +14,7 @@
     UIPopoverController *popover;
 }
 
+@property (strong, nonatomic) IBOutlet UIToolbar *menuToolbar;
 @property (strong, nonatomic) IBOutlet iCarousel *carousel;
 - (IBAction)doSearchDish:(id)sender;
 - (IBAction)showOrderResult:(id)sender;

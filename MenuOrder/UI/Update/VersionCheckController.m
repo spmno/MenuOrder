@@ -83,8 +83,10 @@
         OrderManager *orderManager = [OrderManager sharedInstance];
         orderManager.memberNo = [NSNumber numberWithInteger:[_memberNumberField.text integerValue]];
         orderManager.tableNo = [NSNumber numberWithInteger:[_tableNumberField.text integerValue]];
-        /*KindSelectTabbarController *kindSelectController = [[KindSelectTabbarController alloc] initWithNibName:@"KindSelectTabbarController" bundle:nil];
-        [self.navigationController pushViewController: kindSelectController animated:YES];*/
+        KindSelectController *kindSelectController = [[KindSelectController alloc] initWithNibName:@"KindSelectController" bundle:nil];
+        [self.navigationController pushViewController: kindSelectController animated:YES];
+        
+        /* tab bar
         AKTabBarController *tabBarController = [[AKTabBarController alloc] initWithTabBarHeight:50];
         KindSelectController *kindSelectController = [[KindSelectController alloc] initWithNibName:@"KindSelectController" bundle:nil];
         DishSearchController* searchController = [[DishSearchController alloc]initWithNibName:@"DishSearchController" bundle:nil];
@@ -101,7 +103,8 @@
         
         // Tab background Image
         [tabBarController setBackgroundImageName:@"tabbar_background.png"];
-        [self.navigationController pushViewController: tabBarController animated:YES];
+        
+        [self.navigationController pushViewController: tabBarController animated:YES]; */
 
     } else {
         UpdateViewController* updateViewController = [[UpdateViewController alloc]initWithNibName:@"UpdateViewController" bundle:nil];
